@@ -1,9 +1,3 @@
-<IfModule mod_rewrite.c>
-  RewriteEngine On
-  RewriteCond %{HTTP_HOST} !^(?:www\.)?goooool\.net(?::[0-9]+)?$ [NC]
-  RewriteRule ^ https://goooool.net%{REQUEST_URI} [R=302,L,NE]
-</IfModule>
-
 # Goooool V535 — cliente 100% estático e achatado.
 Options -Indexes
 DirectoryIndex index.html

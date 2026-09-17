@@ -6,21 +6,21 @@
   "name": "Goooool",
   "domain": "goooool.net",
   "url": "https://goooool.net/",
-  "version": 536,
-  "assetVersion": "536",
-  "cacheName": "goooool-offline-v536",
-  "releasedAt": "2026-09-17T16:45:00-03:00",
+  "version": 537,
+  "assetVersion": "537",
+  "cacheName": "goooool-offline-v537",
+  "releasedAt": "2026-09-17T17:45:00-03:00",
   "author": "Thalles Lázaro",
-  "releaseTitle": "Atualização V536 — Auditoria corretiva e mobile canônico",
-  "releaseSummary": "Corrige CORS das APIs públicas, imagens de nacionalidade ambíguas na Biblioteca, transição offline de caches e remove a camada desktop do jogo.",
+  "releaseTitle": "Atualização V537 — Telas grandes restauradas sem tocar na Home",
+  "releaseSummary": "Restaura a camada opcional de telas grandes a partir de 960 px e mantém a Home inicial totalmente fora desse CSS separado.",
   "releaseHighlights": [
-    "Suporte e relatórios de erro voltam a aceitar o cliente oficial em goooool.net sem abrir as APIs administrativas para outras origens.",
-    "A Biblioteca prioriza o nome exato da nacionalidade e não confunde Inglaterra/Escócia por compartilharem o código GB.",
-    "O loader do banco não apaga mais caches do shell durante migração; o Service Worker continua responsável pela vida útil do aplicativo offline.",
-    "O jogo volta ao contrato exclusivamente mobile: telas-grandes.css sai do pacote e do Service Worker; robots/humans também foram saneados."
+    "telas-grandes.css volta ao pacote estático e é carregado somente com media (min-width: 960px).",
+    "Todo bloco da Home (.setup-screen.landing-v99) foi removido do CSS de telas grandes; a tela inicial continua usando apenas o CSS canônico.",
+    "As correções V536 de CORS, Biblioteca, cache offline e SEO permanecem preservadas.",
+    "Banco oficial permanece revisão 1050 / modelo 7 e save schema 178."
   ],
   "releaseNotes": [
-    "APP V536 e cache goooool-offline-v536; save schema 178; banco oficial permanece na revisão 1050 / modelo 7."
+    "APP V537 e cache goooool-offline-v537; save schema 178; banco oficial permanece na revisão 1050 / modelo 7."
   ],
   "backendUrl": "https://db.goooool.net",
   "editorUrl": "https://db.goooool.net/editor",

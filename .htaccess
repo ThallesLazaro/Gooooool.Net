@@ -4,7 +4,7 @@
   RewriteRule ^ https://goooool.net%{REQUEST_URI} [R=302,L,NE]
 </IfModule>
 
-# Goooool V534 — cliente 100% estático e achatado.
+# Goooool V535 — cliente 100% estático e achatado.
 Options -Indexes
 DirectoryIndex index.html
 
@@ -20,8 +20,8 @@ DirectoryIndex index.html
 <IfModule mod_rewrite.c>
   RewriteEngine On
   # Compatibilidade com URLs antigas agora hospedadas no backend separado.
-  RewriteRule ^editor(?:\.php)?/?$ https://db.goooool.net/editor [R=301,L,NE,NC]
-  RewriteRule ^(?:estatisticas|stats\.php)/?$ https://db.goooool.net/estatisticas [R=301,L,NE,NC]
+  RewriteRule ^editor(?:\.php)?(?:/.*)?$ https://db.goooool.net/editor [R=301,L,NE,NC]
+  RewriteRule ^(?:estatisticas|stats|stats\.php)(?:/.*)?$ https://db.goooool.net/estatisticas [R=301,L,NE,NC]
   RewriteRule ^biblioteca(?:/.*)?$ https://db.goooool.net%{REQUEST_URI} [R=301,L,NE,NC]
 
   RewriteCond %{REQUEST_FILENAME} -f [OR]

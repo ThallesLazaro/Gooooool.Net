@@ -41080,23 +41080,6 @@ body:has(.app-modal-overlay .matchday-cinematic) .toast-stack{
 }
 .start-mode-option.is-active .start-mode-option-arrow{color:var(--primary);}
 
-@media (min-width:760px){
-  .start-mode-selector{grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;}
-  .start-mode-option{
-    min-height:184px;
-    padding:15px;
-    grid-template-columns:44px minmax(0,1fr);
-    grid-template-rows:auto 1fr auto;
-    align-items:start;
-    gap:10px;
-  }
-  .start-mode-option-icon{grid-column:1;grid-row:1;width:44px;height:44px;}
-  .start-mode-option-copy{grid-column:1 / -1;grid-row:2;align-content:start;gap:5px;}
-  .start-mode-option-copy strong{font-size:1.02rem;}
-  .start-mode-option-copy > span{font-size:.74rem;line-height:1.45;}
-  .start-mode-option-arrow{grid-column:2;grid-row:1;align-self:center;}
-}
-
 /* Metadados do clube: país nunca desaparece, e escudo + texto ficam no mesmo
    eixo visual. O primeiro item pode encolher, mas não some por estilo. */
 .landing-v99 .team-card-detail-line{

@@ -1,6 +1,6 @@
 # Goooool.net
 
-Versão documentada: V534
+Versão documentada: V536
 Produto: Goooool.net
 Criador e desenvolvedor: Thalles Lázaro
 URL principal: https://goooool.net/
@@ -16,10 +16,10 @@ Goooool.net é um jogo independente de gerenciamento de futebol para navegador, 
 
 ## Estado técnico atual
 
-- Aplicativo: V534.
+- Aplicativo: V535.
 - Estrutura do save: 178.
 - Banco oficial: revisão 1050 / modelo 7.
-- Interface mobile-first; em telas grandes, `telas-grandes.css` amplia progressivamente a experiência. A partida ganha áreas laterais, as páginas internas usam navegação lateral completa com Jogar na paleta fixa oficial e a Home inicial mantém um único fluxo compacto em telas pequenas e grandes, sempre reutilizando os mesmos elementos e ações.
+- Interface exclusivamente mobile; telas grandes preservam a mesma geometria e os mesmos controles do celular, sem layout desktop alternativo.
 - Sempre que nenhuma carreira está aberta, a Home usa um fluxo compacto: modo, clube, card do clube, técnico em modal e começar; busca de clube fica visível e filtros secundários ficam em Mais filtros.
 - Guia, Atualizações, Sobre, Privacidade e Termos usam uma moldura visual única inspirada na Wiki, sem alternar arbitrariamente entre larguras diferentes.
 - Saves locais ao navegador, com exportação e importação.
@@ -88,10 +88,10 @@ O jogo pode coletar diagnóstico técnico sanitizado quando habilitado. Relatór
 - [Política de Privacidade](https://goooool.net/#politica-de-privacidade)
 - [Termos de Uso](https://goooool.net/#termos-de-uso)
 - [Wiki](https://goooool.net/#wiki)
-- [Estatísticas públicas](https://goooool.net/estatisticas)
+- [Estatísticas públicas](https://db.goooool.net/estatisticas)
 
 Para saber o que mudou em uma versão específica, use [**Novidades e versões**](https://goooool.net/#novidades). Este arquivo descreve somente o estado atual e não deve ser usado como histórico de releases.
 
-Arquitetura V534: goooool.net publica somente o cliente estático; db.goooool.net hospeda Editor, Estatísticas, Biblioteca, PHP e persistência de servidor. O banco aprovado é exportado e publicado manualmente no cliente estático.
+Arquitetura V535: goooool.net publica somente o cliente estático; db.goooool.net hospeda Editor, Estatísticas, Biblioteca, PHP e persistência de servidor. O banco aprovado é exportado e publicado manualmente no cliente estático.
 
-- Banco público V534: manifesto + núcleo + fragmentos JSON válidos, alvo 18 MB e limite rígido 20 MB, com SHA-256 e cache offline.
+- Banco público V535: manifesto + núcleo + fragmentos JSON válidos, alvo 18 MB e limite rígido 20 MB, com SHA-256 e cache offline.

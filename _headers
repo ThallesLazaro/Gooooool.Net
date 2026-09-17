@@ -1,4 +1,4 @@
-# Goooool V534 — regras opcionais para hosts estáticos que suportam _headers.
+# Goooool V535 — regras opcionais para hosts estáticos que suportam _headers.
 /index.html
   Cache-Control: no-cache, max-age=0, must-revalidate
 /sw.js

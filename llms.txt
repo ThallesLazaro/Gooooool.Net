@@ -1,0 +1,97 @@
+# Goooool.net
+
+Versão documentada: V534
+Produto: Goooool.net
+Criador e desenvolvedor: Thalles Lázaro
+URL principal: https://goooool.net/
+Idioma principal: português do Brasil
+
+Este arquivo descreve o **estado atual** do Goooool.net. Ele não lista o que mudou em cada atualização. O histórico oficial de versões fica na página `#novidades` do próprio jogo.
+
+- Atualizações de aplicativo são aplicadas silenciosamente quando a Home/estado do jogo estiver seguro; não há modal nem configuração para aviso de versão. O histórico permanece em `#novidades`.
+
+## O que é
+
+Goooool.net é um jogo independente de gerenciamento de futebol para navegador, desenhado primeiro para celular e instalável como PWA. O jogador assume a função de técnico e gestor, controla um clube, disputa temporadas, monta elenco, define tática, negocia jogadores e pode construir uma carreira longa que também inclui seleções.
+
+## Estado técnico atual
+
+- Aplicativo: V534.
+- Estrutura do save: 178.
+- Banco oficial: revisão 1050 / modelo 7.
+- Interface mobile-first; em telas grandes, `telas-grandes.css` amplia progressivamente a experiência. A partida ganha áreas laterais, as páginas internas usam navegação lateral completa com Jogar na paleta fixa oficial e a Home inicial mantém um único fluxo compacto em telas pequenas e grandes, sempre reutilizando os mesmos elementos e ações.
+- Sempre que nenhuma carreira está aberta, a Home usa um fluxo compacto: modo, clube, card do clube, técnico em modal e começar; busca de clube fica visível e filtros secundários ficam em Mais filtros.
+- Guia, Atualizações, Sobre, Privacidade e Termos usam uma moldura visual única inspirada na Wiki, sem alternar arbitrariamente entre larguras diferentes.
+- Saves locais ao navegador, com exportação e importação.
+- Escudos e taças oficiais acompanham a revisão mais recente por ID também em saves existentes, sem reescrever elenco, atributos, contratos, transferências ou história esportiva; uma imagem personalizada no save tem prioridade.
+- Jogadores gerados automaticamente usam pools de nome e sobrenome por nacionalidade (77 países), com fallback regional/global para dados desconhecidos e compatibilidade com bancos antigos.
+- Em contextos visuais, países usam o escudo oficial da seleção antes do nome quando disponível; sem imagem oficial, aparece só o texto. Escudos não recebem sombras ou halos.
+- PWA com cache offline dos recursos já instalados e instalação guiada: quando o navegador oferece o prompt nativo ele é acionado por gesto do jogador; no iPhone/iPad a interface ensina o caminho pelo Safari.
+- Pacote normal para desenvolvimento e pacote protegido para publicação.
+
+## Fluxo da carreira
+
+A Home funciona como central da semana. Ela mostra próximo compromisso, pendências, preparação, mercado, resultado recente, notícias e atalhos. O jogador pode controlar o clube manualmente, usar automações permitidas ou avançar semanas sem partida.
+
+O universo pode manter outros países ativos de forma regulável. Transferências, técnicos, competições, categorias de base, acontecimentos narrativos e fatos do Giro pelo Mundo evoluem com a carreira.
+
+## Assistências da carreira
+
+As assistências ficam apenas em **Ajustes → Carreira** e pertencem ao save atual. Toda carreira nova começa com tudo desligado. As opções são Não ser demitido, Diretoria mais paciente, Lesões reduzidas, Negociações facilitadas e Mais tempo para decisões. Elas podem ser ligadas ou desligadas a qualquer momento e afetam eventos futuros, sem reescrever lesões, propostas ou decisões já concluídas.
+
+## Elenco e tática
+
+Elenco reúne jogadores, treinamento, categoria de base, olheiros, vestiário, centro médico e inscrição. Tática reúne estratégia, estudo do adversário, escalação e papéis.
+
+Posições podem usar siglas em superfícies realmente compactas. Onde houver espaço, a interface prefere nomes completos como Goleiro, Volante, Meio-campista central, Meia ofensivo e Atacante.
+
+## Mercado
+
+Mercado inclui jogadores, propostas, agentes livres e contratos. Negociações consideram clube vendedor, jogador, salário, vínculo, papel e contexto esportivo quando esses sistemas estão habilitados. Textos explicativos usam nomes completos de posições.
+
+## Seleções
+
+A carreira internacional é separada do vínculo com o clube. Convocações, Janelas FIFA, eliminatórias e Copa do Mundo fazem parte da área de Competições. Uma escalação válida possui 11 titulares e exatamente um goleiro entre eles; saves antigos incompatíveis são normalizados de forma defensiva.
+
+## Ao Vivo
+
+Partidas controladas e observadas compartilham a mesma base visual. O Ao Vivo pode exibir campo animado, narração, eventos, estatísticas, escalações, substituições, VAR, prorrogação e pênaltis conforme o contexto. Há opção Turbo e controles de acessibilidade/desempenho.
+
+## Interface e identidade
+
+Cores de clubes e seleções podem tematizar superfícies, desde que o contraste permaneça legível. O botão circular central **Jogar** é sempre verde com a identidade oficial do Goooool.net e não muda conforme tema, clube ou seleção.
+
+Páginas Sobre, Política de Privacidade, Termos e demais páginas públicas abertas sem carreira usam uma barra superior própria encostada ao topo e às laterais da tela, com conteúdo organizado abaixo. Dentro de uma carreira, as páginas continuam usando a navegação normal do jogo; não existe uma segunda lógica funcional de conteúdo.
+
+## Comunidade e banco
+
+O Editor Comunitário permite sugerir correções de clubes e jogadores. Sugestões passam por validação e aprovação. IDs e referências existentes devem ser preservados; jogadores são entidades separadas dos clubes.
+
+O banco padrão não deve ser descrito como fonte esportiva em tempo real. A revisão do banco é independente da versão do aplicativo.
+
+## IA no Editor Comunitário
+
+Quando uma resposta de IA é usada para editar dados, o formato esperado é um único JSON `goooool-ai-edit-v1`, com `product` igual a `Goooool.net`, `developer` igual a `Thalles Lázaro`, `schemaVersion` 1 e alterações identificadas por `entityType`, `entityId` e `operation`. IDs existentes devem ser reutilizados e não inventados.
+
+## Privacidade, diagnóstico e suporte
+
+As estatísticas anônimas usam fila local persistente, IDs determinísticos por partida, confirmação individual pelo servidor e reenvio automático após retorno de conexão/aba. O dia esportivo usa o calendário local; a página pública atualiza gráfico e totais pela mesma fonte consolidada. O diagnóstico local mostra gerados, confirmados e pendentes sem expor o save.
+
+O jogo pode coletar diagnóstico técnico sanitizado quando habilitado. Relatórios não devem incluir o save completo, chaves privadas ou mensagens pessoais. Suporte dentro do jogo usa identificação vinculada à carreira e protege a chave privada de acesso.
+
+## Fontes oficiais dentro do projeto
+
+- [Jogo](https://goooool.net/)
+- [Apresentação](https://jogue.goooool.net/)
+- [Sobre](https://goooool.net/#sobre)
+- [Novidades e versões](https://goooool.net/#novidades)
+- [Política de Privacidade](https://goooool.net/#politica-de-privacidade)
+- [Termos de Uso](https://goooool.net/#termos-de-uso)
+- [Wiki](https://goooool.net/#wiki)
+- [Estatísticas públicas](https://goooool.net/estatisticas)
+
+Para saber o que mudou em uma versão específica, use [**Novidades e versões**](https://goooool.net/#novidades). Este arquivo descreve somente o estado atual e não deve ser usado como histórico de releases.
+
+Arquitetura V534: goooool.net publica somente o cliente estático; db.goooool.net hospeda Editor, Estatísticas, Biblioteca, PHP e persistência de servidor. O banco aprovado é exportado e publicado manualmente no cliente estático.
+
+- Banco público V534: manifesto + núcleo + fragmentos JSON válidos, alvo 18 MB e limite rígido 20 MB, com SHA-256 e cache offline.

@@ -1,0 +1,18 @@
+User-agent: *
+Allow: /
+Allow: /humans.txt
+Allow: /llms.txt
+Allow: /llms-full.txt
+Allow: /estatisticas
+Allow: /biblioteca/
+Disallow: /editor.php
+Disallow: /editor/
+Disallow: /
+Disallow: /docs/
+Disallow: /tests/
+Disallow: /scripts/
+Disallow: /ia.txt
+
+Sitemap: https://goooool.net/sitemap.xml
+Sitemap: https://goooool.net/biblioteca/sitemap.xml
+Host: goooool.net

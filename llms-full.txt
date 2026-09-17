@@ -1,0 +1,168 @@
+# Goooool.net — referência completa do estado atual
+
+Versão documentada: V534 · 17 de setembro de 2026
+Criador e desenvolvedor: Thalles Lázaro
+Site principal: [Goooool.net](https://goooool.net/)
+Apresentação: [jogue.goooool.net](https://jogue.goooool.net/)
+
+Este documento descreve como o Goooool.net funciona **agora**. Ele não contém uma lista de alterações por versão. Para histórico de releases, a fonte canônica é a página [**Novidades e versões**](https://goooool.net/#novidades) do próprio jogo.
+
+- Guia, Atualizações, Sobre, Privacidade e Termos usam uma moldura visual única inspirada na Wiki, com largura, navegação, painéis e rodapé consistentes.
+
+## 1. Identidade do produto
+
+Goooool.net é um jogo independente de técnico e gerenciamento de futebol, feito para navegador e pensado primeiro para celular. A proposta é permitir uma carreira contínua com decisões esportivas, administrativas e narrativas sem transformar a interface em um simulador pesado de desktop.
+
+A experiência é PWA, pode ser instalada e mantém recursos já armazenados disponíveis offline. Quando a instalação direta estiver disponível, o jogo apresenta um fluxo guiado; no iPhone/iPad orienta o uso de Compartilhar → Adicionar à Tela de Início. O projeto é independente e não possui vínculo oficial com clubes, ligas, federações, Elifoot ou Brasfoot.
+
+## 2. Estado técnico
+
+Aplicativo V534. Save schema 178. Banco oficial revisão 1050 / modelo 7. A versão do aplicativo, a estrutura do save e a revisão do banco são conceitos separados.
+A Home sem save prioriza modo, clube, competições, nome do técnico e início da carreira. Escudo oficial da seleção + país não quebra entre imagem e nome e wrappers de escudo não criam fundo ou sombra.
+Países exibem o escudo oficial da seleção antes do nome em contextos visuais quando esse WebP existir; sem imagem oficial, o texto não reserva espaço. Escudos oficiais ou gerados são apresentados sem sombras.
+
+Uma atualização da interface não deve alterar o banco esportivo nem o schema do save sem necessidade. Saves recuperáveis devem ser normalizados sempre que possível, mantendo compatibilidade com carreiras existentes.
+
+Escudos de clubes e seleções e taças são dados visuais de apresentação: em saves existentes, o jogo pode usar a imagem oficial mais recente da mesma entidade por ID. Uma imagem explicitamente personalizada dentro da carreira tem prioridade. Essa atualização visual não importa elencos, atributos, contratos, transferências nem reescreve a história esportiva do save.
+
+## 3. Início de carreira
+
+O jogador pode assumir um clube existente, criar um clube ou iniciar por cenários de carreira quando disponíveis. O Mundo da carreira define a abrangência do universo ativo. O país principal recebe simulação mais profunda; países adicionais podem continuar vivos em representação mais leve.
+
+Mudanças de países ativos que afetem calendários devem preferir a virada de temporada, evitando reescrever uma competição em andamento.
+
+As **Assistências da carreira** não aparecem na criação. Toda carreira nova começa com as cinco opções desligadas. Depois, em Ajustes → Carreira, o jogador pode ativar ou desativar Não ser demitido, Diretoria mais paciente, Lesões reduzidas, Negociações facilitadas e Mais tempo para decisões. As flags pertencem ao save, podem mudar a qualquer momento e só afetam eventos futuros; o histórico registra as alterações sem reescrever consequências já ocorridas.
+
+## 4. Página Início
+
+A Home centraliza a semana: próximo compromisso, preparação, desfalques, mercado, último resultado, notícias, pendências e atalhos. Textos de ajuda que indicam um destino podem oferecer atalho direto para a página, aba e bloco citado.
+
+A Central de notícias respeita as categorias escolhidas pelo jogador. O Giro pelo Mundo apresenta fatos reais persistidos pela carreira, com acontecimentos separados visualmente para leitura no celular.
+
+## 5. Elenco
+
+A área Elenco possui Jogadores, Treinamento, Categoria de base, Olheiros, Vestiário, Centro médico e Inscrição. Perfis podem combinar posição, idade, força, potencial, condição, moral, contrato, disponibilidade e informações adicionais do sistema de profundidade.
+
+Em áreas com espaço suficiente, posições aparecem por extenso. Siglas são reservadas para superfícies realmente compactas. Exemplos: GOL → Goleiro, VOL → Volante, MC → Meio-campista central, MEI → Meia ofensivo e ATA → Atacante.
+
+## 6. Tática e escalação
+
+Tática reúne Estratégia, Estudo do adversário, Escalação e Papéis. O jogador pode escolher formação, mentalidade e demais instruções compatíveis com o motor atual.
+
+A escalação deve respeitar coerência esportiva. Em seleções, os 11 titulares precisam conter exatamente um goleiro. Escalações antigas inválidas podem ser reorganizadas defensivamente sem mudar o schema do save.
+
+## 7. Mercado e contratos
+
+Mercado possui Jogadores, Propostas, Agentes livres e Contratos. O clube vendedor e o jogador podem avaliar uma negociação separadamente. A interface explica necessidades de elenco com nomes completos de posições, evitando códigos internos como “vol” em texto corrido.
+
+Datas de vínculo devem usar linguagem natural, como “contrato até 2039”. Prazos internos baseados em rodada/semana devem aparecer como “até a semana 42” quando esse for o significado real do dado.
+
+## 8. Departamento de Futebol
+
+A Central de Futebol reúne Observação de jogadores, Comissão técnica, Último dia da janela, Centro de dados e Bancos locais. Nomes internos podem continuar em inglês quando fazem parte de protocolos ou estruturas persistidas, mas a interface visível deve permanecer em português natural.
+
+## 9. Gestão do Clube
+
+Gestão do Clube reúne Diretoria, Identidade, História, Meu perfil, Estádio, Finanças e Editor. O histórico da carreira usa fatos já ocorridos. Elementos expansíveis devem comunicar visualmente que podem ser abertos, e não parecer texto estático.
+
+## 10. Competições
+
+Competições inclui Ligas, Copas, Seleções, Giro pelo Mundo, Coeficientes, Estatísticas, Técnicos, Calendário e Regulamentos.
+
+Rankings e retrospectos devem usar rótulos completos quando houver espaço — por exemplo Vitória, Empate e Derrota em vez de V/E/D. Regulamentos da competição selecionada têm prioridade sobre descrições genéricas.
+
+## 11. Seleções e futebol internacional
+
+Clube e seleção são vínculos independentes. A área internacional controla convocações, Janelas FIFA, eliminatórias e Copa do Mundo. Buscas e cards reutilizam os dados reais de clubes/jogadores quando disponíveis.
+
+Quando a interface mostra apenas o adversário, usa “vs Nome” ou linguagem natural como “contra Nome”. O “X” fica reservado a composições visuais em que os dois lados completos de um confronto estão realmente apresentados.
+
+## 12. Amistosos
+
+O criador de amistosos permite selecionar clubes e seleções para um jogo de exibição. Clubes existentes no banco reutilizam seus escudos reais; o sistema não deve cair em emblema gerado quando a imagem oficial está disponível.
+
+O resultado de um amistoso de exibição não altera a carreira normal quando a própria interface o define como exibição.
+
+## 13. Ao Vivo
+
+A tela Ao Vivo apresenta placar, campo opcional, narração, estatísticas, times, eventos e pós-jogo. Partidas observadas e controladas reutilizam o mesmo desenho base; ações técnicas ficam disponíveis apenas quando fazem sentido.
+
+O campo animado pode ser desligado. Turbo acelera a apresentação. O placar, avisos e controles devem permanecer compactos em telas pequenas.
+
+## 14. Pós-jogo e números informativos
+
+Relatórios explicativos não devem mostrar frações impróprias para contagens discretas. Valores como faltas, finalizações, cartões, escanteios, desarmes e ataques perigosos são arredondados quando entram em frases. Métricas que são naturalmente decimais, como xG, preservam precisão apropriada.
+
+## 15. Navegação inferior
+
+A barra inferior é personalizável dentro das regras do aplicativo. A prévia precisa espelhar a geometria da barra real.
+
+O botão circular central **Jogar** possui identidade fixa do Goooool.net: gradiente verde oficial e texto/ícone branco. Ele não recebe cor de clube, seleção, tema personalizado ou outra paleta dinâmica.
+
+Em telas grandes, fora da partida, a barra inferior e o menu de três pontos dão lugar a uma navegação lateral esquerda com ícone + texto. O Jogar migra para essa lateral usando a mesma ação e a mesma paleta fixa de marca do mobile. O topo lateral mostra apenas a identidade Goooool; a página atual é indicada somente pelo item de navegação destacado com `aria-current`.
+
+## 16. Temas, contraste e acessibilidade
+
+Cores de clubes e seleções podem aparecer em superfícies temáticas. Texto e fundo são calculados em conjunto para preservar contraste. O topo de uma seleção clara não deve herdar texto branco da topbar se o par calculado exigir texto escuro.
+
+Acessibilidade inclui tamanhos de fonte, contraste, redução de movimento e outras assistências suportadas pela interface atual. Assistências não devem reescrever as cores oficiais armazenadas no banco.
+
+## 17. Páginas públicas internas
+
+Sobre, Política de Privacidade, Termos de Uso, Guia e Novidades usam o tema e a navegação do jogo. Em telas pequenas, o conteúdo mantém gutter lateral e não encosta nas bordas do viewport.
+
+A página **Novidades e versões** é o único local público destinado ao histórico detalhado das atualizações do aplicativo. README e arquivos llms descrevem o estado atual.
+
+## 18. Editor Comunitário
+
+O Editor Comunitário recebe sugestões para clubes e jogadores. Alterações devem identificar exatamente entidade e campo. Aprovação é administrativa e preserva IDs existentes.
+
+O formato de integração com IA usa `goooool-ai-edit-v1`, `product: Goooool.net`, `developer: Thalles Lázaro`, `schemaVersion: 1`, e cada alteração contém `entityType`, `entityId` e `operation`. Jogadores são entidades próprias e não devem ser enviados como substituição indiscriminada de `/players` dentro do clube.
+
+## 19. Banco de dados
+
+O banco padrão é versionado de forma independente do aplicativo. Não deve ser descrito como uma base esportiva em tempo real. O backup oficial distribuído precisa passar por validação de integridade antes do build.
+
+O Editor pode aceitar bancos comunitários/personalizados sem transformar isso em requisito para jogar.
+
+## 20. Saves e armazenamento
+
+A carreira fica no dispositivo do usuário. O projeto utiliza persistência local e mecanismos de recuperação. Operações críticas devem preservar a causa real de erros e evitar corromper um save por timeout prematuro quando o navegador suspende a página.
+
+Exportação/importação serve como portabilidade e backup. Chaves privadas e dados de runtime da hospedagem não entram em pacotes de publicação.
+
+## 21. Offline e atualizações
+
+Manifest e service worker permitem instalação e uso offline dos recursos em cache. Uma release sincroniza versão do aplicativo, asset version e cache name. Atualização de cache não deve apagar saves. Novas versões são aplicadas silenciosamente apenas quando o jogo está em estado seguro; não existe modal nem preferência para aviso de atualização. O histórico continua disponível em `#novidades`.
+
+As estatísticas anônimas são registradas primeiro em uma fila local persistente. Partidas recebem identidade determinística para que retries e retomadas sejam confirmados pelo servidor sem duplicação; o cliente só remove eventos após confirmação individual. O diagnóstico local informa quantos eventos/partidas foram gerados, confirmados e permanecem pendentes.
+
+## 22. Diagnóstico e privacidade
+
+O diagnóstico técnico é opcional conforme as configurações atuais. Relatórios são sanitizados e não devem conter o arquivo completo do save, mensagens privadas ou chaves. A Política de Privacidade dentro do jogo é a referência pública para tratamento de dados.
+
+## 23. Suporte
+
+O suporte pode vincular uma conversa a um save por identificadores próprios. O ID público não substitui a chave privada. O usuário não deve enviar dados pessoais desnecessários em mensagens de suporte.
+
+## 24. Modo Desenvolvedor
+
+O Modo Desenvolvedor ajuda a localizar componentes e gerar contexto técnico. Quando a preferência está ligada, recarregar a página deve reativar também os listeners reais do inspetor, e não apenas manter o switch visual marcado. Acesso avançado por PIN pode continuar limitado à sessão.
+
+## 25. Documentação técnica
+
+`ia.txt` é a memória técnica interna de continuidade. `README.md`, `llms.txt` e `llms-full.txt` descrevem o produto atual e não repetem um changelog por versão. A Wiki documenta o uso do jogo. A página `#novidades` concentra o histórico de atualizações.
+
+## 26. Autoria e independência
+
+Goooool.net foi criado e é desenvolvido por Thalles Lázaro. O projeto é independente. Marcas, clubes, competições, atletas e referências externas pertencem aos respectivos titulares.
+
+A interface continua mobile-first. Em telas grandes, a página da partida usa `telas-grandes.css` para distribuir campo e informações lado a lado sem criar uma segunda implementação. Placares numéricos visíveis usam `2 - 1`; confrontos sem placar usam `vs`.
+
+## Home inicial em telas grandes
+
+Sem uma carreira carregada, a Home inicial permanece em uma coluna nas telas menores e se organiza em duas áreas nas telas grandes. A área principal concentra carreiras recentes, modos de jogo e criação; a área de apoio concentra Guia, importação, páginas públicas, comunidade e links institucionais. O mesmo DOM e os mesmos eventos do mobile são reutilizados.
+
+Arquitetura V534: goooool.net publica somente o cliente estático; db.goooool.net hospeda Editor, Estatísticas, Biblioteca, PHP e persistência de servidor. O banco aprovado é exportado e publicado manualmente no cliente estático.
+
+Banco público V534: manifesto, núcleo e fragmentos JSON válidos com SHA-256, alvo 18 MB e limite rígido 20 MB; cache offline preservado.

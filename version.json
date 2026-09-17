@@ -1,0 +1,29 @@
+{
+  "format": "goooool-release-v1",
+  "product": "Goooool.net",
+  "developer": "Thalles Lázaro",
+  "schemaVersion": 1,
+  "name": "Goooool",
+  "domain": "goooool.net",
+  "url": "https://goooool.net/",
+  "version": 534,
+  "assetVersion": "534",
+  "cacheName": "goooool-offline-v534",
+  "releasedAt": "2026-09-17T14:15:00-03:00",
+  "author": "Thalles Lázaro",
+  "releaseTitle": "Atualização V534 — Banco estático fragmentado e offline",
+  "releaseSummary": "Divide automaticamente o banco oficial do cliente em JSONs válidos abaixo de 20 MB, com manifesto, SHA-256, reconstrução transparente e cache offline.",
+  "releaseHighlights": [
+    "O banco estático deixa de usar um JSON monolítico e passa a ser publicado por manifesto, núcleo e fragmentos automáticos com alvo de 18 MB e limite rígido de 20 MB.",
+    "O carregador reconstrói o mesmo databasePack em memória, valida tamanho, SHA-256, revisão e versão antes de instalar os dados.",
+    "O Service Worker guarda manifesto e fragmentos para uso offline e nunca depende de db.goooool.net para abrir ou jogar.",
+    "O Editor exporta o banco para goooool.net no mesmo formato fragmentado, pronto para upload manual na raiz."
+  ],
+  "releaseNotes": [
+    "APP V534 e cache goooool-offline-v534; save schema 178; banco oficial permanece na revisão 1050 / modelo 7."
+  ],
+  "backendUrl": "https://db.goooool.net",
+  "editorUrl": "https://db.goooool.net/editor",
+  "statisticsUrl": "https://db.goooool.net/estatisticas",
+  "libraryUrl": "https://db.goooool.net/biblioteca/"
+}

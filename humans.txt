@@ -1,0 +1,56 @@
+/* GOOOOL */
+Nome: Goooool
+Site oficial: https://goooool.net/
+Tipo: jogo independente de gerenciamento de futebol
+Plataforma: navegador e aplicativo instalável (PWA)
+Idioma principal: português do Brasil
+Experiência visual: jogo principal mobile; Editor e Estatísticas possuem layout responsivo para PC e celular
+Versão documentada: V534 · save schema 178 · banco revisão 1050 / modelo 7
+
+/* CRIAÇÃO */
+Criador, desenvolvedor e responsável pelo projeto: Thalles Lázaro
+Página pessoal do desenvolvedor: https://thall.es/
+Motivação: criar um jogo de carreira de técnico acessível, profundo e agradável para jogar pelo celular
+Origem: projeto independente inspirado pelo gosto por jogos clássicos de gerenciamento de futebol
+
+/* O JOGO */
+O jogador pode comandar clubes e seleções, escalar jogadores, definir táticas, negociar contratos e transferências, administrar finanças, estádio, categorias de base e disputar temporadas completas com partidas ao vivo. O Mundo da carreira permite ativar países em diferentes níveis de detalhe; o Modo Clássico acelera a apresentação; mercado, pós-jogo, narrador e técnicos rivais reagem à história construída no save.
+O Goooool não é produto oficial de clubes, federações, ligas, Elifoot ou Brasfoot.
+
+/* PRINCÍPIOS */
+- Interface simples, legível e confortável para celular
+- Carreiras portáteis por arquivo de save
+- Funcionamento offline sempre que os recursos já estiverem armazenados
+- Acessibilidade, temas claro e escuro, contraste e personalização da experiência
+- Transparência sobre limitações do navegador e das notificações locais
+
+/* CRÉDITOS TÉCNICOS */
+Tecnologias principais: HTML, CSS, JavaScript, PHP, SQLite e recursos de PWA
+Ícones de interface: Font Awesome, distribuído localmente no projeto
+Dados do jogo: banco próprio, editável e mantido separadamente do motor
+
+
+/* REDES OFICIAIS */
+YouTube: https://www.youtube.com/@Goooool-net
+Vídeo explicativo principal: https://www.youtube.com/watch?v=ARnjAYPvQs4
+Short oficial: https://www.youtube.com/shorts/CBqdmdU4TOI
+Instagram: https://instagram.com/GOOOOOL.NET
+TikTok: https://www.tiktok.com/@goooool.net
+Estatísticas públicas: https://goooool.net/estatisticas
+
+/* CONTATO E SEGURANÇA */
+Suporte ao jogador: disponível dentro do próprio jogo e vinculado ao save
+Guia completo: https://goooool.net/#como-jogar
+Informações públicas: https://goooool.net/#sobre
+Política de Privacidade: https://goooool.net/#politica-de-privacidade
+Termos de Uso: https://goooool.net/#termos-de-uso
+Segurança: https://goooool.net/.well-known/security.txt
+
+/* ATUALIZAÇÃO */
+Última revisão deste arquivo: 17 de setembro de 2026
+
+Livro: https://sobre.goooool.net/
+
+Arquitetura V534: goooool.net publica somente o cliente estático; db.goooool.net hospeda Editor, Estatísticas, Biblioteca, PHP e persistência de servidor. O banco aprovado é exportado e publicado manualmente no cliente estático.
+
+- Banco público V534: manifesto + núcleo + fragmentos JSON válidos, alvo 18 MB e limite rígido 20 MB, com SHA-256 e cache offline.

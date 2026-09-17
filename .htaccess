@@ -1,0 +1,34 @@
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteCond %{HTTP_HOST} !^(?:www\.)?goooool\.net(?::[0-9]+)?$ [NC]
+  RewriteRule ^ https://goooool.net%{REQUEST_URI} [R=302,L,NE]
+</IfModule>
+
+# Goooool V534 — cliente 100% estático e achatado.
+Options -Indexes
+DirectoryIndex index.html
+
+<IfModule mod_headers.c>
+  <FilesMatch "\\.(?:js|css|json|webmanifest|png|jpe?g|gif|svg|webp|ico|wav|woff2?|ttf|otf)$">
+    Header set Cache-Control "public, max-age=31536000, immutable" "expr=%{REQUEST_STATUS} == 200"
+  </FilesMatch>
+  <FilesMatch "^(?:index\\.html|sw\\.js|version\\.json|manifest\\.webmanifest)$">
+    Header set Cache-Control "no-cache, max-age=0, must-revalidate"
+  </FilesMatch>
+</IfModule>
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  # Compatibilidade com URLs antigas agora hospedadas no backend separado.
+  RewriteRule ^editor(?:\.php)?/?$ https://db.goooool.net/editor [R=301,L,NE,NC]
+  RewriteRule ^(?:estatisticas|stats\.php)/?$ https://db.goooool.net/estatisticas [R=301,L,NE,NC]
+  RewriteRule ^biblioteca(?:/.*)?$ https://db.goooool.net%{REQUEST_URI} [R=301,L,NE,NC]
+
+  RewriteCond %{REQUEST_FILENAME} -f [OR]
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteRule ^ - [L]
+  # Recurso com extensão conhecido que não existe deve permanecer 404, nunca HTML.
+  RewriteRule \.(?:js|css|json|webmanifest|ico|png|jpe?g|gif|svg|webp|avif|wav|wave|mp3|ogg|woff2?|ttf|otf)$ - [R=404,L,NC]
+  # O jogo navega por hash; URL pública sem extensão pode voltar ao shell estático.
+  RewriteRule ^ index.html [L]
+</IfModule>

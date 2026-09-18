@@ -41664,3 +41664,48 @@ html[data-theme="light"] .public-page-wiki-v519 .internal-page-footer{
   .competition-end-trophy{ width:30px; height:30px; right:-6px; bottom:-6px; }
   .celebration-competition-trophy{ width:68px; height:68px; padding:6px; }
 }
+
+
+/* ==========================================================
+   V542 · correções pontuais do Modo Desenvolvedor
+   ========================================================== */
+
+/* Dia de jogo: o kicker vive sobre uma superfície decorada e precisa manter
+   contraste próprio; não herda cinza/sombra de regras globais de texto. */
+.matchday-cinematic.team-dual-tone > .kicker{
+  display:inline-flex;
+  align-items:center;
+  width:fit-content;
+  max-width:100%;
+  padding:4px 8px;
+  border:1px solid rgba(255,255,255,.22);
+  border-radius:999px;
+  background:rgba(3,10,14,.34);
+  color:#ffffff !important;
+  -webkit-text-fill-color:#ffffff !important;
+  text-shadow:none !important;
+  box-shadow:0 1px 0 rgba(255,255,255,.08) inset,0 3px 12px rgba(0,0,0,.18);
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+}
+html[data-theme="light"] .matchday-cinematic.team-dual-tone > .kicker{
+  border-color:rgba(23,32,51,.15);
+  background:rgba(255,255,255,.88);
+  color:#344156 !important;
+  -webkit-text-fill-color:#344156 !important;
+  box-shadow:0 3px 12px rgba(28,39,57,.08);
+}
+
+/* Ver convites: ícone e texto formam uma única unidade centralizada.
+   A regra vale no layout-base porque o defeito também ocorre em telas pequenas. */
+.career-offer-row > button[data-open-international-offers]{
+  display:inline-flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  gap:7px !important;
+  text-align:center;
+}
+.career-offer-row > button[data-open-international-offers] > :is(.fa-solid,.fa-regular,svg){
+  flex:0 0 auto;
+}

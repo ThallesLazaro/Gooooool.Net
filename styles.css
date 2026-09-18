@@ -41596,3 +41596,71 @@ html[data-theme="light"] .public-page-wiki-v519 .internal-page-footer{
 }
 .quick-menu-static-help>span{grid-row:1 / span 2;display:grid;place-items:center;width:34px;height:34px;border-radius:10px;background:color-mix(in srgb,var(--primary) 13%,transparent);color:var(--primary)}
 .quick-menu-static-help>strong{font-size:.79rem}.quick-menu-static-help>small{color:var(--muted);font-size:.62rem}.quick-menu-static-help:is(:hover,:focus-visible){border-color:color-mix(in srgb,var(--primary) 48%,var(--border));background:color-mix(in srgb,var(--primary) 8%,var(--surface-2))}
+
+
+/* ==========================================================
+   V541 · taças oficiais no Ao Vivo e nas conquistas
+   ========================================================== */
+/* A taça é opcional: só entra no grid quando existe WebP oficial. Sem imagem,
+   não há coluna, placeholder ou espaço vazio. */
+.match-header.has-competition-trophy{
+  display:grid !important;
+  grid-template-columns:30px minmax(0,1fr) auto !important;
+  column-gap:6px !important;
+}
+.match-header-trophy{
+  width:28px;
+  height:28px;
+  min-width:28px;
+  align-self:center;
+  display:grid;
+  place-items:center;
+  overflow:hidden;
+}
+.match-header-trophy img{
+  display:block;
+  width:auto;
+  height:auto;
+  max-width:100%;
+  max-height:100%;
+  object-fit:contain;
+  filter:drop-shadow(0 2px 3px rgba(0,0,0,.24));
+}
+@media(max-width:390px){
+  .match-header.has-competition-trophy{ grid-template-columns:26px minmax(0,1fr) auto !important; column-gap:5px !important; }
+  .match-header-trophy{ width:24px; height:24px; min-width:24px; }
+}
+
+.competition-end-emblem{ position:relative; overflow:visible; }
+.competition-end-trophy{
+  position:absolute;
+  right:-8px;
+  bottom:-8px;
+  width:34px;
+  height:34px;
+  display:grid;
+  place-items:center;
+  padding:4px;
+  border:1px solid color-mix(in srgb,var(--team-primary,var(--primary)) 32%,var(--border));
+  border-radius:11px;
+  background:color-mix(in srgb,var(--surface) 94%,transparent);
+  box-shadow:0 5px 14px rgba(0,0,0,.20);
+  z-index:2;
+}
+.competition-end-trophy img{ width:100%; height:100%; object-fit:contain; display:block; }
+.celebration-competition-trophy{
+  width:78px;
+  height:78px;
+  display:grid;
+  place-items:center;
+  padding:7px;
+  border:1px solid rgba(255,255,255,.28);
+  border-radius:20px;
+  background:rgba(255,255,255,.13);
+  box-shadow:0 8px 20px rgba(0,0,0,.20);
+}
+.celebration-competition-trophy img{ width:100%; height:100%; object-fit:contain; display:block; filter:drop-shadow(0 4px 7px rgba(0,0,0,.28)); }
+@media(max-width:390px){
+  .competition-end-trophy{ width:30px; height:30px; right:-6px; bottom:-6px; }
+  .celebration-competition-trophy{ width:68px; height:68px; padding:6px; }
+}

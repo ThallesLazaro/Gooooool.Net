@@ -1,14 +1,14 @@
 # Goooool.net
 
-Versão documentada: V536
+Versão documentada: V539
 Produto: Goooool.net
 Criador e desenvolvedor: Thalles Lázaro
 URL principal: https://goooool.net/
 Idioma principal: português do Brasil
 
-Este arquivo descreve o **estado atual** do Goooool.net. Ele não lista o que mudou em cada atualização. O histórico oficial de versões fica na página `#novidades` do próprio jogo.
+Este arquivo descreve o **estado atual** do Goooool.net. Ele não lista o que mudou em cada atualização. O histórico oficial de versões fica na página `atualizacoes.html` do próprio jogo.
 
-- Atualizações de aplicativo são aplicadas silenciosamente quando a Home/estado do jogo estiver seguro; não há modal nem configuração para aviso de versão. O histórico permanece em `#novidades`.
+- Atualizações de aplicativo são aplicadas silenciosamente quando a Home/estado do jogo estiver seguro; não há modal nem configuração para aviso de versão. O histórico permanece em `atualizacoes.html`.
 
 ## O que é
 
@@ -16,12 +16,12 @@ Goooool.net é um jogo independente de gerenciamento de futebol para navegador, 
 
 ## Estado técnico atual
 
-- Aplicativo: V535.
+- Aplicativo: V539.
 - Estrutura do save: 178.
 - Banco oficial: revisão 1050 / modelo 7.
 - Interface exclusivamente mobile; telas grandes preservam a mesma geometria e os mesmos controles do celular, sem layout desktop alternativo.
 - Sempre que nenhuma carreira está aberta, a Home usa um fluxo compacto: modo, clube, card do clube, técnico em modal e começar; busca de clube fica visível e filtros secundários ficam em Mais filtros.
-- Guia, Atualizações, Sobre, Privacidade e Termos usam uma moldura visual única inspirada na Wiki, sem alternar arbitrariamente entre larguras diferentes.
+- Guia, Atualizações, Sobre, Privacidade, Termos e a Wiki são páginas HTML estáticas independentes e indexáveis na raiz de goooool.net; o jogo apenas aponta para elas em nova aba.
 - Saves locais ao navegador, com exportação e importação.
 - Escudos e taças oficiais acompanham a revisão mais recente por ID também em saves existentes, sem reescrever elenco, atributos, contratos, transferências ou história esportiva; uma imagem personalizada no save tem prioridade.
 - Jogadores gerados automaticamente usam pools de nome e sobrenome por nacionalidade (77 países), com fallback regional/global para dados desconhecidos e compatibilidade com bancos antigos.
@@ -83,15 +83,15 @@ O jogo pode coletar diagnóstico técnico sanitizado quando habilitado. Relatór
 
 - [Jogo](https://goooool.net/)
 - [Apresentação](https://jogue.goooool.net/)
-- [Sobre](https://goooool.net/#sobre)
-- [Novidades e versões](https://goooool.net/#novidades)
-- [Política de Privacidade](https://goooool.net/#politica-de-privacidade)
-- [Termos de Uso](https://goooool.net/#termos-de-uso)
+- [Sobre](https://goooool.net/sobre.html)
+- [Novidades e versões](https://goooool.net/atualizacoes.html)
+- [Política de Privacidade](https://goooool.net/privacidade.html)
+- [Termos de Uso](https://goooool.net/termos.html)
 - [Wiki](https://goooool.net/#wiki)
 - [Estatísticas públicas](https://db.goooool.net/estatisticas)
 
-Para saber o que mudou em uma versão específica, use [**Novidades e versões**](https://goooool.net/#novidades). Este arquivo descreve somente o estado atual e não deve ser usado como histórico de releases.
+Para saber o que mudou em uma versão específica, use [**Novidades e versões**](https://goooool.net/atualizacoes.html). Este arquivo descreve somente o estado atual e não deve ser usado como histórico de releases.
 
-Arquitetura V535: goooool.net publica somente o cliente estático; db.goooool.net hospeda Editor, Estatísticas, Biblioteca, PHP e persistência de servidor. O banco aprovado é exportado e publicado manualmente no cliente estático.
+Arquitetura V539: goooool.net publica somente o cliente estático; db.goooool.net hospeda Editor, Estatísticas, Biblioteca, PHP e persistência de servidor. O banco aprovado é exportado e publicado manualmente no cliente estático.
 
-- Banco público V535: manifesto + núcleo + fragmentos JSON válidos, alvo 18 MB e limite rígido 20 MB, com SHA-256 e cache offline.
+- Banco público V539: manifesto + núcleo + fragmentos JSON válidos, alvo 18 MB e limite rígido 20 MB, com SHA-256 e cache offline.

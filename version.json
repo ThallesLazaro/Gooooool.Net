@@ -6,21 +6,25 @@
   "name": "Goooool",
   "domain": "goooool.net",
   "url": "https://goooool.net/",
-  "version": 537,
-  "assetVersion": "537",
-  "cacheName": "goooool-offline-v537",
-  "releasedAt": "2026-09-17T17:45:00-03:00",
+  "version": 539,
+  "assetVersion": "539",
+  "cacheName": "goooool-offline-v539",
+  "releasedAt": "2026-09-18T13:17:35-03:00",
   "author": "Thalles Lázaro",
-  "releaseTitle": "Atualização V537 — Telas grandes restauradas sem tocar na Home",
-  "releaseSummary": "Restaura a camada opcional de telas grandes a partir de 960 px e mantém a Home inicial totalmente fora desse CSS separado.",
+  "releaseTitle": "Atualização V539 — desktop refinado, imagens e autonomia controlada",
+  "releaseSummary": "Refina a experiência em telas grandes sem tocar no layout mobile ou na Home inicial, amplia a saúde visual do Editor, moderniza cards de notificação e compartilhamento e dá controle para permanecer no clube no Modo autônomo.",
   "releaseHighlights": [
-    "telas-grandes.css volta ao pacote estático e é carregado somente com media (min-width: 960px).",
-    "Todo bloco da Home (.setup-screen.landing-v99) foi removido do CSS de telas grandes; a tela inicial continua usando apenas o CSS canônico.",
-    "As correções V536 de CORS, Biblioteca, cache offline e SEO permanecem preservadas.",
-    "Banco oficial permanece revisão 1050 / modelo 7 e save schema 178."
+    "Telas grandes recebem modais contidos e centralizados, navegação e superfícies densas mais confortáveis; toda a adaptação fica exclusivamente em telas-grandes.css e só atua com carreira carregada, mantendo a Home inicial intacta.",
+    "A Saúde do banco no Editor passa a auditar também escudos de seleções e imagens de taças de ligas e copas, com filtros diretos para localizar itens sem arte.",
+    "O Editor reforça a identidade geográfica com escudo de seleção/bandeira antes do país e país visível junto do clube selecionado, facilitando diferenciar clubes homônimos.",
+    "Cards grandes das notificações são redesenhados do zero; os ícones puros de escudo continuam preservados. Imagens de compartilhamento passam a aproveitar taças oficiais e identidades de seleções quando disponíveis.",
+    "O Modo autônomo ganha a opção Não aceitar propostas de clube, permitindo automatizar a carreira sem trocar automaticamente o clube atual.",
+    "As barras da aba Dados no Ao Vivo reutilizam as cores já resolvidas por contraste entre os times, evitando barras indistinguíveis quando as cores originais são iguais ou muito parecidas.",
+    "Links de convite com parâmetro convite preenchem automaticamente o nome do técnico no modal ao assumir o clube, sem impedir que a pessoa edite o campo.",
+    "Save schema 178 e banco oficial revisão 1050 / modelo 7 permanecem inalterados."
   ],
   "releaseNotes": [
-    "APP V537 e cache goooool-offline-v537; save schema 178; banco oficial permanece na revisão 1050 / modelo 7."
+    "APP V539 e cache goooool-offline-v539; save schema 178; banco oficial permanece na revisão 1050 / modelo 7."
   ],
   "backendUrl": "https://db.goooool.net",
   "editorUrl": "https://db.goooool.net/editor",

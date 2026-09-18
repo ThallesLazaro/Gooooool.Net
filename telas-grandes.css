@@ -316,13 +316,13 @@
    ação canônica do mobile. A partida continua sendo a exceção V500.
    ========================================================== */
 @media (min-width: 960px) {
-  .game-shell:not(:has(.match-screen)) {
+  .game-shell:has(.app-screen):not(:has(.match-screen)) {
     width: min(calc(100vw - 16px), 1560px) !important;
     max-width: none !important;
     min-height: 100dvh;
   }
 
-  .game-shell:not(:has(.match-screen)) .app-screen {
+  .game-shell:has(.app-screen):not(:has(.match-screen)) .app-screen {
     height: 100dvh !important;
     min-height: 0 !important;
     display: grid !important;
@@ -333,14 +333,14 @@
       "lateral conteudo" !important;
   }
 
-  .game-shell:not(:has(.match-screen)) .app-screen > .topbar {
+  .game-shell:has(.app-screen):not(:has(.match-screen)) .app-screen > .topbar {
     grid-area: topo !important;
     grid-column: 2 !important;
     grid-row: 1 !important;
     min-width: 0 !important;
   }
 
-  .game-shell:not(:has(.match-screen)) .app-screen > .content {
+  .game-shell:has(.app-screen):not(:has(.match-screen)) .app-screen > .content {
     grid-area: conteudo !important;
     grid-column: 2 !important;
     grid-row: 2 !important;
@@ -349,7 +349,7 @@
     padding-bottom: 18px !important;
   }
 
-  .game-shell:not(:has(.match-screen)) .app-screen > .content > #view {
+  .game-shell:has(.app-screen):not(:has(.match-screen)) .app-screen > .content > #view {
     width: min(100%, 1240px) !important;
     min-width: 0 !important;
     margin-inline: auto !important;
@@ -357,12 +357,12 @@
 
   /* A barra inferior e o botão de três pontos resolvem a falta de espaço do
      celular. No desktop suas funções migram para a lateral persistente. */
-  .game-shell:not(:has(.match-screen)) .app-screen > .navbar,
-  .game-shell:not(:has(.match-screen)) [data-topbar-menu] {
+  .game-shell:has(.app-screen):not(:has(.match-screen)) .app-screen > .navbar,
+  .game-shell:has(.app-screen):not(:has(.match-screen)) [data-topbar-menu] {
     display: none !important;
   }
 
-  .game-shell:not(:has(.match-screen)) .desktop-side-nav {
+  .game-shell:has(.app-screen):not(:has(.match-screen)) .desktop-side-nav {
     grid-area: lateral !important;
     grid-column: 1 !important;
     grid-row: 1 / -1 !important;
@@ -564,5 +564,106 @@
      espaço para a lateral persistente. */
   .game-shell:has(.match-screen) .desktop-side-nav {
     display: none !important;
+  }
+}
+
+
+/* ==========================================================
+   V539 · refinamentos exclusivos para PC / telas grandes
+   ----------------------------------------------------------
+   Todas as regras abaixo exigem uma .app-screen carregada. A
+   tela inicial sem save fica, portanto, completamente fora do
+   alcance desta camada desktop. O CSS mobile continua canônico.
+   ========================================================== */
+@media (min-width: 960px) {
+  /* Modais deixam de se comportar como bottom sheets gigantes no PC. */
+  body:has(.game-shell .app-screen) .app-modal-overlay:not([data-dev-inspector-overlay="true"]) {
+    padding: clamp(22px, 4vh, 52px) !important;
+    place-items: center !important;
+  }
+
+  body:has(.game-shell .app-screen) .app-modal-overlay:not([data-dev-inspector-overlay="true"]) > .app-modal {
+    width: min(680px, calc(100vw - 72px)) !important;
+    max-height: min(84dvh, 880px) !important;
+    border: 1px solid var(--line) !important;
+    border-radius: 18px !important;
+    box-shadow: 0 26px 88px rgba(0,0,0,.42) !important;
+  }
+
+  body:has(.game-shell .app-screen) .app-modal-overlay:not([data-dev-inspector-overlay="true"]) > .app-modal.is-wide {
+    width: min(1040px, calc(100vw - 96px)) !important;
+    max-height: min(88dvh, 920px) !important;
+  }
+
+  body:has(.game-shell .app-screen) .app-modal-overlay:not([data-dev-inspector-overlay="true"]) .app-modal-body {
+    min-height: 0 !important;
+    padding: 18px 20px 20px !important;
+    scrollbar-gutter: stable;
+  }
+
+  /* Diálogos próprios do jogo (compartilhamento, decisões e afins) também
+     ganham margem de respiro em vez de encostar nas quatro bordas. */
+  body:has(.game-shell .app-screen) :is(.share-preview-overlay,.share-studio-overlay) {
+    padding: clamp(22px, 4vh, 52px) !important;
+    place-items: center !important;
+  }
+
+  body:has(.game-shell .app-screen) :is(.share-preview-dialog,.share-studio-dialog) {
+    width: min(1120px, calc(100vw - 96px)) !important;
+    max-height: min(90dvh, 940px) !important;
+    border-radius: 20px !important;
+  }
+
+  /* A navegação lateral pode permanecer fixa enquanto apenas o conteúdo
+     principal rola. Evita perder os atalhos em páginas longas. */
+  .game-shell:has(.app-screen):not(:has(.match-screen)) .desktop-side-nav {
+    position: sticky !important;
+    top: 0 !important;
+    height: 100dvh !important;
+  }
+
+  .game-shell:has(.app-screen):not(:has(.match-screen)) .app-screen > .topbar {
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 18 !important;
+  }
+
+  /* Tabelas e listas densas aproveitam a largura disponível sem esticar o
+     texto indefinidamente. A rolagem horizontal continua localizada. */
+  .game-shell:has(.app-screen):not(:has(.match-screen)) :is(.table-wrap,.table-scroll,.ranking-list) {
+    scrollbar-gutter: stable;
+  }
+
+  .game-shell:has(.app-screen):not(:has(.match-screen)) :is(.settings-grid,.player-profile-metrics) {
+    column-gap: 12px !important;
+  }
+
+  /* Detalhes/ajuda ficam mais confortáveis para mouse e teclado. */
+  .game-shell:has(.app-screen):not(:has(.match-screen)) :is(.help-details,.panel details) > summary {
+    cursor: pointer;
+  }
+}
+
+@media (min-width: 1280px) {
+  .game-shell:has(.app-screen):not(:has(.match-screen)) {
+    width: min(calc(100vw - 24px), 1640px) !important;
+  }
+
+  .game-shell:has(.app-screen):not(:has(.match-screen)) .app-screen {
+    grid-template-columns: 236px minmax(0, 1fr) !important;
+  }
+
+  .game-shell:has(.app-screen):not(:has(.match-screen)) .desktop-side-nav {
+    width: 236px !important;
+    min-width: 236px !important;
+    padding-inline: 12px !important;
+  }
+
+  .game-shell:has(.app-screen):not(:has(.match-screen)) .app-screen > .content > #view {
+    width: min(100%, 1320px) !important;
+  }
+
+  body:has(.game-shell .app-screen) .app-modal-overlay:not([data-dev-inspector-overlay="true"]) > .app-modal.is-wide {
+    width: min(1120px, calc(100vw - 120px)) !important;
   }
 }

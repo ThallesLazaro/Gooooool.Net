@@ -41588,3 +41588,11 @@ html[data-theme="light"] .public-page-wiki-v519 .internal-page-footer{
     grid-template-columns:minmax(0,1fr) !important;
   }
 }
+
+/* V538 · links de documentação que saem do jogo preservam a carreira em nova aba. */
+.quick-menu-static-help{
+  display:grid;grid-template-columns:34px minmax(0,1fr);grid-template-rows:auto auto;align-items:center;gap:2px 9px;min-width:0;
+  padding:11px;border:1px solid var(--border);border-radius:14px;background:color-mix(in srgb,var(--surface-2) 84%,transparent);color:var(--text);text-decoration:none;
+}
+.quick-menu-static-help>span{grid-row:1 / span 2;display:grid;place-items:center;width:34px;height:34px;border-radius:10px;background:color-mix(in srgb,var(--primary) 13%,transparent);color:var(--primary)}
+.quick-menu-static-help>strong{font-size:.79rem}.quick-menu-static-help>small{color:var(--muted);font-size:.62rem}.quick-menu-static-help:is(:hover,:focus-visible){border-color:color-mix(in srgb,var(--primary) 48%,var(--border));background:color-mix(in srgb,var(--primary) 8%,var(--surface-2))}

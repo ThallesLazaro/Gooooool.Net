@@ -667,3 +667,348 @@
     width: min(1120px, calc(100vw - 120px)) !important;
   }
 }
+
+/* ==========================================================
+   V545 · compatibilidade desktop ampliada sem tocar no mobile
+   ----------------------------------------------------------
+   Regras desta etapa:
+   - altera somente esta folha para telas grandes;
+   - não depende de mudanças em HTML, JS ou styles.css;
+   - preserva a Home inicial sem save, pois exige .app-screen;
+   - reorganiza apenas componentes cuja própria estrutura já é grid/flex;
+   - nunca esconde informação para fazê-la caber em desktop.
+   ========================================================== */
+@media (min-width: 960px) {
+  /* O rótulo Pós-jogo é dinâmico (Pós-jogo / Aguardando / Finalizando…).
+     Ao contrário das demais abas, ele não depende de data-full-label. */
+  .game-shell:has(.match-screen) .match-screen .live-info-tabs #liveFinishTab .live-tab-label {
+    display: inline !important;
+    font-size: .58rem !important;
+    line-height: 1 !important;
+    white-space: nowrap !important;
+  }
+
+  .game-shell:has(.match-screen) .match-screen .live-info-tabs #liveFinishTab .live-tab-label::after {
+    content: none !important;
+    display: none !important;
+  }
+
+  /* Componentes originalmente multidimensionais que o CSS mobile reduz.
+     Em desktop compacto voltam a usar a largura sem ficarem apertados. */
+  .game-shell:has(.app-screen):not(:has(.match-screen)) .world-groups {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+
+  .game-shell:has(.app-screen):not(:has(.match-screen)) .quick-action-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 9px !important;
+  }
+
+  .game-shell:has(.app-screen):not(:has(.match-screen)) .quick-action-grid button {
+    min-height: 72px !important;
+    padding: 10px 11px !important;
+  }
+
+  .game-shell:has(.app-screen):not(:has(.match-screen)) .quick-action-grid strong {
+    font-size: .82rem !important;
+  }
+
+  .game-shell:has(.app-screen):not(:has(.match-screen)) .quick-action-grid small {
+    font-size: .64rem !important;
+    line-height: 1.3 !important;
+  }
+
+  /* Football Center: recupera as composições que já existem no componente
+     e foram empilhadas pelo CSS mobile. */
+  .game-shell:has(.app-screen):not(:has(.match-screen)) :is(.fc-overview-grid,.fc-staff-grid) {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+
+  .game-shell:has(.app-screen):not(:has(.match-screen)) :is(.fc-insight-grid,.fc-style-grid) {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+
+  .game-shell:has(.app-screen):not(:has(.match-screen)) .fc-staff-metrics {
+    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  }
+
+  .game-shell:has(.app-screen):not(:has(.match-screen)) .fc-command-card {
+    grid-template-columns: auto minmax(0, 1fr) auto !important;
+  }
+
+  .game-shell:has(.app-screen):not(:has(.match-screen)) .fc-command-card > .btn {
+    grid-column: auto !important;
+    width: auto !important;
+  }
+
+  /* Formulários que já foram desenhados para múltiplas colunas. */
+  .game-shell:has(.app-screen):not(:has(.match-screen)) .scout-form-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 10px !important;
+  }
+
+  .game-shell:has(.app-screen):not(:has(.match-screen)) .scout-form-grid label:last-child {
+    grid-column: 1 / -1 !important;
+  }
+
+  /* Dia de jogo: no desktop, volta à composição cinematográfica completa. */
+  body:has(.game-shell .app-screen) .matchday-cinematic {
+    min-height: 430px !important;
+    padding: 22px !important;
+  }
+
+  body:has(.game-shell .app-screen) .matchday-stage {
+    grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr) !important;
+    gap: 18px !important;
+  }
+
+  body:has(.game-shell .app-screen) .matchday-versus {
+    order: 0 !important;
+  }
+
+  body:has(.game-shell .app-screen) .matchday-team,
+  body:has(.game-shell .app-screen) .matchday-team.is-away {
+    grid-template-columns: 1fr !important;
+    justify-items: center !important;
+    text-align: center !important;
+  }
+
+  body:has(.game-shell .app-screen) .matchday-team .crest {
+    width: 76px !important;
+    height: 76px !important;
+  }
+
+  body:has(.game-shell .app-screen) .matchday-info-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  }
+
+  body:has(.game-shell .app-screen) .matchday-actions {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: center !important;
+    flex-wrap: wrap !important;
+  }
+
+  body:has(.game-shell .app-screen) .matchday-actions .btn {
+    width: auto !important;
+    min-width: 170px !important;
+  }
+
+  /* Estados vazios ficam visualmente ancorados, sem virar uma faixa enorme. */
+  .game-shell:has(.app-screen):not(:has(.match-screen)) .empty-state-card {
+    width: min(100%, 760px) !important;
+    margin-inline: auto !important;
+    padding-block: 36px !important;
+  }
+
+  /* Métricas de perfil aproveitam largura, mas cada célula mantém tamanho útil. */
+  .game-shell:has(.app-screen):not(:has(.match-screen)) .player-profile-metrics {
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)) !important;
+    gap: 10px !important;
+  }
+
+  /* Cabeçalhos com ações não precisam quebrar cedo no PC. */
+  .game-shell:has(.app-screen):not(:has(.match-screen)) :is(.panel-heading-row,.market-heading,.club-heading,.settings-section-heading) {
+    align-items: center !important;
+    gap: 12px !important;
+  }
+
+  .game-shell:has(.app-screen):not(:has(.match-screen)) :is(.panel-heading-row,.market-heading,.club-heading,.settings-section-heading) > :first-child {
+    min-width: 0 !important;
+    flex: 1 1 auto !important;
+  }
+
+  /* Textos de navegação horizontal usam o espaço disponível antes de rolar. */
+  .game-shell:has(.app-screen):not(:has(.match-screen)) :is(.subtabs,.fc-tabs) {
+    justify-content: flex-start !important;
+  }
+
+  .game-shell:has(.app-screen):not(:has(.match-screen)) :is(.subtabs,.fc-tabs) > :is(button,a) {
+    flex: 0 1 auto !important;
+    min-width: max-content !important;
+  }
+}
+
+@media (min-width: 1200px) {
+  /* Central do técnico: quatro atalhos realmente cabem com folga. */
+  .game-shell:has(.app-screen):not(:has(.match-screen)) .quick-action-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  }
+
+  /* Formulários de mercado recuperam a composição horizontal original.
+     Busca e botão deixam de ocupar uma linha inteira quando há espaço real. */
+  .game-shell:has(.app-screen):not(:has(.match-screen)) .market-filter-grid {
+    grid-template-columns: minmax(230px, 1.45fr) repeat(3, minmax(135px, .75fr)) auto !important;
+    align-items: end !important;
+    gap: 10px !important;
+  }
+
+  .game-shell:has(.app-screen):not(:has(.match-screen)) .market-filter-grid .market-search-field,
+  .game-shell:has(.app-screen):not(:has(.match-screen)) .market-filter-grid .market-filter-submit {
+    grid-column: auto !important;
+  }
+
+  /* Football Center ganha duas áreas de trabalho quando o conteúdo já foi
+     desenhado para comparação lado a lado. */
+  .game-shell:has(.app-screen):not(:has(.match-screen)) :is(.fc-scout-layout,.fc-deadline-layout,.fc-data-layout,.fc-community-layout) {
+    grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr) !important;
+    gap: 16px !important;
+  }
+
+  .game-shell:has(.app-screen):not(:has(.match-screen)) .fc-form {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 10px !important;
+  }
+
+  /* Copas e competições são cards independentes; duas colunas reduzem rolagem
+     sem deixar cada card estreito demais. */
+  .game-shell:has(.app-screen):not(:has(.match-screen)) :is(.cup-grid,.competition-group-grid) {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    align-items: start !important;
+    gap: 12px !important;
+  }
+
+  /* O mural da Home com carreira carregada foi concebido com CSS columns.
+     Em desktop confortável passa a usar duas colunas; a Home sem save não
+     possui .app-screen e permanece completamente intocada. */
+  .game-shell:has(.app-screen):not(:has(.match-screen)) .home-dashboard-grid {
+    columns: 2 !important;
+    column-gap: 14px !important;
+  }
+
+  .game-shell:has(.app-screen):not(:has(.match-screen)) .home-dashboard-grid > * {
+    margin-bottom: 14px !important;
+  }
+
+  /* Pós-jogo pode distribuir cards independentes lado a lado. Cards que
+     contêm tabelas continuam usando a largura inteira para preservar leitura. */
+  .game-shell:has(.match-screen) .match-screen.is-finished.is-post-match-view .live-finish-pane .post-match-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    align-items: start !important;
+  }
+
+  .game-shell:has(.match-screen) .match-screen.is-finished.is-post-match-view .live-finish-pane .post-match-collapsible-card:has(table),
+  .game-shell:has(.match-screen) .match-screen.is-finished.is-post-match-view .live-finish-pane .post-match-collapsible-card:has(.table-wrap) {
+    grid-column: 1 / -1 !important;
+  }
+
+  /* Modais realmente largos podem aproveitar duas colunas em formulários
+     que já usam a classe genérica form-grid, sem alterar modais compactos. */
+  body:has(.game-shell .app-screen) .app-modal.is-wide .form-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    column-gap: 14px !important;
+  }
+}
+
+@media (min-width: 1440px) {
+  /* Monitores largos ganham área de conteúdo, mas mantêm uma largura de
+     leitura controlada para não espalhar a interface pela tela inteira. */
+  .game-shell:has(.app-screen):not(:has(.match-screen)) .app-screen > .content > #view {
+    width: min(100%, 1380px) !important;
+  }
+
+  .game-shell:has(.app-screen):not(:has(.match-screen)) .world-groups {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  }
+
+  .game-shell:has(.app-screen):not(:has(.match-screen)) :is(.fc-insight-grid,.fc-style-grid) {
+    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  }
+
+  body:has(.game-shell .app-screen) .app-modal-overlay:not([data-dev-inspector-overlay="true"]) > .app-modal.is-wide {
+    width: min(1180px, calc(100vw - 140px)) !important;
+  }
+}
+
+/* Notebooks e monitores baixos: preserva informação, reduzindo apenas
+   dimensões verticais e espaçamento. */
+@media (min-width: 960px) and (max-height: 700px) {
+  .game-shell:has(.app-screen):not(:has(.match-screen)) .quick-action-grid button {
+    min-height: 62px !important;
+    padding-block: 8px !important;
+  }
+
+  body:has(.game-shell .app-screen) .app-modal-overlay:not([data-dev-inspector-overlay="true"]) {
+    padding-block: 14px !important;
+  }
+
+  body:has(.game-shell .app-screen) .app-modal-overlay:not([data-dev-inspector-overlay="true"]) > .app-modal,
+  body:has(.game-shell .app-screen) .app-modal-overlay:not([data-dev-inspector-overlay="true"]) > .app-modal.is-wide {
+    max-height: calc(100dvh - 28px) !important;
+  }
+
+  body:has(.game-shell .app-screen) .matchday-cinematic {
+    min-height: 0 !important;
+    gap: 12px !important;
+    padding: 16px !important;
+  }
+
+  body:has(.game-shell .app-screen) .matchday-team .crest {
+    width: 62px !important;
+    height: 62px !important;
+  }
+}
+
+/* V545 · textos que o CSS mobile oculta por falta de largura.
+   Em desktop eles voltam a existir em vez de serem substituídos só por ícones. */
+@media (min-width: 960px) {
+  .game-shell:has(.match-screen) .match-screen .live-info-tabs .live-tab-label {
+    display: inline !important;
+  }
+
+  .game-shell:has(.match-screen) .match-screen .live-info-tabs button::after {
+    content: none !important;
+    display: none !important;
+  }
+
+  .game-shell:has(.match-screen) .match-screen .live-management-actions .btn .live-action-label {
+    display: inline !important;
+  }
+
+  .game-shell:has(.match-screen) .match-screen .live-pitch-caption small,
+  .game-shell:has(.match-screen) .match-screen .other-live-heading span {
+    display: inline !important;
+  }
+
+  .game-shell:has(.match-screen) .match-screen .post-match-card-toggle {
+    width: auto !important;
+    min-width: 34px !important;
+    padding-inline: 9px !important;
+  }
+
+  .game-shell:has(.match-screen) .match-screen .post-match-card-toggle span {
+    display: inline !important;
+  }
+
+  .game-shell:has(.app-screen):not(:has(.match-screen)) .glance-row > small {
+    display: block !important;
+  }
+
+  .game-shell:has(.app-screen):not(:has(.match-screen)) .glance-row {
+    grid-template-columns: 44px minmax(0, 1fr) auto 42px !important;
+  }
+
+  .game-shell:has(.app-screen):not(:has(.match-screen)) .icon-text-button span {
+    display: inline !important;
+  }
+
+  /* O contexto da página no topo deixa de ser um botão quadrado só com ícone.
+     Há espaço para um rótulo curto no desktop, mas ele continua limitado. */
+  .game-shell:has(.app-screen):not(:has(.match-screen)) .topbar-page-context {
+    width: auto !important;
+    min-width: 36px !important;
+    max-width: 190px !important;
+    padding-inline: 9px !important;
+    justify-content: flex-start !important;
+    gap: 6px !important;
+  }
+
+  .game-shell:has(.app-screen):not(:has(.match-screen)) .topbar-page-context span {
+    display: block !important;
+    min-width: 0 !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    white-space: nowrap !important;
+    font-size: .6rem !important;
+  }
+}

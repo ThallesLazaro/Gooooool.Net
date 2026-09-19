@@ -6,22 +6,23 @@
   "name": "Goooool",
   "domain": "goooool.net",
   "url": "https://goooool.net/",
-  "version": 543,
-  "assetVersion": "543",
-  "cacheName": "goooool-offline-v543",
-  "releasedAt": "2026-09-19T10:06:30-03:00",
+  "version": 545,
+  "assetVersion": "545",
+  "cacheName": "goooool-offline-v545",
+  "releasedAt": "2026-09-19T14:25:00-03:00",
   "author": "Thalles Lázaro",
-  "releaseTitle": "Atualização V543 — Taças sem corte e tipografia equilibrada",
-  "releaseSummary": "Corrige o encaixe de taças oficiais em toda a interface, reorganiza os modais de premiação, mantém o país visível no cabeçalho do Editor e reduz pesos tipográficos excessivos.",
+  "releaseTitle": "Atualização V545 — experiência em telas grandes refinada",
+  "releaseSummary": "Refina exclusivamente a camada telas-grandes.css para aproveitar melhor PCs e monitores sem alterar o CSS mobile, a Home inicial ou a lógica do jogo.",
   "releaseHighlights": [
-    "Imagens oficiais de taças passam a preservar sempre a proporção original com encaixe contain em cards de competição, configuração, cabeçalho da partida e modais, evitando cortes quando a arte não é 1:1.",
-    "Nos modais de campeonato e conquista, a taça deixa de ficar sobreposta ao escudo e passa a ter destaque próprio, sem fundo nem borda; sem imagem oficial, nenhum espaço vazio é reservado.",
-    "O cabeçalho do Editor mantém escudo e nome do país visíveis dentro de selectedTeamMeta também em telas estreitas, inclusive o span interno que ainda era ocultado por uma regra antiga.",
-    "A interface do jogo deixa de usar font-weight 800 e pesos equivalentes excessivos; CTAs como Começar com Palmeiras ficam visualmente mais equilibrados, e a mesma regra alcança textos desenhados nos cards de compartilhamento.",
-    "Save schema 178 e banco oficial revisão 1050 / modelo 7 permanecem inalterados."
+    "O botão Pós-jogo volta a exibir corretamente seu texto dinâmico no desktop, incluindo estados como Aguardando e Finalizando, sem recriar o rótulo por CSS.",
+    "Ao Vivo, Pós-jogo, Central do Técnico, Football Center, Dia de jogo, Copa do Mundo, mercado, competições e telas internas passam a aproveitar melhor larguras a partir de 960 px.",
+    "A camada desktop passa a distinguir desktop compacto, confortável e monitores largos, além de preservar uma adaptação própria para notebooks com pouca altura.",
+    "Rótulos e informações ocultados no mobile voltam a aparecer em telas grandes quando há espaço, evitando interfaces compostas apenas por ícones.",
+    "A Home inicial/sem save continua totalmente fora de telas-grandes.css; styles.css, JavaScript, banco oficial 1050 / modelo 7 e save schema 178 permanecem inalterados.",
+    "Os pacotes sobre.goooool.net-V544.zip e jogue.goooool.net-V544.zip permanecem idênticos porque os sites não foram alterados nesta etapa."
   ],
   "releaseNotes": [
-    "APP V543 e cache goooool-offline-v543; save schema 178; banco oficial permanece na revisão 1050 / modelo 7."
+    "APP V545 e cache goooool-offline-v545; save schema 178; banco oficial permanece na revisão 1050 / modelo 7."
   ],
   "backendUrl": "https://db.goooool.net",
   "editorUrl": "https://db.goooool.net/editor",

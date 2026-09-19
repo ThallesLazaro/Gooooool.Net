@@ -41784,3 +41784,19 @@ html[data-theme="light"] .matchday-cinematic.team-dual-tone > .kicker{
   .celebration-emblems{gap:14px;}
   .celebration-competition-trophy{width:72px;height:80px;}
 }
+
+
+/* V544 · conquista com hierarquia clara entre taça e clube. */
+.competition-champion-showcase,.celebration-champion-showcase{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:18px;width:100%;margin:2px auto 12px}
+.competition-champion-trophy-stage,.competition-champion-club-stage,.celebration-trophy-stage,.celebration-club-stage{display:grid;justify-items:center;align-content:center;gap:6px;min-width:0;text-align:center}
+.competition-champion-trophy-stage,.celebration-trophy-stage{flex:1 1 122px;min-height:128px}
+.competition-champion-club-stage,.celebration-club-stage{flex:1 1 112px;min-height:112px}
+.competition-champion-label,.competition-champion-club-stage>span,.celebration-trophy-stage>span,.celebration-club-stage>span{color:var(--muted);font-size:.58rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+.competition-champion-club-stage>strong,.celebration-club-stage>strong{max-width:170px;color:var(--text);font-size:.74rem;font-weight:700;line-height:1.15;overflow-wrap:anywhere}
+.competition-champion-trophy-stage .competition-end-trophy{width:min(112px,28vw)!important;height:min(132px,33vw)!important;margin:0!important}
+.celebration-trophy-stage .celebration-competition-trophy{width:min(118px,30vw)!important;height:min(138px,35vw)!important;margin:0!important}
+.competition-champion-showcase :is(.competition-end-trophy,.celebration-competition-trophy),.celebration-champion-showcase :is(.competition-end-trophy,.celebration-competition-trophy){border:0!important;border-radius:0!important;background:transparent!important;box-shadow:none!important;padding:0!important;overflow:visible!important}
+.competition-champion-showcase :is(.competition-end-trophy,.celebration-competition-trophy)>img,.celebration-champion-showcase :is(.competition-end-trophy,.celebration-competition-trophy)>img{display:block!important;width:100%!important;height:100%!important;object-fit:contain!important;object-position:center!important;filter:drop-shadow(0 10px 14px rgba(0,0,0,.30))}
+.competition-champion-club-stage .crest,.celebration-club-stage .crest{width:76px!important;height:76px!important;max-width:76px!important;max-height:76px!important}
+.competition-end-summary.is-champion .competition-end-hero{padding-top:16px}.celebration-card:not(.is-placement) .placement-rank.is-title{margin-top:1px}
+@media(max-width:430px){.competition-champion-showcase,.celebration-champion-showcase{gap:12px}.competition-champion-trophy-stage,.celebration-trophy-stage{flex-basis:106px;min-height:116px}.competition-champion-club-stage,.celebration-club-stage{flex-basis:98px;min-height:104px}.competition-champion-trophy-stage .competition-end-trophy{width:min(94px,27vw)!important;height:min(116px,33vw)!important}.celebration-trophy-stage .celebration-competition-trophy{width:min(100px,28vw)!important;height:min(120px,34vw)!important}.competition-champion-club-stage .crest,.celebration-club-stage .crest{width:66px!important;height:66px!important;max-width:66px!important;max-height:66px!important}}

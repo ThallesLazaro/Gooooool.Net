@@ -1,6 +1,6 @@
 # Goooool.net
 
-Versão documentada: V542
+Versão documentada: V543
 Produto: Goooool.net
 Criador e desenvolvedor: Thalles Lázaro
 URL principal: https://goooool.net/
@@ -16,7 +16,7 @@ Goooool.net é um jogo independente de gerenciamento de futebol para navegador, 
 
 ## Estado técnico atual
 
-- Aplicativo: V542.
+- Aplicativo: V543.
 - Estrutura do save: 178.
 - Banco oficial: revisão 1050 / modelo 7.
 - Interface exclusivamente mobile; telas grandes preservam a mesma geometria e os mesmos controles do celular, sem layout desktop alternativo.
@@ -92,6 +92,6 @@ O jogo pode coletar diagnóstico técnico sanitizado quando habilitado. Relatór
 
 Para saber o que mudou em uma versão específica, use [**Novidades e versões**](https://goooool.net/atualizacoes.html). Este arquivo descreve somente o estado atual e não deve ser usado como histórico de releases.
 
-Arquitetura V542: goooool.net publica somente o cliente estático; db.goooool.net hospeda Editor, Estatísticas, Biblioteca, PHP e persistência de servidor. O banco aprovado é exportado e publicado manualmente no cliente estático.
+Arquitetura V543: goooool.net publica somente o cliente estático; db.goooool.net hospeda Editor, Estatísticas, Biblioteca, PHP e persistência de servidor. O banco aprovado é exportado e publicado manualmente no cliente estático.
 
-- Banco público V542: manifesto + núcleo + fragmentos JSON válidos, alvo 18 MB e limite rígido 20 MB, com SHA-256 e cache offline.
+- Banco público V543: manifesto + núcleo + fragmentos JSON válidos, alvo 18 MB e limite rígido 20 MB, com SHA-256 e cache offline.

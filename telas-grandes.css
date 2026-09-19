@@ -465,7 +465,7 @@
     transform: none;
   }
 
-  .desktop-side-play-copy strong { font-size: .78rem; font-weight: 800; }
+  .desktop-side-play-copy strong { font-size: .78rem; font-weight: 700; }
   .desktop-side-play-copy small { font-size: .55rem; opacity: .78; }
   .desktop-side-play-icon { font-size: 1rem; background: rgba(255,255,255,.18); }
   .desktop-side-play :is(.desktop-side-play-icon,.desktop-side-play-copy,.fa-solid,.fa-regular,strong,small,span) {

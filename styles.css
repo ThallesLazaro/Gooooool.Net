@@ -31610,7 +31610,7 @@ html[data-theme="light"] .match-screen .live-finish-pane .post-round-result .pos
   background: color-mix(in srgb, var(--primary) 12%, var(--panel));
   color: var(--primary);
   font-size: .72rem;
-  font-weight: 800;
+  font-weight: 700;
 }
 
 /* Nome do técnico e nome do clube têm mais presença que os demais campos. */
@@ -32274,7 +32274,7 @@ html[data-theme="light"] .match-screen .live-finish-pane .post-round-result .pos
 .manager-market-event em{ color: var(--muted); font-size: .6rem; font-style: normal; white-space: nowrap; }
 .manager-market-ranking article{ display: grid; grid-template-columns: 26px minmax(0,1fr) 34px; gap: 8px; align-items: center; padding: 7px 8px; border-bottom: 1px solid var(--line); }
 .manager-market-ranking article > b{ color: var(--muted); }
-.manager-market-ranking article > span{ text-align: right; font-weight: 800; color: var(--primary); }
+.manager-market-ranking article > span{ text-align: right; font-weight: 700; color: var(--primary); }
 .manager-market-ranking strong, .manager-market-ranking small{ display:block; }
 .manager-market-ranking small{ color: var(--muted); font-size: .65rem; }
 
@@ -32400,7 +32400,7 @@ button.world-digest-item{ cursor:pointer; }
 .manager-passport-stint-head small, .manager-passport-stint-head em{ color: var(--muted); font-size: .56rem; font-style: normal; }
 .manager-passport-stint-head strong{ overflow: hidden; font-size: .8rem; text-overflow: ellipsis; white-space: nowrap; }
 .manager-passport-country-mark{ display: grid; place-items: center; width: 35px; height: 35px; border-radius: 0; background: transparent; font-size: 1.25rem; }
-.manager-passport-active{ align-self: start; padding: 4px 6px; border-radius: 999px; color: var(--accent); background: color-mix(in srgb,var(--accent) 12%,transparent); font-size: .52rem; font-weight: 800; }
+.manager-passport-active{ align-self: start; padding: 4px 6px; border-radius: 999px; color: var(--accent); background: color-mix(in srgb,var(--accent) 12%,transparent); font-size: .52rem; font-weight: 700; }
 .manager-passport-stats{ display: grid; grid-template-columns: repeat(5,minmax(0,1fr)); gap: 5px; }
 .manager-passport-stats span{ display: grid; gap: 2px; padding: 6px 2px; text-align: center; border-radius: 9px; background: var(--panel); }
 .manager-passport-stats small{ color: var(--muted); font-size: .48rem; }
@@ -34965,14 +34965,14 @@ html[data-reduced-motion="true"] .match-screen #liveFinishTab.is-finalizing > .f
 }
 .percentage-ring strong > b{
   font:inherit;
-  font-weight:800;
+  font-weight:700;
 }
 .percentage-ring strong > small{
   margin-top:.08em;
   font-size:.47em;
   line-height:1;
   letter-spacing:0;
-  font-weight:800;
+  font-weight:700;
   color:inherit;
   opacity:.86;
 }
@@ -37414,7 +37414,7 @@ html.developer-mode-enabled body{ cursor: default; }
 }
 .dev-inspector-tabs button{
   min-width:0; padding:8px 5px; border:0; border-radius:9px; background:transparent;
-  color:var(--muted); font:inherit; font-size:.67rem; font-weight:800;
+  color:var(--muted); font:inherit; font-size:.67rem; font-weight:700;
 }
 .dev-inspector-tabs button.is-active{ background:var(--primary); color:var(--on-primary); }
 .dev-inspector-pane{ display:grid; gap:6px; min-width:0; }
@@ -37426,7 +37426,7 @@ html.developer-mode-enabled body{ cursor: default; }
 .dev-inspector-row > strong, .dev-inspector-row > code{ min-width:0; overflow-wrap:anywhere; font-size:.68rem; line-height:1.35; }
 .dev-inspector-row > code{ color:var(--text); }
 .dev-inspector-link{ display:grid; gap:6px; padding:9px; border:1px dashed var(--line); border-radius:10px; }
-.dev-inspector-link > span{ color:var(--muted); font-size:.62rem; font-weight:800; text-transform:uppercase; }
+.dev-inspector-link > span{ color:var(--muted); font-size:.62rem; font-weight:700; text-transform:uppercase; }
 .dev-inspector-link code{ max-height:68px; overflow:auto; overflow-wrap:anywhere; font-size:.61rem; line-height:1.4; }
 .dev-inspector-nav{ display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:7px; }
 .dev-inspector-actions{ display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:7px; }
@@ -37445,7 +37445,7 @@ html.developer-mode-enabled body{ cursor: default; }
 .dev-inspector-collector-actions{ display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:7px; }
 .dev-inspector-collector-empty{ margin:0; color:var(--muted); font-size:.61rem; line-height:1.45; }
 .dev-inspector-saved{ min-width:0; border-top:1px solid var(--line); padding-top:8px; }
-.dev-inspector-saved > summary{ cursor:pointer; color:var(--text); font-size:.64rem; font-weight:800; }
+.dev-inspector-saved > summary{ cursor:pointer; color:var(--text); font-size:.64rem; font-weight:700; }
 .dev-inspector-saved-list{ display:grid; gap:6px; max-height:210px; overflow:auto; margin:8px 0; }
 .dev-inspector-saved-issue{
   display:grid; grid-template-columns:minmax(0,1fr) auto; align-items:center; gap:8px; padding:8px; border:1px solid var(--line); border-radius:10px; background:var(--panel);
@@ -37457,7 +37457,7 @@ html.developer-mode-enabled body{ cursor: default; }
 .dev-inspector-saved-issue code{ color:var(--muted); font-size:.53rem; }
 .dev-inspector-saved-issue .icon-button{ width:34px; min-width:34px; height:34px; min-height:34px; padding:0; }
 .dev-inspector-privacy{ border-top:1px solid var(--line); padding-top:9px; color:var(--muted); font-size:.64rem; }
-.dev-inspector-privacy summary{ cursor:pointer; color:var(--text); font-weight:800; }
+.dev-inspector-privacy summary{ cursor:pointer; color:var(--text); font-weight:700; }
 .dev-inspector-privacy p{ margin:7px 0 0; line-height:1.5; }
 
 /* V451 · acesso por PIN, fila primeiro e restauração da minimização. */
@@ -37550,7 +37550,7 @@ html.developer-mode-enabled body{ cursor: default; }
 .dev-access-gate > p{ margin:0; color:var(--muted); font-size:.72rem; line-height:1.5; }
 .dev-access-gate form{ display:grid; gap:10px; }
 .dev-access-gate label{ display:grid; gap:6px; }
-.dev-access-gate label > span{ color:var(--text); font-size:.68rem; font-weight:800; }
+.dev-access-gate label > span{ color:var(--text); font-size:.68rem; font-weight:700; }
 .dev-access-gate input{ width:100%; }
 .dev-access-hint{ color:var(--muted); font-size:.6rem; line-height:1.45; }
 .developer-mode-capabilities{ display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:7px; margin:10px 0; }
@@ -39064,7 +39064,7 @@ html[data-theme="light"] .market-command-hero.team-tone[style*="--team-gradient-
 .dev-inspector-public-selection small{
   color:var(--muted);
   font-size:.56rem;
-  font-weight:800;
+  font-weight:700;
   letter-spacing:.06em;
   text-transform:uppercase;
 }
@@ -40111,7 +40111,7 @@ body:has(.app-modal-overlay .matchday-cinematic) .toast-stack{
 .install-game-hero{ display:grid; grid-template-columns:58px minmax(0,1fr); gap:14px; align-items:center; padding:16px; border:1px solid var(--line); border-radius:18px; background:linear-gradient(135deg,color-mix(in srgb,var(--play-cta-bg,#167a4d) 12%,var(--panel)),var(--panel)); }
 .install-game-mark{ display:grid; place-items:center; width:58px; height:58px; border-radius:18px; background:var(--play-cta-bg,#167a4d); color:var(--play-cta-text,#fff); font-size:1.45rem; overflow:hidden; }
 .install-game-mark svg{ width:34px; height:34px; }
-.install-game-hero small{ color:var(--muted); font-weight:800; text-transform:uppercase; letter-spacing:.08em; }
+.install-game-hero small{ color:var(--muted); font-weight:700; text-transform:uppercase; letter-spacing:.08em; }
 .install-game-hero h3{ margin:2px 0 4px; font-size:1.08rem; }
 .install-game-hero p{ margin:0; color:var(--muted); line-height:1.5; font-size:.78rem; }
 .install-game-benefits{ display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:10px; }
@@ -40139,7 +40139,7 @@ body:has(.app-modal-overlay .matchday-cinematic) .toast-stack{
 
 /* V508 · presença do suporte e novas mensagens sem interromper a leitura */
 .developer-feedback-heading-status{display:flex;align-items:flex-end;gap:8px;flex-direction:column}
-.developer-feedback-presence{display:inline-flex;align-items:center;gap:6px;font-size:.78rem;font-weight:800;color:var(--muted)}
+.developer-feedback-presence{display:inline-flex;align-items:center;gap:6px;font-size:.78rem;font-weight:700;color:var(--muted)}
 .developer-feedback-presence i{width:8px;height:8px;border-radius:999px;background:currentColor;box-shadow:0 0 0 3px color-mix(in srgb,currentColor 15%,transparent)}
 .developer-feedback-presence.is-online{color:#2fbf71}
 .developer-feedback-presence.is-offline{color:var(--muted)}
@@ -40195,7 +40195,7 @@ body:has(.app-modal-overlay .matchday-cinematic) .toast-stack{
 }
 .setup-team-competitions > header { display:flex; align-items:end; justify-content:space-between; gap:10px; }
 .setup-team-competitions > header > div { display:grid; gap:1px; min-width:0; }
-.setup-team-competitions > header small { color:var(--primary); font-size:.56rem; font-weight:800; letter-spacing:.1em; }
+.setup-team-competitions > header small { color:var(--primary); font-size:.56rem; font-weight:700; letter-spacing:.1em; }
 .setup-team-competitions > header strong { font-size:.78rem; }
 .setup-team-competitions > header > span { color:var(--muted); font-size:.58rem; white-space:nowrap; }
 .setup-team-competition-list { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:7px; }
@@ -40204,7 +40204,7 @@ body:has(.app-modal-overlay .matchday-cinematic) .toast-stack{
   padding:8px; border:1px solid var(--line); border-radius:12px; background:var(--panel);
 }
 .setup-competition-chip > span:last-child { display:grid; min-width:0; gap:1px; }
-.setup-competition-chip small { font-size:.49rem; font-weight:800; letter-spacing:.055em; }
+.setup-competition-chip small { font-size:.49rem; font-weight:700; letter-spacing:.055em; }
 .setup-competition-chip strong { overflow:hidden; text-overflow:ellipsis; white-space:nowrap; font-size:.67rem; }
 .setup-competition-chip em { color:var(--muted); font-size:.56rem; font-style:normal; line-height:1.25; }
 .setup-competition-chip.is-confirmed { border-color:color-mix(in srgb,var(--success,#32d17d) 48%,var(--line)); background:color-mix(in srgb,var(--success,#32d17d) 8%,var(--panel)); }
@@ -41477,7 +41477,7 @@ html[data-theme="light"] .public-page-wiki-v519 .internal-page-footer{
   min-height:48px;
   border-radius:13px;
   font-size:.75rem;
-  font-weight:800;
+  font-weight:700;
   overflow-wrap:anywhere;
 }
 .landing-v99.is-start-screen .setup-selected-team-start[disabled]{
@@ -41514,7 +41514,7 @@ html[data-theme="light"] .public-page-wiki-v519 .internal-page-footer{
   filter:none !important;
 }
 .setup-manager-modal-team > div{min-width:0;display:grid;gap:2px;}
-.setup-manager-modal-team small{color:var(--muted);font-size:.58rem;font-weight:800;letter-spacing:.05em;}
+.setup-manager-modal-team small{color:var(--muted);font-size:.58rem;font-weight:700;letter-spacing:.05em;}
 .setup-manager-modal-team strong{min-width:0;font-size:.95rem;overflow-wrap:anywhere;}
 .setup-manager-modal-team span{min-width:0;color:var(--muted);font-size:.68rem;overflow-wrap:anywhere;}
 .setup-manager-modal-name{display:grid;gap:6px;font-size:.7rem;font-weight:750;}
@@ -41708,4 +41708,79 @@ html[data-theme="light"] .matchday-cinematic.team-dual-tone > .kicker{
 }
 .career-offer-row > button[data-open-international-offers] > :is(.fa-solid,.fa-regular,svg){
   flex:0 0 auto;
+}
+
+
+/* ==========================================================
+   V543 · taças sem recorte, premiações em destaque e tipografia equilibrada
+   ========================================================== */
+/* Toda imagem oficial de taça deve caber inteira no espaço disponível,
+   independentemente da proporção original. Nunca cortar para forçar 1:1. */
+:is(.competition-trophy-mark,.setup-competition-trophy,.match-header-trophy,.competition-end-trophy,.celebration-competition-trophy){
+  box-sizing:border-box;
+}
+:is(.competition-trophy-mark,.setup-competition-trophy,.match-header-trophy,.competition-end-trophy,.celebration-competition-trophy) > img{
+  display:block !important;
+  width:100% !important;
+  height:100% !important;
+  min-width:0 !important;
+  min-height:0 !important;
+  max-width:100% !important;
+  max-height:100% !important;
+  object-fit:contain !important;
+  object-position:center !important;
+  aspect-ratio:auto !important;
+  border:0 !important;
+  border-radius:0 !important;
+  background:transparent !important;
+  box-shadow:none !important;
+}
+.match-header-trophy{overflow:visible !important;}
+.match-header-trophy > img{filter:drop-shadow(0 2px 3px rgba(0,0,0,.24));}
+
+/* Encerramento de competição: escudo e taça são identidades independentes.
+   A taça deixa de ser um selo sobreposto ao escudo e ganha destaque próprio. */
+.competition-end-emblems{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  min-width:0;
+}
+.competition-end-trophy{
+  position:static !important;
+  inset:auto !important;
+  width:72px;
+  height:72px;
+  padding:0;
+  border:0;
+  border-radius:0;
+  background:transparent;
+  box-shadow:none;
+  overflow:visible;
+  z-index:auto;
+}
+.competition-end-trophy > img{filter:drop-shadow(0 6px 10px rgba(0,0,0,.24));}
+
+/* Conquista/vice/pódio: a taça oficial fica no mesmo nível visual do escudo,
+   sem placa, fundo ou borda. Sem trophyWebp, nenhum espaço é criado. */
+.celebration-emblems{align-items:center;gap:18px;}
+.celebration-competition-trophy{
+  width:84px;
+  height:92px;
+  padding:0;
+  border:0;
+  border-radius:0;
+  background:transparent;
+  box-shadow:none;
+  overflow:visible;
+}
+.celebration-competition-trophy > img{filter:drop-shadow(0 7px 11px rgba(0,0,0,.30));}
+@media(max-width:520px){
+  .competition-end-emblems{gap:8px;}
+  .competition-end-emblem{width:54px;height:54px;}
+  .competition-end-emblem .crest{max-width:42px;max-height:42px;}
+  .competition-end-trophy{width:54px;height:58px;}
+  .celebration-emblems{gap:14px;}
+  .celebration-competition-trophy{width:72px;height:80px;}
 }

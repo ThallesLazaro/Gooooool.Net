@@ -42504,6 +42504,48 @@ html[data-theme="light"] .live-event-summary.is-neutral{box-shadow:none}
 html[data-theme="light"] .live-event-summary.is-goal{background:color-mix(in srgb,var(--success) 7%,#fff)}
 html[data-theme="light"] .live-event-summary-icon{background:#fff;border-color:#dfe5ec}
 
+/* V554 · a semântica dos eventos é independente da identidade cromática do clube.
+   O clube continua aparecendo pelo escudo e pela barra lateral; gol/cartões/trocas/VAR
+   nunca herdam verde, azul, vermelho etc. do time comandado. */
+.live-events-pane{
+  --live-event-goal:#27b36a;
+  --live-event-yellow:#f2c94c;
+  --live-event-red:#e24d5b;
+  --live-event-sub:#4f8cff;
+  --live-event-injury:#f08a3c;
+  --live-event-var:#9b6cff;
+  --live-event-shootout:#19a6b8;
+  scroll-padding-top:52px;
+}
+.live-event-summary{scroll-margin-top:52px}
+.live-event-summary.has-team-context{box-shadow:inset 3px 0 0 var(--team-primary,var(--line))}
+.live-event-summary.is-goal{background:color-mix(in srgb,var(--live-event-goal) 9%,var(--panel-2))}
+.live-event-summary.is-goal .live-event-summary-icon{color:var(--live-event-goal)!important;border-color:color-mix(in srgb,var(--live-event-goal) 36%,var(--line))!important;background:color-mix(in srgb,var(--live-event-goal) 11%,var(--panel))!important}
+.live-event-summary.is-yellow .live-event-summary-icon{color:var(--live-event-yellow)!important;border-color:color-mix(in srgb,var(--live-event-yellow) 52%,var(--line))!important;background:color-mix(in srgb,var(--live-event-yellow) 12%,var(--panel))!important}
+.live-event-summary.is-red .live-event-summary-icon,.live-event-summary.is-penalty-miss .live-event-summary-icon{color:var(--live-event-red)!important;border-color:color-mix(in srgb,var(--live-event-red) 42%,var(--line))!important;background:color-mix(in srgb,var(--live-event-red) 11%,var(--panel))!important}
+.live-event-summary.is-substitution .live-event-summary-icon{color:var(--live-event-sub)!important;border-color:color-mix(in srgb,var(--live-event-sub) 40%,var(--line))!important;background:color-mix(in srgb,var(--live-event-sub) 10%,var(--panel))!important}
+.live-event-summary.is-injury .live-event-summary-icon{color:var(--live-event-injury)!important;border-color:color-mix(in srgb,var(--live-event-injury) 42%,var(--line))!important;background:color-mix(in srgb,var(--live-event-injury) 10%,var(--panel))!important}
+.live-event-summary.is-var-decision .live-event-summary-icon{color:var(--live-event-var)!important;border-color:color-mix(in srgb,var(--live-event-var) 40%,var(--line))!important;background:color-mix(in srgb,var(--live-event-var) 10%,var(--panel))!important}
+.live-event-summary.is-shootout .live-event-summary-icon{color:var(--live-event-shootout)!important;border-color:color-mix(in srgb,var(--live-event-shootout) 40%,var(--line))!important;background:color-mix(in srgb,var(--live-event-shootout) 10%,var(--panel))!important}
+.live-event-summary.is-yellow .live-event-summary-icon .fa-solid{color:var(--live-event-yellow)!important}
+.live-event-summary.is-goal .live-event-summary-icon .fa-solid{color:var(--live-event-goal)!important}
+.live-event-summary.is-red .live-event-summary-icon .fa-solid,.live-event-summary.is-penalty-miss .live-event-summary-icon .fa-solid{color:var(--live-event-red)!important}
+.live-event-summary.is-substitution .live-event-summary-icon .fa-solid{color:var(--live-event-sub)!important}
+.live-event-summary.is-injury .live-event-summary-icon .fa-solid{color:var(--live-event-injury)!important}
+.live-event-summary.is-var-decision .live-event-summary-icon .fa-solid{color:var(--live-event-var)!important}
+.live-event-summary.is-shootout .live-event-summary-icon .fa-solid{color:var(--live-event-shootout)!important}
+html[data-theme="light"] .live-events-pane{
+  --live-event-goal:#087d45;
+  --live-event-yellow:#9a6800;
+  --live-event-red:#b4233c;
+  --live-event-sub:#245fc2;
+  --live-event-injury:#a54f12;
+  --live-event-var:#6941c6;
+  --live-event-shootout:#087989;
+}
+html[data-theme="light"] .live-event-summary.has-team-context{box-shadow:inset 3px 0 0 var(--team-surface-accent-light,var(--team-primary,#667085))}
+html[data-theme="light"] .live-event-summary.is-goal{background:color-mix(in srgb,var(--live-event-goal) 7%,#fff)}
+
 @media(max-width:380px){
   .live-event-summary{grid-template-columns:31px 24px minmax(0,1fr) auto;gap:5px;padding-inline:5px}
   .live-event-summary-team{display:none}
@@ -42511,4 +42553,43 @@ html[data-theme="light"] .live-event-summary-icon{background:#fff;border-color:#
   .live-goal-authors{gap:3px;padding-inline:1px}
   .live-goal-authors span{padding-inline:3px}
   .live-goal-authors span b{font-size:.48rem}
+}
+
+/* V554 · acabamento da aba Eventos: até os ícones estruturais usam uma
+   paleta própria, nunca a cor do clube. O cabeçalho sticky ocupa ~44px;
+   54px de scroll-padding/margin mantém o alvo inteiro abaixo dele. */
+.live-events-pane{
+  --live-events-ui-accent:#7aa7ff;
+  scroll-padding-top:54px !important;
+}
+.live-events-pane .live-event-summary{scroll-margin-top:54px !important}
+.live-events-head strong .fa-solid,
+.live-events-empty .fa-solid,
+.match-screen .live-info-tabs > button[data-live-tab="events"] > .fa-solid{
+  color:var(--live-events-ui-accent) !important;
+}
+@media(hover:hover) and (pointer:fine){
+  .live-event-summary.is-clickable:hover{
+    border-color:color-mix(in srgb,var(--text) 18%,var(--line)) !important;
+  }
+}
+html[data-theme="light"] .live-events-pane{--live-events-ui-accent:#245fc2}
+
+/* V554 · estados interativos também permanecem semânticos/neutros. */
+.live-event-summary.is-clickable:focus-visible{outline-color:var(--live-events-ui-accent) !important}
+.live-event-summary.is-yellow{background:color-mix(in srgb,var(--live-event-yellow) 5%,var(--panel-2))}
+.live-event-summary.is-red,.live-event-summary.is-penalty-miss{background:color-mix(in srgb,var(--live-event-red) 6%,var(--panel-2))}
+.live-event-summary.is-substitution{background:color-mix(in srgb,var(--live-event-sub) 5%,var(--panel-2))}
+.live-event-summary.is-injury{background:color-mix(in srgb,var(--live-event-injury) 5%,var(--panel-2))}
+.live-event-summary.is-var-decision{background:color-mix(in srgb,var(--live-event-var) 5%,var(--panel-2))}
+.live-event-summary.is-shootout{background:color-mix(in srgb,var(--live-event-shootout) 5%,var(--panel-2))}
+@media(hover:hover) and (pointer:fine){
+  .live-event-summary.is-clickable:hover{background:color-mix(in srgb,var(--text) 4%,var(--panel-2)) !important}
+  .live-event-summary.is-goal.is-clickable:hover{background:color-mix(in srgb,var(--live-event-goal) 12%,var(--panel-2)) !important}
+  .live-event-summary.is-yellow.is-clickable:hover{background:color-mix(in srgb,var(--live-event-yellow) 9%,var(--panel-2)) !important}
+  .live-event-summary.is-red.is-clickable:hover,.live-event-summary.is-penalty-miss.is-clickable:hover{background:color-mix(in srgb,var(--live-event-red) 10%,var(--panel-2)) !important}
+  .live-event-summary.is-substitution.is-clickable:hover{background:color-mix(in srgb,var(--live-event-sub) 9%,var(--panel-2)) !important}
+  .live-event-summary.is-injury.is-clickable:hover{background:color-mix(in srgb,var(--live-event-injury) 9%,var(--panel-2)) !important}
+  .live-event-summary.is-var-decision.is-clickable:hover{background:color-mix(in srgb,var(--live-event-var) 9%,var(--panel-2)) !important}
+  .live-event-summary.is-shootout.is-clickable:hover{background:color-mix(in srgb,var(--live-event-shootout) 9%,var(--panel-2)) !important}
 }

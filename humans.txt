@@ -5,7 +5,7 @@ Tipo: jogo independente de gerenciamento de futebol
 Plataforma: navegador e aplicativo instalável (PWA)
 Idioma principal: português do Brasil
 Experiência visual: jogo principal mobile; Editor e Estatísticas possuem layout responsivo para PC e celular
-Versão documentada: V544 · save schema 178 · banco revisão 1050 / modelo 7
+Versão documentada: V547 · save schema 178 · banco revisão 1050 / modelo 7
 
 /* CRIAÇÃO */
 Criador, desenvolvedor e responsável pelo projeto: Thalles Lázaro
@@ -46,12 +46,12 @@ Política de Privacidade: https://goooool.net/privacidade.html
 Termos de Uso: https://goooool.net/termos.html
 
 /* ATUALIZAÇÃO */
-Última revisão deste arquivo: 18 de setembro de 2026
+Última revisão deste arquivo: 20 de setembro de 2026
 
 Livro: https://sobre.goooool.net/
 
-Arquitetura V544: goooool.net publica somente o cliente estático; db.goooool.net hospeda Editor, Estatísticas, Biblioteca, PHP e persistência de servidor. O banco aprovado é exportado e publicado manualmente no cliente estático.
+Arquitetura V547: goooool.net publica somente o cliente estático; db.goooool.net hospeda Editor, Estatísticas, Biblioteca, PHP e persistência de servidor. O banco aprovado é exportado e publicado manualmente no cliente estático.
 
-- Banco público V544: manifesto + núcleo + fragmentos JSON válidos, alvo 18 MB e limite rígido 20 MB, com SHA-256 e cache offline.
+- Banco público V547: manifesto + núcleo + fragmentos JSON válidos, alvo 18 MB e limite rígido 20 MB, com SHA-256 e cache offline.
 
-Documentação pública V544: Guia, Atualizações, Sobre, Privacidade, Termos, Wiki e 12 capítulos são HTMLs estáticos indexáveis na raiz de goooool.net.
+Documentação pública V547: Guia, Atualizações, Sobre, Privacidade, Termos, Wiki e 12 capítulos são HTMLs estáticos indexáveis na raiz de goooool.net.

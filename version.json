@@ -6,23 +6,24 @@
   "name": "Goooool",
   "domain": "goooool.net",
   "url": "https://goooool.net/",
-  "version": 545,
-  "assetVersion": "545",
-  "cacheName": "goooool-offline-v545",
-  "releasedAt": "2026-09-19T14:25:00-03:00",
+  "version": 547,
+  "assetVersion": "547",
+  "cacheName": "goooool-offline-v547",
+  "releasedAt": "2026-09-20T13:45:00-03:00",
   "author": "Thalles Lázaro",
-  "releaseTitle": "Atualização V545 — experiência em telas grandes refinada",
-  "releaseSummary": "Refina exclusivamente a camada telas-grandes.css para aproveitar melhor PCs e monitores sem alterar o CSS mobile, a Home inicial ou a lógica do jogo.",
+  "releaseTitle": "Atualização V547 — criação de clube com IA e elencos organizados",
+  "releaseSummary": "Adiciona criação segura de clube por JSON gerado em qualquer IA, com validação e prévia locais, e padroniza a ordem futebolística dos elencos.",
   "releaseHighlights": [
-    "O botão Pós-jogo volta a exibir corretamente seu texto dinâmico no desktop, incluindo estados como Aguardando e Finalizando, sem recriar o rótulo por CSS.",
-    "Ao Vivo, Pós-jogo, Central do Técnico, Football Center, Dia de jogo, Copa do Mundo, mercado, competições e telas internas passam a aproveitar melhor larguras a partir de 960 px.",
-    "A camada desktop passa a distinguir desktop compacto, confortável e monitores largos, além de preservar uma adaptação própria para notebooks com pouca altura.",
-    "Rótulos e informações ocultados no mobile voltam a aparecer em telas grandes quando há espaço, evitando interfaces compostas apenas por ícones.",
-    "A Home inicial/sem save continua totalmente fora de telas-grandes.css; styles.css, JavaScript, banco oficial 1050 / modelo 7 e save schema 178 permanecem inalterados.",
-    "Os pacotes sobre.goooool.net-V544.zip e jogue.goooool.net-V544.zip permanecem idênticos porque os sites não foram alterados nesta etapa."
+    "A abertura ganha Criar clube com IA: o jogo monta um prompt, o jogador usa a IA que preferir e cola o JSON de volta, sem API nem dependência de fornecedor.",
+    "O importador aceita somente add de um clube personalizado e seus jogadores; update/delete e alterações de entidades oficiais são rejeitados.",
+    "O JSON é validado, pré-visualizado e revalidado contra a revisão atual do banco antes da criação da carreira; o clube final recebe identidade própria dentro do save.",
+    "Jogadores importados passam pelo normalizador existente do motor e o elenco é completado automaticamente até o mínimo seguro quando necessário.",
+    "Antes de escolher o clube, “Ver elenco” mostra o plantel cadastrado por setores sem criar save; se não houver jogadores oficiais/personalizados, o jogo informa que o elenco será gerado no início da carreira.",
+    "Listas que representam elencos completos passam a usar ordem futebolística por posição: goleiros, defesa, meio-campo e ataque, preservando variações por setor.",
+    "Guia, Primeiros passos, Comunidade e dados, Atualizações, jogue.goooool.net e sobre.goooool.net documentam o novo fluxo de criação com IA."
   ],
   "releaseNotes": [
-    "APP V545 e cache goooool-offline-v545; save schema 178; banco oficial permanece na revisão 1050 / modelo 7."
+    "APP V547 e cache goooool-offline-v547; save schema 178; banco oficial permanece na revisão 1050 / modelo 7."
   ],
   "backendUrl": "https://db.goooool.net",
   "editorUrl": "https://db.goooool.net/editor",

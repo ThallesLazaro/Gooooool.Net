@@ -1,6 +1,6 @@
 # Goooool.net
 
-Versão documentada: V544
+Versão documentada: V547
 Produto: Goooool.net
 Criador e desenvolvedor: Thalles Lázaro
 URL principal: https://goooool.net/
@@ -16,10 +16,10 @@ Goooool.net é um jogo independente de gerenciamento de futebol para navegador, 
 
 ## Estado técnico atual
 
-- Aplicativo: V544.
+- Aplicativo: V547.
 - Estrutura do save: 178.
 - Banco oficial: revisão 1050 / modelo 7.
-- Interface exclusivamente mobile; telas grandes preservam a mesma geometria e os mesmos controles do celular, sem layout desktop alternativo.
+- Interface mobile-first; telas grandes usam uma camada CSS separada (`telas-grandes.css`) somente nas telas internas com carreira carregada, sem alterar o CSS mobile nem a Home inicial.
 - Sempre que nenhuma carreira está aberta, a Home usa um fluxo compacto: modo, clube, card do clube, técnico em modal e começar; busca de clube fica visível e filtros secundários ficam em Mais filtros.
 - Guia, Atualizações, Sobre, Privacidade, Termos e a Wiki são páginas HTML estáticas independentes e indexáveis na raiz de goooool.net; o jogo apenas aponta para elas em nova aba.
 - Saves locais ao navegador, com exportação e importação.
@@ -92,6 +92,6 @@ O jogo pode coletar diagnóstico técnico sanitizado quando habilitado. Relatór
 
 Para saber o que mudou em uma versão específica, use [**Novidades e versões**](https://goooool.net/atualizacoes.html). Este arquivo descreve somente o estado atual e não deve ser usado como histórico de releases.
 
-Arquitetura V544: goooool.net publica somente o cliente estático; db.goooool.net hospeda Editor, Estatísticas, Biblioteca, PHP e persistência de servidor. O banco aprovado é exportado e publicado manualmente no cliente estático.
+Arquitetura V547: goooool.net publica somente o cliente estático; db.goooool.net hospeda Editor, Estatísticas, Biblioteca, PHP e persistência de servidor. O banco aprovado é exportado e publicado manualmente no cliente estático.
 
-- Banco público V544: manifesto + núcleo + fragmentos JSON válidos, alvo 18 MB e limite rígido 20 MB, com SHA-256 e cache offline.
+- Banco público V547: manifesto + núcleo + fragmentos JSON válidos, alvo 18 MB e limite rígido 20 MB, com SHA-256 e cache offline.

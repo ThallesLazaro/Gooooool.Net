@@ -1,6 +1,6 @@
 # Goooool.net
 
-Versão documentada: V550
+Versão documentada: V551
 Produto: Goooool.net
 Criador e desenvolvedor: Thalles Lázaro
 URL principal: https://goooool.net/
@@ -16,7 +16,7 @@ Goooool.net é um jogo independente de gerenciamento de futebol para navegador, 
 
 ## Estado técnico atual
 
-- Aplicativo: V550.
+- Aplicativo: V551.
 - Estrutura do save: 178.
 - Banco oficial: revisão 1050 / modelo 7.
 - Interface mobile-first; telas grandes usam uma camada CSS separada (`telas-grandes.css`) somente nas telas internas com carreira carregada, sem alterar o CSS mobile nem a Home inicial.
@@ -26,6 +26,8 @@ Goooool.net é um jogo independente de gerenciamento de futebol para navegador, 
 - Escudos e taças oficiais acompanham a revisão mais recente por ID também em saves existentes, sem reescrever elenco, atributos, contratos, transferências ou história esportiva; uma imagem personalizada no save tem prioridade.
 - Jogadores gerados automaticamente usam pools de nome e sobrenome por nacionalidade (77 países), com fallback regional/global para dados desconhecidos e compatibilidade com bancos antigos.
 - Nos prompts assistidos por IA, `name` representa o nome real/completo ou profissional oficial; `shirtName` representa o nome futebolístico/popular reconhecido pelos torcedores. Não se inventa apelido e os campos podem coincidir quando essa for a forma pública legítima.
+- Acesso e rebaixamento usam a mesma regra efetiva na tabela, regulamento e virada da temporada; só há movimento quando existe uma divisão de destino conectada. Mudanças reais do clube controlado ficam disponíveis em notificação e o Técnico automático não é interrompido por popup.
+- Os efeitos WAV do jogo são nivelados por loudness perceptivo em torno de -16 LUFS, preservando formato e margem contra clipping; efeitos ultracurtos usam RMS equivalente.
 - Em contextos visuais, países usam o escudo oficial da seleção antes do nome quando disponível; sem imagem oficial, aparece só o texto. Escudos não recebem sombras ou halos.
 - PWA com cache offline dos recursos já instalados e instalação guiada: quando o navegador oferece o prompt nativo ele é acionado por gesto do jogador; no iPhone/iPad a interface ensina o caminho pelo Safari.
 - Pacote normal para desenvolvimento e pacote protegido para publicação.
@@ -93,6 +95,6 @@ O jogo pode coletar diagnóstico técnico sanitizado quando habilitado. Relatór
 
 Para saber o que mudou em uma versão específica, use [**Novidades e versões**](https://goooool.net/atualizacoes.html). Este arquivo descreve somente o estado atual e não deve ser usado como histórico de releases.
 
-Arquitetura V550: goooool.net publica somente o cliente estático; db.goooool.net hospeda Editor, Estatísticas, Biblioteca, PHP e persistência de servidor. O banco aprovado é exportado e publicado manualmente no cliente estático.
+Arquitetura V551: goooool.net publica somente o cliente estático; db.goooool.net hospeda Editor, Estatísticas, Biblioteca, PHP e persistência de servidor. O banco aprovado é exportado e publicado manualmente no cliente estático.
 
-- Banco público V550: manifesto + núcleo + fragmentos JSON válidos, alvo 18 MB e limite rígido 20 MB, com SHA-256 e cache offline.
+- Banco público V551: manifesto + núcleo + fragmentos JSON válidos, alvo 18 MB e limite rígido 20 MB, com SHA-256 e cache offline.

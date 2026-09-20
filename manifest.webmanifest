@@ -16,67 +16,67 @@
   "lang": "pt-BR",
   "icons": [
     {
-      "src": "icon-72.png?v=550",
+      "src": "icon-72.png?v=551",
       "sizes": "72x72",
       "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "icon-96.png?v=550",
+      "src": "icon-96.png?v=551",
       "sizes": "96x96",
       "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "icon-128.png?v=550",
+      "src": "icon-128.png?v=551",
       "sizes": "128x128",
       "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "icon-144.png?v=550",
+      "src": "icon-144.png?v=551",
       "sizes": "144x144",
       "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "icon-152.png?v=550",
+      "src": "icon-152.png?v=551",
       "sizes": "152x152",
       "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "icon-192.png?v=550",
+      "src": "icon-192.png?v=551",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "icon-384.png?v=550",
+      "src": "icon-384.png?v=551",
       "sizes": "384x384",
       "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "icon-512.png?v=550",
+      "src": "icon-512.png?v=551",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "icon-1024.png?v=550",
+      "src": "icon-1024.png?v=551",
       "sizes": "1024x1024",
       "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "maskable-icon-192.png?v=550",
+      "src": "maskable-icon-192.png?v=551",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "maskable"
     },
     {
-      "src": "maskable-icon-512.png?v=550",
+      "src": "maskable-icon-512.png?v=551",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "maskable"
@@ -90,7 +90,7 @@
       "url": "./?shortcut=continue#home",
       "icons": [
         {
-          "src": "icon-192.png?v=550",
+          "src": "icon-192.png?v=551",
           "sizes": "192x192"
         }
       ]
@@ -102,7 +102,7 @@
       "url": "./?shortcut=next-match#home",
       "icons": [
         {
-          "src": "icon-192.png?v=550",
+          "src": "icon-192.png?v=551",
           "sizes": "192x192"
         }
       ]
@@ -114,7 +114,7 @@
       "url": "./?shortcut=squad#squad",
       "icons": [
         {
-          "src": "icon-192.png?v=550",
+          "src": "icon-192.png?v=551",
           "sizes": "192x192"
         }
       ]
@@ -126,7 +126,7 @@
       "url": "./?shortcut=market#market",
       "icons": [
         {
-          "src": "icon-192.png?v=550",
+          "src": "icon-192.png?v=551",
           "sizes": "192x192"
         }
       ]

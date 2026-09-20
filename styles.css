@@ -42277,3 +42277,28 @@ textarea{
   .league-movement-route-arrow{margin:auto;transform:rotate(90deg)}
 }
 
+
+/* V552 · nome futebolístico em destaque; nome civil/completo só como dado
+   secundário em contextos que realmente exibem detalhes do atleta. */
+.player-full-name-meta,
+.player-profile-full-name,
+.editor-player-full-name{
+  display: block;
+  margin-top: 2px;
+  color: var(--muted);
+  font-size: .56rem;
+  font-weight: 500;
+  line-height: 1.35;
+  overflow-wrap: anywhere;
+}
+.player-full-name-detail{
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 7px 8px;
+  border-radius: 9px;
+  background: var(--panel-2);
+}
+.player-full-name-detail strong{ font-size: .56rem; }
+.player-full-name-detail span{ min-width: 0; color: var(--muted); font-size: .58rem; text-align: right; overflow-wrap: anywhere; }

@@ -41828,7 +41828,7 @@ html[data-theme="light"] .matchday-cinematic.team-dual-tone > .kicker{
   position:fixed;
   z-index:var(--ui-layer-floating,78);
   right:max(0px,env(safe-area-inset-right));
-  top:clamp(132px,34vh,300px);
+  top:48%;
   display:flex;
   align-items:center;
   flex-direction:row-reverse;
@@ -41936,7 +41936,6 @@ html[data-theme="light"] .matchday-cinematic.team-dual-tone > .kicker{
   box-shadow:none;
 }
 @media(max-width:520px){
-  .automation-global-control{top:clamp(118px,31vh,238px)}
   .automation-global-control.automation-mini-notice{--automation-control-height:50px}
   .automation-global-tab{width:36px;min-width:36px}
   .automation-global-panel{width:min(220px,calc(100vw - 48px));padding:5px 7px 5px 9px}
@@ -42214,3 +42213,67 @@ textarea{
   background:#7c1827!important;
   color:#fff!important;
 }
+
+/* ==========================================================
+   V551 · mudança de divisão: confirmação factual e legível
+   ========================================================== */
+.league-movement-summary{
+  display:grid;
+  gap:14px;
+  padding:16px;
+  border:1px solid color-mix(in srgb,var(--line) 72%,transparent);
+  border-radius:18px;
+  background:linear-gradient(155deg,color-mix(in srgb,var(--panel) 96%,var(--primary) 4%),var(--panel));
+}
+.league-movement-summary.is-promotion{
+  border-color:color-mix(in srgb,#45c887 52%,var(--line));
+}
+.league-movement-summary.is-relegation{
+  border-color:color-mix(in srgb,#e05d6f 56%,var(--line));
+}
+.league-movement-hero{
+  display:grid;
+  grid-template-columns:auto minmax(0,1fr);
+  align-items:center;
+  gap:12px;
+}
+.league-movement-hero h3{margin:2px 0 4px;font-size:1.08rem;line-height:1.15}
+.league-movement-hero p{margin:0;color:var(--muted);font-size:.72rem;line-height:1.45}
+.league-movement-icon{
+  width:52px;
+  height:52px;
+  display:grid;
+  place-items:center;
+  border-radius:16px;
+  font-size:1.2rem;
+  background:color-mix(in srgb,var(--primary) 20%,var(--panel));
+  color:var(--text);
+}
+.league-movement-summary.is-promotion .league-movement-icon{background:rgba(45,154,96,.18);color:#75dfa7}
+.league-movement-summary.is-relegation .league-movement-icon{background:rgba(179,48,66,.2);color:#ff9aa7}
+.league-movement-route{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);
+  gap:8px;
+  align-items:stretch;
+}
+.league-movement-route article{
+  min-width:0;
+  display:grid;
+  align-content:center;
+  gap:3px;
+  padding:10px;
+  border:1px solid var(--line);
+  border-radius:12px;
+  background:color-mix(in srgb,var(--panel-2) 88%,transparent);
+}
+.league-movement-route article small{color:var(--muted);font-size:.54rem;text-transform:uppercase;letter-spacing:.04em}
+.league-movement-route article strong{font-size:.68rem;line-height:1.25;overflow-wrap:anywhere}
+.league-movement-route article span{color:var(--muted);font-size:.58rem}
+.league-movement-route-arrow{align-self:center;display:grid;place-items:center;width:30px;height:30px;border-radius:999px;background:var(--panel-2);color:var(--text)}
+.league-movement-note{margin:0;padding:10px 11px;border-radius:12px;background:rgba(255,255,255,.045);color:var(--muted);font-size:.64rem;line-height:1.45}
+@media(max-width:480px){
+  .league-movement-route{grid-template-columns:1fr}
+  .league-movement-route-arrow{margin:auto;transform:rotate(90deg)}
+}
+

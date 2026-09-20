@@ -42147,3 +42147,40 @@ html[data-theme="light"] .matchday-cinematic.team-dual-tone > .kicker{
   .landing-v99 .team-card-roster-preview{width:42px;min-width:42px;padding-inline:4px;}
   .setup-roster-player{grid-template-columns:32px minmax(0,1fr) 34px;padding:8px;gap:8px;}
 }
+
+
+/* ==========================================================
+   V549 · legibilidade de formulários e componentes dinâmicos
+   ========================================================== */
+
+/* Textareas compartilham uma margem interna mínima. Regras mais específicas
+   continuam livres para ajustar controles compactos quando necessário. */
+textarea{
+  padding:10px 12px;
+  box-sizing:border-box;
+}
+
+/* Dia de jogo: competição/fase/rodada são informação, não decoração truncável.
+   O chip cresce verticalmente e mantém o texto integral em telas estreitas. */
+.matchday-cinematic.team-dual-tone > .kicker{
+  display:flex;
+  width:fit-content;
+  max-width:100%;
+  white-space:normal!important;
+  overflow:visible!important;
+  text-overflow:clip!important;
+  overflow-wrap:anywhere;
+  word-break:normal;
+  line-height:1.35;
+}
+
+/* O tema do clube continua aparecendo na borda, mas a superfície da aba é
+   neutra e escura para o robô branco manter contraste em qualquer paleta. */
+.automation-global-control:not(.is-counting) .automation-global-tab{
+  background:linear-gradient(160deg,#213028,#101713);
+}
+.automation-global-control .automation-global-tab .fa-robot{
+  color:#fff!important;
+  -webkit-text-fill-color:#fff!important;
+  filter:drop-shadow(0 1px 1px rgba(0,0,0,.48));
+}

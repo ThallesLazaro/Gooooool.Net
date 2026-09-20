@@ -1,6 +1,6 @@
 # Goooool.net — referência completa do estado atual
 
-Versão documentada: V548 · 20 de setembro de 2026
+Versão documentada: V549 · 20 de setembro de 2026
 Criador e desenvolvedor: Thalles Lázaro
 Site principal: [Goooool.net](https://goooool.net/)
 Apresentação: [jogue.goooool.net](https://jogue.goooool.net/)
@@ -17,9 +17,10 @@ A experiência é PWA, pode ser instalada e mantém recursos já armazenados dis
 
 ## 2. Estado técnico
 
-Aplicativo V548. Save schema 178. Banco oficial revisão 1050 / modelo 7. A versão do aplicativo, a estrutura do save e a revisão do banco são conceitos separados.
+Aplicativo V549. Save schema 178. Banco oficial revisão 1050 / modelo 7. A versão do aplicativo, a estrutura do save e a revisão do banco são conceitos separados.
 A Home sem save prioriza modo, clube, competições, nome do técnico e início da carreira. Escudo oficial da seleção + país não quebra entre imagem e nome e wrappers de escudo não criam fundo ou sombra.
 Países exibem o escudo oficial da seleção antes do nome em contextos visuais quando esse WebP existir; sem imagem oficial, o texto não reserva espaço. Escudos oficiais ou gerados são apresentados sem sombras.
+Prompts que geram ou atualizam jogadores usam uma identidade em dois níveis: `name` guarda o nome real/completo ou profissional oficial, enquanto `shirtName` guarda a forma futebolística/popular reconhecida pelos torcedores. A regra respeita padrões culturais, não inventa apelidos e não exige que os dois campos sejam diferentes.
 
 Uma atualização da interface não deve alterar o banco esportivo nem o schema do save sem necessidade. Saves recuperáveis devem ser normalizados sempre que possível, mantendo compatibilidade com carreiras existentes.
 
@@ -163,6 +164,6 @@ A interface é exclusivamente mobile. Telas grandes preservam a mesma organizaç
 
 Sem uma carreira carregada, a Home inicial permanece em uma coluna nas telas menores e se organiza em duas áreas nas telas grandes. A área principal concentra carreiras recentes, modos de jogo e criação; a área de apoio concentra Guia, importação, páginas públicas, comunidade e links institucionais. O mesmo DOM e os mesmos eventos do mobile são reutilizados.
 
-Arquitetura V548: goooool.net publica somente o cliente estático; db.goooool.net hospeda Editor, Estatísticas, Biblioteca, PHP e persistência de servidor. O banco aprovado é exportado e publicado manualmente no cliente estático.
+Arquitetura V549: goooool.net publica somente o cliente estático; db.goooool.net hospeda Editor, Estatísticas, Biblioteca, PHP e persistência de servidor. O banco aprovado é exportado e publicado manualmente no cliente estático.
 
-Banco público V548: manifesto, núcleo e fragmentos JSON válidos com SHA-256, alvo 18 MB e limite rígido 20 MB; cache offline preservado.
+Banco público V549: manifesto, núcleo e fragmentos JSON válidos com SHA-256, alvo 18 MB e limite rígido 20 MB; cache offline preservado.

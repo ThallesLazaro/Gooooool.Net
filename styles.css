@@ -42184,3 +42184,33 @@ textarea{
   -webkit-text-fill-color:#fff!important;
   filter:drop-shadow(0 1px 1px rgba(0,0,0,.48));
 }
+
+/* ==========================================================
+   V550 · ação Desativar consistente em qualquer tema
+   ========================================================== */
+.automation-global-control .automation-global-disable{
+  height:36px;
+  min-height:36px;
+  align-self:center;
+  margin:0;
+  transform:translateY(1px);
+  border-color:#c84b5b!important;
+  background:#8f1f2f!important;
+  color:#fff!important;
+  -webkit-text-fill-color:#fff!important;
+  box-shadow:0 2px 8px rgba(0,0,0,.18);
+}
+.automation-global-control .automation-global-disable .fa-solid{
+  color:#fff!important;
+  -webkit-text-fill-color:#fff!important;
+}
+.automation-global-control .automation-global-disable:hover,
+.automation-global-control .automation-global-disable:focus-visible{
+  background:#a9283a!important;
+  color:#fff!important;
+  -webkit-text-fill-color:#fff!important;
+}
+.automation-global-control .automation-global-disable:active{
+  background:#7c1827!important;
+  color:#fff!important;
+}

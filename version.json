@@ -6,22 +6,22 @@
   "name": "Goooool",
   "domain": "goooool.net",
   "url": "https://goooool.net/",
-  "version": 551,
-  "assetVersion": "551",
-  "cacheName": "goooool-offline-v551",
-  "releasedAt": "2026-09-20T17:20:00-03:00",
+  "version": 552,
+  "assetVersion": "552",
+  "cacheName": "goooool-offline-v552",
+  "releasedAt": "2026-09-20T18:08:00-03:00",
   "author": "Thalles Lázaro",
-  "releaseTitle": "Atualização V551 — divisões auditadas e áudio nivelado",
-  "releaseSummary": "Audita e unifica acesso/rebaixamento, adiciona avisos de mudança de divisão, ajusta o controle de automação e nivela o loudness dos áudios brutos do jogo.",
+  "releaseTitle": "Atualização V552 — nomes futebolísticos padronizados",
+  "releaseSummary": "Padroniza shirtName como identidade pública dos jogadores em elencos, escalações, modais, mercado, eventos e demais superfícies rápidas, preservando o nome completo nos contextos de detalhe.",
   "releaseHighlights": [
-    "O controle global de automação passa a usar top: 48% e mantém a mesma posição proporcional em telas menores.",
-    "Acesso e rebaixamento passam a usar uma única regra efetiva entre divisões conectadas; a zona mostrada na interface é a mesma quantidade realmente movimentada pelo motor.",
-    "Quando o clube do jogador realmente sobe ou cai, o jogo registra a mudança, pode mostrar um modal e sempre deixa uma notificação com ação para rever; sem mudança de divisão, nenhum modal é criado.",
-    "Técnico automático não é interrompido por esses modais e a preferência de popups de títulos, prêmios e divisões continua sendo respeitada.",
-    "Os dez WAVs brutos do jogo foram medidos e normalizados para loudness perceptivo próximo de -16 LUFS, preservando formato, duração e margem contra clipping."
+    "Listas, escalações, bancos, prévias de elenco, modais de clubes e seleções, mercado, estatísticas e eventos passam a priorizar shirtName como nome público do jogador.",
+    "A prévia do clube criado com IA agora identifica atletas pelo nome futebolístico/popular, evitando nomes civis longos como rótulo principal.",
+    "Perfis e áreas realmente detalhadas mantêm o nome futebolístico em destaque e mostram o nome completo como informação secundária quando os dois forem diferentes.",
+    "Buscas e links automáticos reconhecem tanto name quanto shirtName, então a mudança visual não reduz a capacidade de localizar ou abrir jogadores.",
+    "Novos registros de mercado, carreira, base, aposentadoria, notificações e eventos passam a gravar a identidade pública quando o campo é apenas de apresentação."
   ],
   "releaseNotes": [
-    "APP V551 e cache goooool-offline-v551; save schema 178; banco oficial permanece na revisão 1050 / modelo 7."
+    "APP V552 e cache goooool-offline-v552; save schema 178; banco oficial permanece na revisão 1050 / modelo 7."
   ],
   "backendUrl": "https://db.goooool.net",
   "editorUrl": "https://db.goooool.net/editor",

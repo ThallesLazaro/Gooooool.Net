@@ -3657,7 +3657,6 @@ html[data-theme="light"] .live-competition-group > header{ background: #eef2f6; 
 .pitch-score .fixture-team strong{
   max-width: min(21vw,112px) !important;
   font-size: .62rem !important;
-  line-height: 1.05;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -7730,7 +7729,7 @@ html.simplified-management .assistant-review-card .assistant-review-grid, html.s
 .team-profile-title h3{ margin: 3px 0; font-size: 1.35rem; }
 .team-profile-title p{ margin: 0; color: rgba(255,255,255,.74); font-size: .7rem; }
 .team-profile-tags{ display: flex; flex-wrap: wrap; gap: 6px; margin-top: 9px; }
-.team-profile-tags span{ display: inline-flex; align-items: center; gap: 5px; padding: 5px 7px; border: 1px solid rgba(255,255,255,.14); border-radius: 999px; background: rgba(0,0,0,.2); font-size: .58rem; }
+.team-profile-tags span{ display: inline-flex; align-items: center; gap: 5px; padding: 1px 2px; border: 0; border-radius: 999px; background: transparent; font-size: .58rem; }
 .team-profile-rating{ display: grid; place-items: center; min-width: 104px; padding: 12px; border: 1px solid rgba(255,255,255,.16); border-radius: 17px; background: rgba(0,0,0,.22); }
 .team-profile-rating small, .team-profile-rating span{ font-size: .57rem; opacity: .72; }
 .team-profile-rating strong{ font-size: 2rem; line-height: 1.05; }
@@ -21141,8 +21140,8 @@ html.goooool-installed [data-install-app], html.goooool-installed #installAppBtn
 }
 .team-profile-hero-modern .team-profile-tags span{
   color: inherit;
-  border-color: color-mix(in srgb,currentColor 22%,transparent);
-  background: color-mix(in srgb,currentColor 10%,transparent);
+  border-color: transparent;
+  background: transparent;
 }
 .team-profile-hero-modern .team-profile-rating{
   color: inherit;
@@ -21198,10 +21197,15 @@ html[data-theme="light"] .app-modal.has-team-context .team-profile-hero-modern, 
 .team-profile-hero-modern .team-profile-title p{
   color: color-mix(in srgb,currentColor 80%,transparent);
 }
-.team-profile-hero-modern .team-profile-tags span, .team-profile-hero-modern .team-profile-rating{
+.team-profile-hero-modern .team-profile-rating{
   border-color: color-mix(in srgb,currentColor 26%,transparent);
   background: color-mix(in srgb,currentColor 10%,transparent);
   box-shadow: inset 0 1px 0 color-mix(in srgb,currentColor 9%,transparent);
+}
+.team-profile-hero-modern .team-profile-tags span{
+  border: 0;
+  background: transparent;
+  box-shadow: none;
 }
 
 /* =========================================================
@@ -39630,8 +39634,8 @@ html[data-reduced-motion="true"] #liveScore .live-score-value.is-goal-pop{ anima
 .automation-mini-notice{
   min-height: 40px !important;
   max-width: min(82vw, 244px) !important;
-  padding: 6px 7px !important;
-  gap: 7px !important;
+  padding: 0 !important;
+  gap: 0 !important;
   border-radius: 999px !important;
   align-items: center !important;
 }
@@ -41903,10 +41907,39 @@ html[data-theme="light"] .matchday-cinematic.team-dual-tone > .kicker{
   font-weight:700;
 }
 .automation-global-control .auto-manager-floating-countdown[hidden]{display:none!important}
+
+/* V548 · o controle global encosta na borda e abre como uma peça única.
+   Neutraliza apenas o padding/gap herdados do aviso legado e mantém aba e painel
+   com exatamente a mesma altura visual. */
+.automation-global-control.automation-mini-notice{
+  --automation-control-height:54px;
+  min-height:0!important;
+  max-width:none!important;
+  padding:0!important;
+  gap:0!important;
+  border-radius:0!important;
+}
+.automation-global-control .automation-global-tab,
+.automation-global-control .automation-global-panel{
+  --automation-control-border:color-mix(in srgb,var(--primary) 46%,var(--line));
+  height:var(--automation-control-height)!important;
+  min-height:var(--automation-control-height)!important;
+  box-sizing:border-box;
+  border-color:var(--automation-control-border);
+}
+.automation-global-control .automation-global-panel{
+  padding:6px 8px 6px 10px;
+  gap:8px;
+}
+.automation-global-control.is-open .automation-global-tab{
+  border-left-color:transparent;
+  box-shadow:none;
+}
 @media(max-width:520px){
   .automation-global-control{top:clamp(118px,31vh,238px)}
-  .automation-global-tab{width:36px;min-width:36px;height:50px}
-  .automation-global-panel{width:min(220px,calc(100vw - 48px));min-height:66px;padding:9px}
+  .automation-global-control.automation-mini-notice{--automation-control-height:50px}
+  .automation-global-tab{width:36px;min-width:36px}
+  .automation-global-panel{width:min(220px,calc(100vw - 48px));padding:5px 7px 5px 9px}
 }
 
 /* V546 · em telas pequenas, taça e clube não disputam a mesma linha. */

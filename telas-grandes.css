@@ -135,9 +135,7 @@
   }
 
   .game-shell:has(.match-screen) .match-screen .live-pitch-caption {
-    min-height: 24px !important;
-    height: 24px !important;
-    padding-inline: 8px !important;
+    /* V548 · dimensões naturais do CSS base; desktop não força altura/padding. */
   }
 
   .game-shell:has(.match-screen) .match-screen > .pitch-score > .live-management-bar {
@@ -158,9 +156,7 @@
 
   .game-shell:has(.match-screen) .match-screen .live-management-actions .btn,
   .game-shell:has(.match-screen) .match-screen :is(.live-pause-button,#liveStrategyBtn,#liveSubstitutionBtn,#liveRolesBtn,#liveIntegrityBtn,#skipMatchBtn) {
-    min-height: 42px !important;
-    height: 42px !important;
-    padding: 4px 6px !important;
+    /* V548 · usa as dimensões naturais dos controles definidos no CSS base. */
   }
 
   .game-shell:has(.match-screen) .match-screen .live-management-actions .btn > .live-action-label {
@@ -996,7 +992,6 @@
      Há espaço para um rótulo curto no desktop, mas ele continua limitado. */
   .game-shell:has(.app-screen):not(:has(.match-screen)) .topbar-page-context {
     width: auto !important;
-    min-width: 36px !important;
     max-width: 190px !important;
     padding-inline: 9px !important;
     justify-content: flex-start !important;

@@ -6,24 +6,23 @@
   "name": "Goooool",
   "domain": "goooool.net",
   "url": "https://goooool.net/",
-  "version": 547,
-  "assetVersion": "547",
-  "cacheName": "goooool-offline-v547",
-  "releasedAt": "2026-09-20T13:45:00-03:00",
+  "version": 548,
+  "assetVersion": "548",
+  "cacheName": "goooool-offline-v548",
+  "releasedAt": "2026-09-20T14:32:00-03:00",
   "author": "Thalles Lázaro",
-  "releaseTitle": "Atualização V547 — criação de clube com IA e elencos organizados",
-  "releaseSummary": "Adiciona criação segura de clube por JSON gerado em qualquer IA, com validação e prévia locais, e padroniza a ordem futebolística dos elencos.",
+  "releaseTitle": "Atualização V548 — elencos padronizados e navegação preservada",
+  "releaseSummary": "Padroniza as listagens completas de elenco por posição, corrige a prévia sem perda de scroll ou campos e refina o controle global de automação e ajustes visuais.",
   "releaseHighlights": [
-    "A abertura ganha Criar clube com IA: o jogo monta um prompt, o jogador usa a IA que preferir e cola o JSON de volta, sem API nem dependência de fornecedor.",
-    "O importador aceita somente add de um clube personalizado e seus jogadores; update/delete e alterações de entidades oficiais são rejeitados.",
-    "O JSON é validado, pré-visualizado e revalidado contra a revisão atual do banco antes da criação da carreira; o clube final recebe identidade própria dentro do save.",
-    "Jogadores importados passam pelo normalizador existente do motor e o elenco é completado automaticamente até o mínimo seguro quando necessário.",
-    "Antes de escolher o clube, “Ver elenco” mostra o plantel cadastrado por setores sem criar save; se não houver jogadores oficiais/personalizados, o jogo informa que o elenco será gerado no início da carreira.",
-    "Listas que representam elencos completos passam a usar ordem futebolística por posição: goleiros, defesa, meio-campo e ataque, preservando variações por setor.",
-    "Guia, Primeiros passos, Comunidade e dados, Atualizações, jogue.goooool.net e sobre.goooool.net documentam o novo fluxo de criação com IA."
+    "Modais de clubes e seleções passam a seguir a mesma ordem futebolística das demais listas de elenco: GOL, ZAG, LD, LE, VOL, MC, MEI, PD, PE e ATA, com força apenas como desempate dentro da posição.",
+    "Fechar a prévia de elenco não reconstrói mais a tela por baixo: o scroll da abertura é preservado e o conteúdo preenchido em Criar clube com IA permanece intacto.",
+    "O controle global de Técnico automático/Modo autônomo usa ícone de robô, encosta corretamente na borda e abre como um componente contínuo, com aba e painel na mesma altura.",
+    "As tags do perfil de equipe ficam mais leves, sem fundo/borda decorativa e com padding reduzido.",
+    "Em telas grandes, o Ao Vivo deixa de forçar altura/padding dos botões de gestão e da legenda do campo; o contexto do topo também deixa de impor largura mínima.",
+    "O placar ao vivo deixa de forçar line-height reduzido no nome das equipes."
   ],
   "releaseNotes": [
-    "APP V547 e cache goooool-offline-v547; save schema 178; banco oficial permanece na revisão 1050 / modelo 7."
+    "APP V548 e cache goooool-offline-v548; save schema 178; banco oficial permanece na revisão 1050 / modelo 7."
   ],
   "backendUrl": "https://db.goooool.net",
   "editorUrl": "https://db.goooool.net/editor",

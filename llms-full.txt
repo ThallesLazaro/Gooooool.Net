@@ -1,6 +1,6 @@
 # Goooool.net — referência completa do estado atual
 
-Versão documentada: V547 · 20 de setembro de 2026
+Versão documentada: V548 · 20 de setembro de 2026
 Criador e desenvolvedor: Thalles Lázaro
 Site principal: [Goooool.net](https://goooool.net/)
 Apresentação: [jogue.goooool.net](https://jogue.goooool.net/)
@@ -17,7 +17,7 @@ A experiência é PWA, pode ser instalada e mantém recursos já armazenados dis
 
 ## 2. Estado técnico
 
-Aplicativo V547. Save schema 178. Banco oficial revisão 1050 / modelo 7. A versão do aplicativo, a estrutura do save e a revisão do banco são conceitos separados.
+Aplicativo V548. Save schema 178. Banco oficial revisão 1050 / modelo 7. A versão do aplicativo, a estrutura do save e a revisão do banco são conceitos separados.
 A Home sem save prioriza modo, clube, competições, nome do técnico e início da carreira. Escudo oficial da seleção + país não quebra entre imagem e nome e wrappers de escudo não criam fundo ou sombra.
 Países exibem o escudo oficial da seleção antes do nome em contextos visuais quando esse WebP existir; sem imagem oficial, o texto não reserva espaço. Escudos oficiais ou gerados são apresentados sem sombras.
 
@@ -163,6 +163,6 @@ A interface é exclusivamente mobile. Telas grandes preservam a mesma organizaç
 
 Sem uma carreira carregada, a Home inicial permanece em uma coluna nas telas menores e se organiza em duas áreas nas telas grandes. A área principal concentra carreiras recentes, modos de jogo e criação; a área de apoio concentra Guia, importação, páginas públicas, comunidade e links institucionais. O mesmo DOM e os mesmos eventos do mobile são reutilizados.
 
-Arquitetura V547: goooool.net publica somente o cliente estático; db.goooool.net hospeda Editor, Estatísticas, Biblioteca, PHP e persistência de servidor. O banco aprovado é exportado e publicado manualmente no cliente estático.
+Arquitetura V548: goooool.net publica somente o cliente estático; db.goooool.net hospeda Editor, Estatísticas, Biblioteca, PHP e persistência de servidor. O banco aprovado é exportado e publicado manualmente no cliente estático.
 
-Banco público V547: manifesto, núcleo e fragmentos JSON válidos com SHA-256, alvo 18 MB e limite rígido 20 MB; cache offline preservado.
+Banco público V548: manifesto, núcleo e fragmentos JSON válidos com SHA-256, alvo 18 MB e limite rígido 20 MB; cache offline preservado.

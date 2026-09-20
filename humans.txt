@@ -5,7 +5,7 @@ Tipo: jogo independente de gerenciamento de futebol
 Plataforma: navegador e aplicativo instalável (PWA)
 Idioma principal: português do Brasil
 Experiência visual: jogo principal mobile; Editor e Estatísticas possuem layout responsivo para PC e celular
-Versão documentada: V552 · save schema 178 · banco revisão 1050 / modelo 7
+Versão documentada: V553 · save schema 178 · banco revisão 1050 / modelo 7
 Divisões: acesso/rebaixamento só ocorre entre níveis conectados e a interface usa a mesma regra efetiva do motor. Mudanças reais do clube controlado ficam na Central de notificações e respeitam o Técnico automático.
 Áudio: efeitos WAV brutos nivelados para loudness perceptivo consistente, aproximadamente -16 LUFS.
 
@@ -52,9 +52,9 @@ Termos de Uso: https://goooool.net/termos.html
 
 Livro: https://sobre.goooool.net/
 
-Arquitetura V552: goooool.net publica somente o cliente estático; db.goooool.net hospeda Editor, Estatísticas, Biblioteca, PHP e persistência de servidor. O banco aprovado é exportado e publicado manualmente no cliente estático.
+Arquitetura V553: goooool.net publica somente o cliente estático; db.goooool.net hospeda Editor, Estatísticas, Biblioteca, PHP e persistência de servidor. O banco aprovado é exportado e publicado manualmente no cliente estático.
 
-- Banco público V552: manifesto + núcleo + fragmentos JSON válidos, alvo 18 MB e limite rígido 20 MB, com SHA-256 e cache offline.
+- Banco público V553: manifesto + núcleo + fragmentos JSON válidos, alvo 18 MB e limite rígido 20 MB, com SHA-256 e cache offline.
 
-Documentação pública V552: Guia, Atualizações, Sobre, Privacidade, Termos, Wiki e 12 capítulos são HTMLs estáticos indexáveis na raiz de goooool.net.
+Documentação pública V553: Guia, Atualizações, Sobre, Privacidade, Termos, Wiki e 12 capítulos são HTMLs estáticos indexáveis na raiz de goooool.net.
 Identidade pública de jogadores: em listas, escalações, prévias, mercado, eventos e outras superfícies rápidas, exibir `shirtName`; reservar `name` completo para cadastro, busca e contextos de detalhe, onde pode aparecer como informação secundária.

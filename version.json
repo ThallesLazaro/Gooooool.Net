@@ -6,22 +6,22 @@
   "name": "Goooool",
   "domain": "goooool.net",
   "url": "https://goooool.net/",
-  "version": 552,
-  "assetVersion": "552",
-  "cacheName": "goooool-offline-v552",
-  "releasedAt": "2026-09-20T18:08:00-03:00",
+  "version": 553,
+  "assetVersion": "553",
+  "cacheName": "goooool-offline-v553",
+  "releasedAt": "2026-09-20T18:20:00-03:00",
   "author": "Thalles Lázaro",
-  "releaseTitle": "Atualização V552 — nomes futebolísticos padronizados",
-  "releaseSummary": "Padroniza shirtName como identidade pública dos jogadores em elencos, escalações, modais, mercado, eventos e demais superfícies rápidas, preservando o nome completo nos contextos de detalhe.",
+  "releaseTitle": "Atualização V553 — Eventos ao vivo",
+  "releaseSummary": "Adiciona uma aba Eventos objetiva no Ao Vivo, autores dos gols junto ao placar e preservação da aba preferida de usuários existentes, com Eventos como padrão para novos jogadores.",
   "releaseHighlights": [
-    "Listas, escalações, bancos, prévias de elenco, modais de clubes e seleções, mercado, estatísticas e eventos passam a priorizar shirtName como nome público do jogador.",
-    "A prévia do clube criado com IA agora identifica atletas pelo nome futebolístico/popular, evitando nomes civis longos como rótulo principal.",
-    "Perfis e áreas realmente detalhadas mantêm o nome futebolístico em destaque e mostram o nome completo como informação secundária quando os dois forem diferentes.",
-    "Buscas e links automáticos reconhecem tanto name quanto shirtName, então a mudança visual não reduz a capacidade de localizar ou abrir jogadores.",
-    "Novos registros de mercado, carreira, base, aposentadoria, notificações e eventos passam a gravar a identidade pública quando o campo é apenas de apresentação."
+    "A nova aba Eventos resume em tempo real gols, cartões, expulsões, substituições, lesões, pênaltis perdidos, VAR e decisões por pênaltis sem duplicar a narração.",
+    "Eventos é a aba inicial padrão para novos usuários; quem já possuía uma aba Ao Vivo salva mantém a preferência anterior e novas trocas continuam sendo lembradas.",
+    "O placar mostra autores dos gols em formato compacto usando shirtName, com minutos, indicação de pênalti/gol contra e resumo +N quando houver muitos marcadores.",
+    "Quando o usuário está em outra aba, Eventos recebe um indicador discreto de novidade que desaparece ao abrir a linha do tempo.",
+    "Turbo 4×, Ir para o final, partidas observadas e retomadas preservam os acontecimentos importantes; tema claro e escuro recebem estilos próprios de contraste."
   ],
   "releaseNotes": [
-    "APP V552 e cache goooool-offline-v552; save schema 178; banco oficial permanece na revisão 1050 / modelo 7."
+    "APP V553 e cache goooool-offline-v553; save schema 178; banco oficial permanece na revisão 1050 / modelo 7."
   ],
   "backendUrl": "https://db.goooool.net",
   "editorUrl": "https://db.goooool.net/editor",

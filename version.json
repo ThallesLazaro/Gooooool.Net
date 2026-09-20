@@ -6,22 +6,20 @@
   "name": "Goooool",
   "domain": "goooool.net",
   "url": "https://goooool.net/",
-  "version": 549,
-  "assetVersion": "549",
-  "cacheName": "goooool-offline-v549",
-  "releasedAt": "2026-09-20T15:45:00-03:00",
+  "version": 550,
+  "assetVersion": "550",
+  "cacheName": "goooool-offline-v550",
+  "releasedAt": "2026-09-20T16:00:00-03:00",
   "author": "Thalles Lázaro",
-  "releaseTitle": "Atualização V549 — legibilidade e identidade dos jogadores",
-  "releaseSummary": "Melhora textareas e textos longos do Dia de jogo, garante o robô do Modo autônomo com contraste consistente e padroniza name/shirtName nos prompts de IA.",
+  "releaseTitle": "Atualização V550 — controle de automação refinado",
+  "releaseSummary": "Corrige o ícone e o contraste do botão Desativar no controle global de automação e melhora seu alinhamento vertical.",
   "releaseHighlights": [
-    "Textareas recebem padding interno padrão para o conteúdo não encostar nas bordas, incluindo os campos do fluxo Criar clube com IA.",
-    "O kicker do Dia de jogo passa a quebrar linha naturalmente e exibir competição, fase e rodada por inteiro, sem reticências ou corte.",
-    "O Modo autônomo ganha suporte local real ao ícone fa-robot e superfície de contraste estável, preservando a paleta do clube na borda.",
-    "Prompts que produzem jogadores diferenciam name (nome real/completo ou profissional oficial) de shirtName (nome futebolístico/popular reconhecido pelos torcedores).",
-    "A orientação de shirtName respeita culturas diferentes, evita apelidos inventados e permite que shirtName coincida com name quando essa for a forma pública legítima."
+    "O botão Desativar passa a usar um ícone power-off local real, sem fallback para circle-info.",
+    "Texto e ícone de Desativar permanecem claros nos temas claro e escuro sobre um vermelho escuro estável.",
+    "O botão Desativar ganha altura fixa, alinhamento central e pequeno ajuste óptico vertical dentro do painel aberto."
   ],
   "releaseNotes": [
-    "APP V549 e cache goooool-offline-v549; save schema 178; banco oficial permanece na revisão 1050 / modelo 7."
+    "APP V550 e cache goooool-offline-v550; save schema 178; banco oficial permanece na revisão 1050 / modelo 7."
   ],
   "backendUrl": "https://db.goooool.net",
   "editorUrl": "https://db.goooool.net/editor",

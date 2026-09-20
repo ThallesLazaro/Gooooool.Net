@@ -1,4 +1,4 @@
-/* Goooool V553 · pacote estático protegido · media.js */
+/* Goooool V554 · pacote estático protegido · media.js */
 (()=>{"use strict";
 const host=String(location.hostname||"").toLowerCase();
 if(!(host==="goooool.net"||host==="www.goooool.net")){try{location.replace("https://goooool.net/");}catch{}return;}
@@ -9,5 +9,5 @@ let integrity=2166136261;
 for(let index=0;index<encoded.length;index++){bytes[index]=encoded.charCodeAt(index)^key[index%key.length];integrity=Math.imul(integrity^bytes[index],16777619)>>>0;}
 if(integrity!==3235156418)throw new Error("Arquivo protegido inválido: media.js");
 const source=new TextDecoder("utf-8").decode(bytes);
-(0,eval)(source+"\n//# sourceURL=/media.js?v=553");
+(0,eval)(source+"\n//# sourceURL=/media.js?v=554");
 })();

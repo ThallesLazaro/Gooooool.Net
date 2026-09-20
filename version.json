@@ -6,22 +6,22 @@
   "name": "Goooool",
   "domain": "goooool.net",
   "url": "https://goooool.net/",
-  "version": 553,
-  "assetVersion": "553",
-  "cacheName": "goooool-offline-v553",
-  "releasedAt": "2026-09-20T18:20:00-03:00",
+  "version": 554,
+  "assetVersion": "554",
+  "cacheName": "goooool-offline-v554",
+  "releasedAt": "2026-09-20T19:10:00-03:00",
   "author": "Thalles Lázaro",
-  "releaseTitle": "Atualização V553 — Eventos ao vivo",
-  "releaseSummary": "Adiciona uma aba Eventos objetiva no Ao Vivo, autores dos gols junto ao placar e preservação da aba preferida de usuários existentes, com Eventos como padrão para novos jogadores.",
+  "releaseTitle": "Atualização V554 — Automação responsiva e Eventos semânticos",
+  "releaseSummary": "Corrige o Técnico automático preso na busca pelo próximo compromisso e separa as cores semânticas da aba Eventos da identidade visual do clube.",
   "releaseHighlights": [
-    "A nova aba Eventos resume em tempo real gols, cartões, expulsões, substituições, lesões, pênaltis perdidos, VAR e decisões por pênaltis sem duplicar a narração.",
-    "Eventos é a aba inicial padrão para novos usuários; quem já possuía uma aba Ao Vivo salva mantém a preferência anterior e novas trocas continuam sendo lembradas.",
-    "O placar mostra autores dos gols em formato compacto usando shirtName, com minutos, indicação de pênalti/gol contra e resumo +N quando houver muitos marcadores.",
-    "Quando o usuário está em outra aba, Eventos recebe um indicador discreto de novidade que desaparece ao abrir a linha do tempo.",
-    "Turbo 4×, Ir para o final, partidas observadas e retomadas preservam os acontecimentos importantes; tema claro e escuro recebem estilos próprios de contraste."
+    "O Técnico automático passa a avançar o calendário uma semana por ciclo quando não há partida imediata, evitando um único carregamento longo ao procurar o próximo compromisso.",
+    "Cada semana automática conclui, salva e reavalia o estado antes da próxima, preservando partidas, decisões, propostas, seleção e integridade do save.",
+    "A aba Eventos deixa de herdar a cor do clube: gol, amarelo, vermelho, substituição, lesão, VAR e pênaltis usam cores semânticas próprias.",
+    "Tema claro e escuro recebem paletas semânticas específicas, enquanto a identidade do time fica restrita ao escudo e à barra lateral de contexto.",
+    "A rolagem da aba Eventos compensa o cabeçalho fixo por scroll-padding/scroll-margin para nenhum evento ficar escondido sob a barra superior."
   ],
   "releaseNotes": [
-    "APP V553 e cache goooool-offline-v553; save schema 178; banco oficial permanece na revisão 1050 / modelo 7."
+    "APP V554 e cache goooool-offline-v554; save schema 178; banco oficial permanece na revisão 1050 / modelo 7."
   ],
   "backendUrl": "https://db.goooool.net",
   "editorUrl": "https://db.goooool.net/editor",

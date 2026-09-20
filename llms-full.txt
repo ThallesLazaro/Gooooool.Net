@@ -172,3 +172,5 @@ Identidade pública de jogadores: em listas, escalações, prévias, mercado, ev
 
 ## Eventos ao vivo
 A aba Eventos apresenta uma linha do tempo objetiva com gols, cartões, expulsões, substituições, lesões, pênaltis perdidos, VAR e decisões por pênaltis. Novos usuários começam nessa aba; preferências existentes são preservadas. O placar exibe os autores dos gols com `shirtName` e minutos.
+
+Estado atual V554: o Técnico automático avança semanas em ciclos individuais quando procura o próximo compromisso; na aba Eventos, cores de gol/cartões/trocas/lesão/VAR são semânticas e independem da cor do clube, com compensação de scroll para o cabeçalho fixo.

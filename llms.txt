@@ -100,3 +100,5 @@ Arquitetura V553: goooool.net publica somente o cliente estático; db.goooool.ne
 
 - Banco público V553: manifesto + núcleo + fragmentos JSON válidos, alvo 18 MB e limite rígido 20 MB, com SHA-256 e cache offline.
 Identidade pública de jogadores: em listas, escalações, prévias, mercado, eventos e outras superfícies rápidas, exibir `shirtName`; reservar `name` completo para cadastro, busca e contextos de detalhe, onde pode aparecer como informação secundária.
+
+Estado atual V554: o Técnico automático avança semanas em ciclos individuais quando procura o próximo compromisso; na aba Eventos, cores de gol/cartões/trocas/lesão/VAR são semânticas e independem da cor do clube, com compensação de scroll para o cabeçalho fixo.

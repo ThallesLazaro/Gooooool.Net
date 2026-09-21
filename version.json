@@ -6,21 +6,20 @@
   "name": "Goooool",
   "domain": "goooool.net",
   "url": "https://goooool.net/",
-  "version": 558,
-  "assetVersion": "558",
-  "cacheName": "goooool-offline-v558",
-  "releasedAt": "2026-09-21T09:45:00-03:00",
+  "version": 559,
+  "assetVersion": "559",
+  "cacheName": "goooool-offline-v559",
+  "releasedAt": "2026-09-21T10:30:00-03:00",
   "author": "Thalles Lázaro",
-  "releaseTitle": "Atualização V558 — Técnico automático sem execução concorrente",
-  "releaseSummary": "Elimina o agendamento duplicado do Técnico automático, impede reentrada do ciclo semanal e amplia o diagnóstico de tarefas de rodada sem alterar save, banco ou resultados.",
+  "releaseTitle": "Atualização V559 — taças reais nos cards de campeão",
+  "releaseSummary": "Cards de compartilhamento de conquistas passam a usar a taça oficial da competição quando ela existir no banco, e o replay de campeão pelas notificações mantém a ação Compartilhar.",
   "releaseHighlights": [
-    "A Home passa a ser a única responsável por agendar o próximo ciclo do Técnico automático; o timeout extra de 900 ms foi removido.",
-    "Chamadas simultâneas de runAutoManagerWeek compartilham a mesma Promise e não capturam uma segunda rodada enquanto o ciclo atual ainda está terminando.",
-    "A consolidação cooperativa da rodada expõe apenas metadados temporários de diagnóstico, como temporada, rodada e quantidade de reutilizações da tarefa em andamento.",
-    "AUTO_MANAGER_NO_PROGRESS continua existindo como proteção para travamentos reais, mas deixa de ser provocado pela corrida entre dois ciclos do assistente.",
-    "Save schema 178 e banco oficial 1050 / modelo 7 permanecem inalterados."
+    "O gerador de imagens de conquistas resolve a taça oficial pelo competitionId/nome e usa trophyWebp salvo no registro quando disponível; o ícone genérico fica apenas como fallback.",
+    "O modal Campeonato encerrado e seu replay aberto pelas notificações reutilizam a mesma rotina de compartilhamento do campeão.",
+    "Conquistas antigas continuam compatíveis: se o registro não guardar trophyWebp, a imagem é recuperada do banco oficial pelo identificador da competição.",
+    "A lógica esportiva, o save schema 178 e o banco oficial 1050 / modelo 7 permanecem inalterados."
   ],
   "releaseNotes": [
-    "APP V558 e cache goooool-offline-v558; save schema 178; banco oficial permanece na revisão 1050 / modelo 7."
+    "APP V559 e cache goooool-offline-v559; save schema 178; banco oficial permanece na revisão 1050 / modelo 7."
   ]
 }

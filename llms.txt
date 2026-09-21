@@ -1,7 +1,7 @@
-Estado atual V559: cards de compartilhamento ligados a competições usam a taça oficial quando disponível no banco; o replay de campeão pelas notificações mantém a ação Compartilhar sem reaplicar efeitos da competição.
+Estado atual V560: a prévia de clubes criados com IA usa a mesma identidade visual da carreira; clubes brasileiros preservam UF/cidade real sem herdar a vaga-base; taças Canvas usam contain em caixa reservada.
 # Goooool.net
 
-Versão documentada: V553
+Versão documentada: V560
 Produto: Goooool.net
 Criador e desenvolvedor: Thalles Lázaro
 URL principal: https://goooool.net/
@@ -17,7 +17,7 @@ Goooool.net é um jogo independente de gerenciamento de futebol para navegador, 
 
 ## Estado técnico atual
 
-- Aplicativo: V553.
+- Aplicativo: V560.
 - Estrutura do save: 178.
 - Banco oficial: revisão 1050 / modelo 7.
 - Interface mobile-first; telas grandes usam uma camada CSS separada (`telas-grandes.css`) somente nas telas internas com carreira carregada, sem alterar o CSS mobile nem a Home inicial.

@@ -6,20 +6,21 @@
   "name": "Goooool",
   "domain": "goooool.net",
   "url": "https://goooool.net/",
-  "version": 559,
-  "assetVersion": "559",
-  "cacheName": "goooool-offline-v559",
-  "releasedAt": "2026-09-21T10:30:00-03:00",
+  "version": 560,
+  "assetVersion": "560",
+  "cacheName": "goooool-offline-v560",
+  "releasedAt": "2026-09-21T10:45:00-03:00",
   "author": "Thalles Lázaro",
-  "releaseTitle": "Atualização V559 — taças reais nos cards de campeão",
-  "releaseSummary": "Cards de compartilhamento de conquistas passam a usar a taça oficial da competição quando ela existir no banco, e o replay de campeão pelas notificações mantém a ação Compartilhar.",
+  "releaseTitle": "Atualização V560 — prévia fiel do clube com IA, geografia segura e taças padronizadas",
+  "releaseSummary": "A prévia de clubes criados com IA usa a mesma identidade visual da carreira, clubes brasileiros preservam cidade/UF sem herdar a localização da vaga-base, e todas as taças Canvas ficam contidas em uma caixa fixa sem invadir textos.",
   "releaseHighlights": [
-    "O gerador de imagens de conquistas resolve a taça oficial pelo competitionId/nome e usa trophyWebp salvo no registro quando disponível; o ícone genérico fica apenas como fallback.",
-    "O modal Campeonato encerrado e seu replay aberto pelas notificações reutilizam a mesma rotina de compartilhamento do campeão.",
-    "Conquistas antigas continuam compatíveis: se o registro não guardar trophyWebp, a imagem é recuperada do banco oficial pelo identificador da competição.",
-    "A lógica esportiva, o save schema 178 e o banco oficial 1050 / modelo 7 permanecem inalterados."
+    "O clube validado pela IA já possui colors e crestStyle estável, fazendo o escudo da prévia e o escudo após criar a carreira usarem a mesma identidade visual.",
+    "Clubes brasileiros criados com IA passam a exigir/resolver stateCode real; clubes históricos reconhecidos podem corrigir UF/cidade conflitantes e nunca herdam o estado do clube usado apenas como vaga-base da liga.",
+    "O prompt de Criar clube com IA reforça geografia real: Atlético-MG/Belo Horizonte/MG, Flamengo/Rio de Janeiro/RJ e demais clubes devem preservar cidade e UF coerentes.",
+    "Todas as taças usadas por cards Canvas passam por uma caixa total padronizada: a arte oficial usa contain e não ultrapassa a área reservada, independentemente da proporção do arquivo.",
+    "Os cards de campeão e de troféu da carreira receberam folga adicional entre a taça e o 1º/título; save schema 178 e banco 1050 / modelo 7 permanecem inalterados."
   ],
   "releaseNotes": [
-    "APP V559 e cache goooool-offline-v559; save schema 178; banco oficial permanece na revisão 1050 / modelo 7."
+    "APP V560 e cache goooool-offline-v560; save schema 178; banco oficial permanece na revisão 1050 / modelo 7."
   ]
 }

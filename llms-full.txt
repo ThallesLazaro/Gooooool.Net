@@ -1,7 +1,7 @@
-Estado atual V559: cards de compartilhamento ligados a competições usam a taça oficial quando disponível no banco; o replay de campeão pelas notificações mantém a ação Compartilhar sem reaplicar efeitos da competição.
+Estado atual V560: a prévia de clubes criados com IA usa a mesma identidade visual da carreira; clubes brasileiros preservam UF/cidade real sem herdar a vaga-base; taças Canvas usam contain em caixa reservada.
 # Goooool.net — referência completa do estado atual
 
-Versão documentada: V553 · 20 de setembro de 2026
+Versão documentada: V560 · 21 de setembro de 2026
 Criador e desenvolvedor: Thalles Lázaro
 Site principal: [Goooool.net](https://goooool.net/)
 Apresentação: [jogue.goooool.net](https://jogue.goooool.net/)
@@ -18,7 +18,7 @@ A experiência é PWA, pode ser instalada e mantém recursos já armazenados dis
 
 ## 2. Estado técnico
 
-Aplicativo V553. Save schema 178. Banco oficial revisão 1050 / modelo 7. A versão do aplicativo, a estrutura do save e a revisão do banco são conceitos separados.
+Aplicativo V560. Save schema 178. Banco oficial revisão 1050 / modelo 7. A versão do aplicativo, a estrutura do save e a revisão do banco são conceitos separados.
 A Home sem save prioriza modo, clube, competições, nome do técnico e início da carreira. Escudo oficial da seleção + país não quebra entre imagem e nome e wrappers de escudo não criam fundo ou sombra.
 Países exibem o escudo oficial da seleção antes do nome em contextos visuais quando esse WebP existir; sem imagem oficial, o texto não reserva espaço. Escudos oficiais ou gerados são apresentados sem sombras.
 Prompts que geram ou atualizam jogadores usam uma identidade em dois níveis: `name` guarda o nome real/completo ou profissional oficial, enquanto `shirtName` guarda a forma futebolística/popular reconhecida pelos torcedores. A regra respeita padrões culturais, não inventa apelidos e não exige que os dois campos sejam diferentes.

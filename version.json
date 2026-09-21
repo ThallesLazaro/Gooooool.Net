@@ -6,22 +6,22 @@
   "name": "Goooool",
   "domain": "goooool.net",
   "url": "https://goooool.net/",
-  "version": 555,
-  "assetVersion": "555",
-  "cacheName": "goooool-offline-v555",
-  "releasedAt": "2026-09-20T20:51:00-03:00",
+  "version": 556,
+  "assetVersion": "556",
+  "cacheName": "goooool-offline-v556",
+  "releasedAt": "2026-09-20T21:05:00-03:00",
   "author": "Thalles Lázaro",
-  "releaseTitle": "Atualização V555 — Eventos por categoria e calendário reconciliado",
-  "releaseSummary": "Redesenha a aba Eventos como painel por categorias e corrige falsos travamentos do Técnico automático quando o cursor do calendário aponta para uma rodada já encerrada ou para o fim da temporada.",
+  "releaseTitle": "Atualização V556 — Gol sofrido destacado em Eventos",
+  "releaseSummary": "Distingue visualmente gols a favor e gols sofridos dentro do bloco Gols da aba Eventos, mantendo a categoria verde e aplicando tema vermelho próprio apenas ao lance do adversário.",
   "releaseHighlights": [
-    "A aba Eventos deixa de usar aparência de linha do tempo e passa a separar Gols, Cartões, Substituições e Outros acontecimentos em blocos próprios.",
-    "A barra superior de Eventos continua fixa e a rolagem automática calcula sua altura real antes de posicionar um novo lance, evitando conteúdo escondido.",
-    "Gols, cartões, substituições, lesões, VAR e pênaltis continuam usando cores semânticas próprias em tema claro e escuro, sem herdar a cor do clube.",
-    "O motor reconcilia o cursor do calendário somente para frente quando currentRound aponta para uma rodada já encerrada ou para uma lacuna válida.",
-    "Se todas as rodadas já terminaram, a temporada é encerrada normalmente; se houver rodada pendente para trás, o jogo não repete efeitos e pausa com diagnóstico específico."
+    "O bloco Gols continua verde como categoria, mas gols sofridos pelo clube comandado recebem um tema vermelho próprio no card do evento.",
+    "A classificação usa teamId do evento contra controlledTeamId, sem depender do texto da narração nem da cor do clube.",
+    "Borda, fundo, ícone e minuto do gol sofrido usam vermelho semântico com contraste específico para tema claro e escuro.",
+    "Gols a favor continuam verdes; escudo e nome da equipe permanecem como identidade visual sem contaminar a semântica do lance.",
+    "Os blocos Gols, Cartões, Substituições e Outros usam 15 px de espaçamento e não forçam altura mínima, preservando conforto também em celulares estreitos."
   ],
   "releaseNotes": [
-    "APP V555 e cache goooool-offline-v555; save schema 178; banco oficial permanece na revisão 1050 / modelo 7."
+    "APP V556 e cache goooool-offline-v556; save schema 178; banco oficial permanece na revisão 1050 / modelo 7."
   ],
   "backendUrl": "https://db.goooool.net",
   "editorUrl": "https://db.goooool.net/editor",

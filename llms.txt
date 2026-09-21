@@ -1,4 +1,4 @@
-Estado atual V555: a aba Eventos organiza Gols, Cartões, Substituições e Outros em blocos próprios; cores são semânticas e a rolagem compensa dinamicamente o cabeçalho fixo. O Técnico automático reconcilia o cursor do calendário apenas para frente e conclui normalmente o fim de temporada quando todas as rodadas já foram encerradas.
+Estado atual V556: no bloco Gols da aba Eventos, gols a favor permanecem verdes e gols sofridos recebem tema vermelho próprio, sem depender da cor do clube; os blocos Gols, Cartões, Substituições e Outros usam 15 px de espaçamento sem altura mínima forçada; a organização por categorias e a reconciliação segura do calendário da V555 permanecem.
 # Goooool.net
 
 Versão documentada: V553

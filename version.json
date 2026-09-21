@@ -6,22 +6,22 @@
   "name": "Goooool",
   "domain": "goooool.net",
   "url": "https://goooool.net/",
-  "version": 554,
-  "assetVersion": "554",
-  "cacheName": "goooool-offline-v554",
-  "releasedAt": "2026-09-20T19:10:00-03:00",
+  "version": 555,
+  "assetVersion": "555",
+  "cacheName": "goooool-offline-v555",
+  "releasedAt": "2026-09-20T20:51:00-03:00",
   "author": "Thalles Lázaro",
-  "releaseTitle": "Atualização V554 — Automação responsiva e Eventos semânticos",
-  "releaseSummary": "Corrige o Técnico automático preso na busca pelo próximo compromisso e separa as cores semânticas da aba Eventos da identidade visual do clube.",
+  "releaseTitle": "Atualização V555 — Eventos por categoria e calendário reconciliado",
+  "releaseSummary": "Redesenha a aba Eventos como painel por categorias e corrige falsos travamentos do Técnico automático quando o cursor do calendário aponta para uma rodada já encerrada ou para o fim da temporada.",
   "releaseHighlights": [
-    "O Técnico automático passa a avançar o calendário uma semana por ciclo quando não há partida imediata, evitando um único carregamento longo ao procurar o próximo compromisso.",
-    "Cada semana automática conclui, salva e reavalia o estado antes da próxima, preservando partidas, decisões, propostas, seleção e integridade do save.",
-    "A aba Eventos deixa de herdar a cor do clube: gol, amarelo, vermelho, substituição, lesão, VAR e pênaltis usam cores semânticas próprias.",
-    "Tema claro e escuro recebem paletas semânticas específicas, enquanto a identidade do time fica restrita ao escudo e à barra lateral de contexto.",
-    "A rolagem da aba Eventos compensa o cabeçalho fixo por scroll-padding/scroll-margin para nenhum evento ficar escondido sob a barra superior."
+    "A aba Eventos deixa de usar aparência de linha do tempo e passa a separar Gols, Cartões, Substituições e Outros acontecimentos em blocos próprios.",
+    "A barra superior de Eventos continua fixa e a rolagem automática calcula sua altura real antes de posicionar um novo lance, evitando conteúdo escondido.",
+    "Gols, cartões, substituições, lesões, VAR e pênaltis continuam usando cores semânticas próprias em tema claro e escuro, sem herdar a cor do clube.",
+    "O motor reconcilia o cursor do calendário somente para frente quando currentRound aponta para uma rodada já encerrada ou para uma lacuna válida.",
+    "Se todas as rodadas já terminaram, a temporada é encerrada normalmente; se houver rodada pendente para trás, o jogo não repete efeitos e pausa com diagnóstico específico."
   ],
   "releaseNotes": [
-    "APP V554 e cache goooool-offline-v554; save schema 178; banco oficial permanece na revisão 1050 / modelo 7."
+    "APP V555 e cache goooool-offline-v555; save schema 178; banco oficial permanece na revisão 1050 / modelo 7."
   ],
   "backendUrl": "https://db.goooool.net",
   "editorUrl": "https://db.goooool.net/editor",

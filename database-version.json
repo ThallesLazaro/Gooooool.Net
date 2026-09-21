@@ -3,13 +3,13 @@
     "product": "Goooool.net",
     "developer": "Thalles Lázaro",
     "schemaVersion": 1,
-    "revision": "db-a55578eba6e89e405363cc52",
-    "cacheToken": "db-a55578eba6e89e405363cc52",
-    "sourceMtime": 1789943303,
-    "sourceHash": "4b19a8b966d40d772ec747ebe9c377a15594e87f4b7736621e41c41f5574a5a5",
-    "databaseVersion": 1070,
-    "gameVersion": 553,
+    "revision": "db-c37a80fe665661af9c9bac65",
+    "cacheToken": "db-c37a80fe665661af9c9bac65",
+    "sourceMtime": 1789945453,
+    "sourceHash": "563890ce2eed91635ac4d31eae148877fa397ae0e70c0e236fc7d8ef5f8a2173",
+    "databaseVersion": 1071,
+    "gameVersion": 554,
     "fileSize": 42162329,
     "updatedAt": "2026-09-20",
-    "generatedAt": "2026-09-20T23:01:41+00:00"
+    "generatedAt": "2026-09-21T00:30:29+00:00"
 }

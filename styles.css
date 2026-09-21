@@ -42603,8 +42603,7 @@ html[data-theme="light"] .live-events-pane{--live-events-ui-accent:#245fc2}
 }
 .live-events-groups{
   display:grid;
-  gap:9px;
-  min-height:100%;
+  gap:15px;
   padding:8px 8px 16px;
 }
 .live-event-group{
@@ -42713,7 +42712,33 @@ html[data-theme="light"] .live-event-group.is-other{
   --event-group-accent:#6941c6;
 }
 @media(max-width:360px){
-  .live-events-groups{gap:7px;padding-inline:6px}
+  .live-events-groups{padding-inline:6px}
   .live-event-group > header{padding-inline:7px}
   .live-event-group-list{padding:5px}
 }
+/* V556 · gols sofridos continuam dentro do bloco Gols, mas ganham um tema
+   vermelho próprio para distinguir imediatamente gol a favor de gol contra
+   o clube comandado. A regra é semântica e independe das cores do clube. */
+.live-events-pane{--live-event-goal-against:#ff6374}
+.live-event-group.is-goals .live-event-summary.is-goal-against{
+  border-color:color-mix(in srgb,var(--live-event-goal-against) 44%,var(--line))!important;
+  background:color-mix(in srgb,var(--live-event-goal-against) 10%,var(--panel-2))!important;
+}
+.live-event-summary.is-goal-against .live-event-summary-icon{
+  color:var(--live-event-goal-against)!important;
+  border-color:color-mix(in srgb,var(--live-event-goal-against) 46%,var(--line))!important;
+  background:color-mix(in srgb,var(--live-event-goal-against) 12%,var(--panel))!important;
+}
+.live-event-summary.is-goal-against .live-event-summary-icon .fa-solid{color:var(--live-event-goal-against)!important}
+.live-event-summary.is-goal-against time{color:var(--live-event-goal-against)!important}
+html[data-theme="light"] .live-events-pane{--live-event-goal-against:#b4233c}
+html[data-theme="light"] .live-event-group.is-goals .live-event-summary.is-goal-against{
+  background:color-mix(in srgb,var(--live-event-goal-against) 8%,#fff)!important;
+}
+@media(hover:hover) and (pointer:fine){
+  .live-event-summary.is-goal-against.is-clickable:hover{
+    background:color-mix(in srgb,var(--live-event-goal-against) 14%,var(--panel-2))!important;
+    border-color:color-mix(in srgb,var(--live-event-goal-against) 55%,var(--line))!important;
+  }
+}
+

@@ -6,25 +6,21 @@
   "name": "Goooool",
   "domain": "goooool.net",
   "url": "https://goooool.net/",
-  "version": 556,
-  "assetVersion": "556",
-  "cacheName": "goooool-offline-v556",
-  "releasedAt": "2026-09-20T21:05:00-03:00",
+  "version": 558,
+  "assetVersion": "558",
+  "cacheName": "goooool-offline-v558",
+  "releasedAt": "2026-09-21T09:45:00-03:00",
   "author": "Thalles Lázaro",
-  "releaseTitle": "Atualização V556 — Gol sofrido destacado em Eventos",
-  "releaseSummary": "Distingue visualmente gols a favor e gols sofridos dentro do bloco Gols da aba Eventos, mantendo a categoria verde e aplicando tema vermelho próprio apenas ao lance do adversário.",
+  "releaseTitle": "Atualização V558 — Técnico automático sem execução concorrente",
+  "releaseSummary": "Elimina o agendamento duplicado do Técnico automático, impede reentrada do ciclo semanal e amplia o diagnóstico de tarefas de rodada sem alterar save, banco ou resultados.",
   "releaseHighlights": [
-    "O bloco Gols continua verde como categoria, mas gols sofridos pelo clube comandado recebem um tema vermelho próprio no card do evento.",
-    "A classificação usa teamId do evento contra controlledTeamId, sem depender do texto da narração nem da cor do clube.",
-    "Borda, fundo, ícone e minuto do gol sofrido usam vermelho semântico com contraste específico para tema claro e escuro.",
-    "Gols a favor continuam verdes; escudo e nome da equipe permanecem como identidade visual sem contaminar a semântica do lance.",
-    "Os blocos Gols, Cartões, Substituições e Outros usam 15 px de espaçamento e não forçam altura mínima, preservando conforto também em celulares estreitos."
+    "A Home passa a ser a única responsável por agendar o próximo ciclo do Técnico automático; o timeout extra de 900 ms foi removido.",
+    "Chamadas simultâneas de runAutoManagerWeek compartilham a mesma Promise e não capturam uma segunda rodada enquanto o ciclo atual ainda está terminando.",
+    "A consolidação cooperativa da rodada expõe apenas metadados temporários de diagnóstico, como temporada, rodada e quantidade de reutilizações da tarefa em andamento.",
+    "AUTO_MANAGER_NO_PROGRESS continua existindo como proteção para travamentos reais, mas deixa de ser provocado pela corrida entre dois ciclos do assistente.",
+    "Save schema 178 e banco oficial 1050 / modelo 7 permanecem inalterados."
   ],
   "releaseNotes": [
-    "APP V556 e cache goooool-offline-v556; save schema 178; banco oficial permanece na revisão 1050 / modelo 7."
-  ],
-  "backendUrl": "https://db.goooool.net",
-  "editorUrl": "https://db.goooool.net/editor",
-  "statisticsUrl": "https://db.goooool.net/estatisticas",
-  "libraryUrl": "https://db.goooool.net/biblioteca/"
+    "APP V558 e cache goooool-offline-v558; save schema 178; banco oficial permanece na revisão 1050 / modelo 7."
+  ]
 }

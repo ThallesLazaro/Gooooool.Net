@@ -1,4 +1,4 @@
-Estado atual V556: no bloco Gols da aba Eventos, gols a favor permanecem verdes e gols sofridos recebem tema vermelho próprio, sem depender da cor do clube; os blocos Gols, Cartões, Substituições e Outros usam 15 px de espaçamento sem altura mínima forçada; a organização por categorias e a reconciliação segura do calendário da V555 permanecem.
+Estado atual V558: o Técnico automático usa um único agendador por ciclo, impede reentrada de runAutoManagerWeek e mantém telemetria temporária da consolidação de rodada para diagnosticar reutilizações concorrentes. A proteção de calendário continua ativa para travamentos reais. Save schema 178 e banco oficial 1050 / modelo 7 permanecem.
 # Goooool.net
 
 Versão documentada: V553

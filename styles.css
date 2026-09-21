@@ -42593,3 +42593,127 @@ html[data-theme="light"] .live-events-pane{--live-events-ui-accent:#245fc2}
   .live-event-summary.is-var-decision.is-clickable:hover{background:color-mix(in srgb,var(--live-event-var) 9%,var(--panel-2)) !important}
   .live-event-summary.is-shootout.is-clickable:hover{background:color-mix(in srgb,var(--live-event-shootout) 9%,var(--panel-2)) !important}
 }
+
+/* V555 · Eventos deixa de ser uma linha do tempo e vira um painel de consulta
+   por assunto. A identidade do clube fica no escudo/nome; cores de gols,
+   cartões, trocas e outros lances são semânticas e independentes do time. */
+.live-events-pane{
+  --live-events-sticky-offset:58px;
+  scroll-padding-top:var(--live-events-sticky-offset)!important;
+}
+.live-events-groups{
+  display:grid;
+  gap:9px;
+  min-height:100%;
+  padding:8px 8px 16px;
+}
+.live-event-group{
+  --event-group-accent:var(--live-events-ui-accent,#7aa7ff);
+  overflow:clip;
+  border:1px solid var(--line);
+  border-radius:12px;
+  background:var(--panel-2);
+  scroll-margin-top:var(--live-events-sticky-offset)!important;
+}
+.live-event-group.is-goals{--event-group-accent:var(--live-event-goal,#27b36a)}
+.live-event-group.is-cards{--event-group-accent:var(--live-event-yellow,#f2c94c)}
+.live-event-group.is-substitutions{--event-group-accent:var(--live-event-sub,#4f8cff)}
+.live-event-group.is-other{--event-group-accent:var(--live-event-var,#9b6cff)}
+.live-event-group > header{
+  min-height:36px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:8px;
+  padding:6px 8px;
+  border-bottom:1px solid var(--line);
+  background:color-mix(in srgb,var(--event-group-accent) 8%,var(--panel));
+}
+.live-event-group > header > span{
+  min-width:0;
+  display:flex;
+  align-items:center;
+  gap:6px;
+  color:var(--text);
+}
+.live-event-group > header > span > .fa-solid{
+  width:18px;
+  color:var(--event-group-accent)!important;
+  text-align:center;
+  font-size:.7rem;
+}
+.live-event-group > header strong{
+  font-size:.62rem;
+  line-height:1.15;
+}
+.live-event-group > header > b{
+  min-width:22px;
+  height:22px;
+  display:grid;
+  place-items:center;
+  padding:0 5px;
+  border:1px solid color-mix(in srgb,var(--event-group-accent) 35%,var(--line));
+  border-radius:999px;
+  background:color-mix(in srgb,var(--event-group-accent) 10%,var(--panel));
+  color:var(--event-group-accent);
+  font-size:.52rem;
+  font-variant-numeric:tabular-nums;
+}
+.live-event-group-list{
+  display:grid;
+  gap:5px;
+  padding:6px;
+}
+.live-event-group-empty{
+  margin:0;
+  padding:10px 8px;
+  color:var(--muted);
+  font-size:.53rem;
+  line-height:1.35;
+  text-align:center;
+}
+.live-events-pane .live-event-summary{
+  margin:0;
+  box-shadow:none!important;
+  scroll-margin-top:var(--live-events-sticky-offset)!important;
+}
+.live-events-pane .live-event-summary.has-team-context{
+  box-shadow:none!important;
+}
+.live-event-group.is-goals .live-event-summary{
+  border-color:color-mix(in srgb,var(--live-event-goal) 24%,var(--line));
+}
+.live-event-group.is-cards .live-event-summary{
+  border-color:color-mix(in srgb,var(--live-event-yellow) 22%,var(--line));
+}
+.live-event-group.is-substitutions .live-event-summary{
+  border-color:color-mix(in srgb,var(--live-event-sub) 22%,var(--line));
+}
+.live-event-group.is-other .live-event-summary{
+  border-color:color-mix(in srgb,var(--live-event-var) 18%,var(--line));
+}
+html[data-theme="light"] .live-event-group{
+  background:#f7f9fc;
+  border-color:#dfe5ec;
+}
+html[data-theme="light"] .live-event-group > header{
+  background:color-mix(in srgb,var(--event-group-accent) 7%,#fff);
+  border-bottom-color:#dfe5ec;
+}
+html[data-theme="light"] .live-event-group.is-cards{
+  --event-group-accent:#8a6100;
+}
+html[data-theme="light"] .live-event-group.is-goals{
+  --event-group-accent:#087d45;
+}
+html[data-theme="light"] .live-event-group.is-substitutions{
+  --event-group-accent:#245fc2;
+}
+html[data-theme="light"] .live-event-group.is-other{
+  --event-group-accent:#6941c6;
+}
+@media(max-width:360px){
+  .live-events-groups{gap:7px;padding-inline:6px}
+  .live-event-group > header{padding-inline:7px}
+  .live-event-group-list{padding:5px}
+}

@@ -1,4 +1,4 @@
-Estado atual V560: a prévia de clubes criados com IA usa a mesma identidade visual da carreira; clubes brasileiros preservam UF/cidade real sem herdar a vaga-base; taças Canvas usam contain em caixa reservada.
+Estado atual V561: formatos especiais do banco são executados pelo motor, retomadas de storage/Técnico automático são mais resilientes, nomes cobrem todos os países das ligas e Jogos ao vivo renderiza por país sob demanda.
 # Goooool.net
 
 Versão documentada: V560

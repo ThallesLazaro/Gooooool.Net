@@ -1,15 +1,15 @@
 {
-    "format": "goooool-database-revision-v1",
-    "product": "Goooool.net",
-    "developer": "Thalles Lázaro",
-    "schemaVersion": 1,
-    "revision": "db-06efeb9e14e217eb663beb69",
-    "cacheToken": "db-06efeb9e14e217eb663beb69",
-    "sourceMtime": 1789997847,
-    "sourceHash": "1ce11778ea44b34a819114fad76730405efbeb0b4570407a5c7b48388bccd696",
-    "databaseVersion": 1077,
-    "gameVersion": 559,
-    "fileSize": 42702326,
-    "updatedAt": "2026-09-21",
-    "generatedAt": "2026-09-21T14:35:18+00:00"
+  "format": "goooool-database-revision-v1",
+  "product": "Goooool.net",
+  "developer": "Thalles Lázaro",
+  "schemaVersion": 1,
+  "revision": "db-auditoria-r1116-name-pools-v1",
+  "cacheToken": "db-auditoria-r1116-name-pools-v1",
+  "sourceMtime": 0,
+  "sourceHash": "b888c216ce39d6ac75f163737f22541c9c91c73cdd9be73a8868b619a49d67f7",
+  "databaseVersion": 1116,
+  "gameVersion": 561,
+  "fileSize": 43421447,
+  "updatedAt": "2026-09-24",
+  "generatedAt": "2026-09-24T13:30:00+00:00"
 }

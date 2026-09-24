@@ -1,4 +1,4 @@
-# Como publicar a V564 do Goooool.net
+# Como publicar a V565 do Goooool.net
 
 A arquitetura atual separa o jogo estático do backend. A publicação oficial de cada release possui **três ZIPs internos** e um ZIP principal que contém exatamente esses três arquivos.
 

@@ -42742,3 +42742,34 @@ html[data-theme="light"] .live-event-group.is-goals .live-event-summary.is-goal-
   }
 }
 
+
+/* V562 · subabas por país dos outros jogos: alinhadas ao conteúdo mobile. */
+.match-screen #otherLiveCountryTabs{
+  box-sizing:border-box;
+  width:calc(100% - 20px)!important;
+  max-width:calc(100% - 20px)!important;
+  margin:10px 10px 0!important;
+  padding:5px!important;
+  scroll-padding-inline:5px;
+}
+.match-screen #otherLiveCountryTabs .subtab{
+  display:inline-flex!important;
+  align-items:center;
+  justify-content:center;
+  gap:6px;
+  min-width:max-content;
+}
+.match-screen #otherLiveCountryTabs .live-country-tab-label,
+.match-screen #otherLiveCountryTabs .live-country-tab-country{
+  display:inline-flex;
+  align-items:center;
+  gap:5px;
+  min-width:0;
+}
+.match-screen #otherLiveCountryTabs .country-inline-image,
+.match-screen #otherLiveCountryTabs .live-country-tab-country img{
+  width:16px;
+  height:16px;
+  flex:0 0 16px;
+  object-fit:contain;
+}

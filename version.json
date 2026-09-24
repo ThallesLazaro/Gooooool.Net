@@ -6,21 +6,20 @@
   "name": "Goooool",
   "domain": "goooool.net",
   "url": "https://goooool.net/",
-  "version": 562,
-  "assetVersion": "562",
-  "cacheName": "goooool-offline-v562",
+  "version": 563,
+  "assetVersion": "563",
+  "cacheName": "goooool-offline-v563",
   "releasedAt": "2026-09-24T12:49:00-03:00",
   "author": "Thalles Lázaro",
-  "releaseTitle": "Atualização V562 — editor da Copa do Mundo, Série D completa e Ao Vivo refinado",
-  "releaseSummary": "A Copa do Mundo passa a ser editável no editor.php, o perfil nacional garante todas as divisões cadastradas, as subabas por país do Ao Vivo são corrigidas e o alerta transitório de storage deixa de gerar falso warning.",
+  "releaseTitle": "Atualização V563 — inicialização e Copa do Mundo no Editor corrigidas",
+  "releaseSummary": "Corrige a inicialização com o banco modular R1116 e garante que a Copa do Mundo apareça imediatamente em Copas e competições no editor.php, inclusive após cache antigo.",
   "releaseHighlights": [
-    "A Copa do Mundo aparece em Copas e competições no editor.php e aceita personalização da taça WebP sem alterar sua identidade estrutural.",
-    "País do clube carrega todas as divisões cadastradas; o bootstrap R1116 foi sincronizado para 174 ligas e 2.551 clubes, incluindo Série A, B, C e D do Brasil.",
-    "Subabas por país dos outros jogos ficam alinhadas ao conteúdo mobile, usam a imagem oficial do país quando disponível e não deslocam a página ao trocar de aba.",
-    "O reporter de armazenamento deixa de tratar recovering por 5 segundos como falha; blocked, retry final e falhas reais continuam reportados.",
-    "Arquivos llms, README, páginas estáticas e metadados de release foram sincronizados com V562/R1116."
+    "O bootstrap do jogo usa uma liga oficial mínima do catálogo quando DEFAULT_DATABASE não contém times, evitando GooooolStartupDependencyError: base esportiva.",
+    "A Copa do Mundo passa a invalidar corretamente o índice persistente do Editor por versão e possui fallback defensivo contra cache antigo.",
+    "Ao escolher um clube, o perfil oficial continua substituindo o bootstrap pelas divisões reais do país; Flamengo retorna Série A, B, C e D com 85 clubes.",
+    "Save schema 178 e banco esportivo R1116 / modelo 7 permanecem inalterados."
   ],
   "releaseNotes": [
-    "APP V562 e cache goooool-offline-v562; save schema 178 preservado; banco oficial R1116 / modelo 7; 174 ligas e 2.551 clubes."
+    "APP V563 e cache goooool-offline-v563; save schema 178 preservado; banco oficial R1116 / modelo 7; 174 ligas e 2.551 clubes."
   ]
 }

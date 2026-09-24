@@ -1,7 +1,7 @@
-Estado atual V562: Copa do Mundo editável no editor.php, todas as divisões nacionais cadastradas no perfil, Ao Vivo por país refinado e diagnóstico de storage sem falso warning transitório.
+Estado atual V563: Copa do Mundo editável no editor.php, todas as divisões nacionais cadastradas no perfil, Ao Vivo por país refinado e diagnóstico de storage sem falso warning transitório.
 # Goooool.net — referência completa do estado atual
 
-Versão documentada: V562 · 24 de setembro de 2026
+Versão documentada: V563 · 24 de setembro de 2026
 Criador e desenvolvedor: Thalles Lázaro
 Site principal: [Goooool.net](https://goooool.net/)
 Apresentação: [jogue.goooool.net](https://jogue.goooool.net/)
@@ -18,7 +18,7 @@ A experiência é PWA, pode ser instalada e mantém recursos já armazenados dis
 
 ## 2. Estado técnico
 
-Aplicativo V562. Save schema 178. Banco oficial revisão 1116 / modelo 7, com 174 ligas e 2.551 clubes no catálogo. A versão do aplicativo, a estrutura do save e a revisão do banco são conceitos separados.
+Aplicativo V563. Save schema 178. Banco oficial revisão 1116 / modelo 7, com 174 ligas e 2.551 clubes no catálogo. A versão do aplicativo, a estrutura do save e a revisão do banco são conceitos separados.
 
 O perfil do país controlado inclui todas as divisões cadastradas. No Brasil isso significa Série A, Série B, Série C e Série D; ligas com mais de 20 participantes não são truncadas. Saves antigos não têm calendário em andamento reescrito: divisões oficiais ausentes são sincronizadas na próxima virada de temporada.
 A Copa do Mundo também é uma entidade editável em `db.goooool.net/editor.php` na categoria Copas e competições, com upload/remoção da taça WebP e identidade FIFA protegida contra duplicação ou exclusão.

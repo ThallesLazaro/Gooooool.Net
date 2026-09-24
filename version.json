@@ -6,21 +6,21 @@
   "name": "Goooool",
   "domain": "goooool.net",
   "url": "https://goooool.net/",
-  "version": 561,
-  "assetVersion": "561",
-  "cacheName": "goooool-offline-v561",
-  "releasedAt": "2026-09-24T09:00:00-03:00",
+  "version": 562,
+  "assetVersion": "562",
+  "cacheName": "goooool-offline-v562",
+  "releasedAt": "2026-09-24T12:49:00-03:00",
   "author": "Thalles Lázaro",
-  "releaseTitle": "Atualização V561 — formatos reais, armazenamento resiliente e Ao Vivo mais leve",
-  "releaseSummary": "O motor passa a executar os formatos especiais já descritos no banco, corrige retomadas de armazenamento e do Técnico automático, amplia nomes por nacionalidade e reduz o DOM dos outros jogos ao vivo.",
+  "releaseTitle": "Atualização V562 — editor da Copa do Mundo, Série D completa e Ao Vivo refinado",
+  "releaseSummary": "A Copa do Mundo passa a ser editável no editor.php, o perfil nacional garante todas as divisões cadastradas, as subabas por país do Ao Vivo são corrigidas e o alerta transitório de storage deixa de gerar falso warning.",
   "releaseHighlights": [
-    "O seasonFormat do banco passa a comandar o calendário e as fases especiais compatíveis, incluindo splits, playoffs top 6, MLS por conferências e as fases específicas das Séries C e D.",
-    "Retomadas do IndexedDB deixam de usar a janela rígida de 5 segundos após voltar do segundo plano, e a atualização de metadados usa o mesmo watchdog resiliente a suspensões do navegador.",
-    "O Técnico automático evita falso AUTO_MANAGER_NO_PROGRESS enquanto uma consolidação de rodada ainda está terminando e faz uma única nova tentativa segura quando o calendário está pronto.",
-    "A Copa do Mundo aceita taça WebP editável com contain; o gerador de nomes cobre todos os 118 países presentes nas ligas do catálogo com pools próprios.",
-    "Outros jogos no Ao Vivo ganham subabas por país e renderização sob demanda, sem alterar relógio, simulação ou resultados das partidas não visíveis."
+    "A Copa do Mundo aparece em Copas e competições no editor.php e aceita personalização da taça WebP sem alterar sua identidade estrutural.",
+    "País do clube carrega todas as divisões cadastradas; o bootstrap R1116 foi sincronizado para 174 ligas e 2.551 clubes, incluindo Série A, B, C e D do Brasil.",
+    "Subabas por país dos outros jogos ficam alinhadas ao conteúdo mobile, usam a imagem oficial do país quando disponível e não deslocam a página ao trocar de aba.",
+    "O reporter de armazenamento deixa de tratar recovering por 5 segundos como falha; blocked, retry final e falhas reais continuam reportados.",
+    "Arquivos llms, README, páginas estáticas e metadados de release foram sincronizados com V562/R1116."
   ],
   "releaseNotes": [
-    "APP V561 e cache goooool-offline-v561; save schema 178 preservado; banco oficial R1116 / modelo 7."
+    "APP V562 e cache goooool-offline-v562; save schema 178 preservado; banco oficial R1116 / modelo 7; 174 ligas e 2.551 clubes."
   ]
 }

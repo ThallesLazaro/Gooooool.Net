@@ -1,7 +1,7 @@
-Estado atual V561: formatos especiais do banco são executados pelo motor, retomadas de storage/Técnico automático são mais resilientes, nomes cobrem todos os países das ligas e Jogos ao vivo renderiza por país sob demanda.
+Estado atual V562: Copa do Mundo editável no editor.php, todas as divisões nacionais cadastradas no perfil, Ao Vivo por país refinado e diagnóstico de storage sem falso warning transitório.
 # Goooool.net — referência completa do estado atual
 
-Versão documentada: V561 · 24 de setembro de 2026
+Versão documentada: V562 · 24 de setembro de 2026
 Criador e desenvolvedor: Thalles Lázaro
 Site principal: [Goooool.net](https://goooool.net/)
 Apresentação: [jogue.goooool.net](https://jogue.goooool.net/)
@@ -18,7 +18,11 @@ A experiência é PWA, pode ser instalada e mantém recursos já armazenados dis
 
 ## 2. Estado técnico
 
-Aplicativo V561. Save schema 178. Banco oficial revisão 1116 / modelo 7. A versão do aplicativo, a estrutura do save e a revisão do banco são conceitos separados.
+Aplicativo V562. Save schema 178. Banco oficial revisão 1116 / modelo 7, com 174 ligas e 2.551 clubes no catálogo. A versão do aplicativo, a estrutura do save e a revisão do banco são conceitos separados.
+
+O perfil do país controlado inclui todas as divisões cadastradas. No Brasil isso significa Série A, Série B, Série C e Série D; ligas com mais de 20 participantes não são truncadas. Saves antigos não têm calendário em andamento reescrito: divisões oficiais ausentes são sincronizadas na próxima virada de temporada.
+A Copa do Mundo também é uma entidade editável em `db.goooool.net/editor.php` na categoria Copas e competições, com upload/remoção da taça WebP e identidade FIFA protegida contra duplicação ou exclusão.
+
 A Home sem save prioriza modo, clube, competições, nome do técnico e início da carreira. Escudo oficial da seleção + país não quebra entre imagem e nome e wrappers de escudo não criam fundo ou sombra.
 Países exibem o escudo oficial da seleção antes do nome em contextos visuais quando esse WebP existir; sem imagem oficial, o texto não reserva espaço. Escudos oficiais ou gerados são apresentados sem sombras.
 Prompts que geram ou atualizam jogadores usam uma identidade em dois níveis: `name` guarda o nome real/completo ou profissional oficial, enquanto `shirtName` guarda a forma futebolística/popular reconhecida pelos torcedores. A regra respeita padrões culturais, não inventa apelidos e não exige que os dois campos sejam diferentes.

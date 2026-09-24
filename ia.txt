@@ -1,3 +1,12 @@
+# CHECKPOINT ATUAL — V564 / R1116 — 2026-09-24
+
+- APP V564; save schema 178 preservado; banco oficial R1116 / modelo 7 preservado.
+- Backend VERSION.txt sincronizado com a release atual; editor.php, stats.php, Open Graph, Twitter, favicons, Font Awesome e scripts deixam de renderizar versões antigas por engano.
+- Biblioteca regenerada a partir do R1116 com assets V564; o gerador não usa mais revisões fixas 544/557.
+- Copa do Mundo no Editor: pesquisa pelo nome continua disponível e a lista mostra contexto FIFA sem expor o ID técnico world-cup como subtítulo visual.
+- Sobre/documentação e pacotes auxiliares sincronizados com V564.
+- Nenhuma mudança no conteúdo esportivo do banco, IDs oficiais ou estrutura de saves nesta rodada.
+
 # ESTADO SOBERANO V563/R1116 — 24/09/2026
 
 - APP V563 / cache `goooool-offline-v563`; save schema 178 preservado; banco oficial R1116 / modelo 7.

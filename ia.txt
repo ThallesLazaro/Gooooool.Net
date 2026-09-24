@@ -1,3 +1,10 @@
+# ESTADO SOBERANO V563/R1116 — 24/09/2026
+
+- APP V563 / cache `goooool-offline-v563`; save schema 178 preservado; banco oficial R1116 / modelo 7.
+- HOTFIX STARTUP: `data.js` prepara uma base esportiva mínima (uma liga + seus clubes) a partir do catálogo oficial quando `DEFAULT_DATABASE` modular não contém `teams/leagues`. Ao selecionar clube, `activateProfile()` continua substituindo pelo perfil real completo.
+- EDITOR COPA DO MUNDO: `world-cup` permanece editável em `Copas e competições`; cache do índice editorial agora inclui APP_VERSION/schema 3 e o endpoint possui fallback defensivo para `world-cup`, evitando invisibilidade após cache R1116 antigo.
+- REGRESSÃO: bootstrap limpo abre com br-a/20 clubes; Flamengo ativa br-a/br-b/br-c/br-d com 85 clubes.
+
 # ESTADO SOBERANO V562/R1116 — 24/09/2026
 
 - APP V562 / cache `goooool-offline-v562`; save schema 178 preservado; banco oficial R1116 / modelo 7.

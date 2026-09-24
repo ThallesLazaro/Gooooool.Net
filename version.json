@@ -6,20 +6,20 @@
   "name": "Goooool",
   "domain": "goooool.net",
   "url": "https://goooool.net/",
-  "version": 563,
-  "assetVersion": "563",
-  "cacheName": "goooool-offline-v563",
-  "releasedAt": "2026-09-24T12:49:00-03:00",
+  "version": 564,
+  "assetVersion": "564",
+  "cacheName": "goooool-offline-v564",
+  "releasedAt": "2026-09-24T13:53:00-03:00",
   "author": "Thalles Lázaro",
-  "releaseTitle": "Atualização V563 — inicialização e Copa do Mundo no Editor corrigidas",
-  "releaseSummary": "Corrige a inicialização com o banco modular R1116 e garante que a Copa do Mundo apareça imediatamente em Copas e competições no editor.php, inclusive após cache antigo.",
+  "releaseTitle": "Atualização V564 — versões estáticas e Editor refinados",
+  "releaseSummary": "Sincroniza a versão dos assets públicos e do backend, remove IDs técnicos da apresentação da Copa do Mundo e atualiza os geradores estáticos para não recriarem referências antigas.",
   "releaseHighlights": [
-    "O bootstrap do jogo usa uma liga oficial mínima do catálogo quando DEFAULT_DATABASE não contém times, evitando GooooolStartupDependencyError: base esportiva.",
-    "A Copa do Mundo passa a invalidar corretamente o índice persistente do Editor por versão e possui fallback defensivo contra cache antigo.",
-    "Ao escolher um clube, o perfil oficial continua substituindo o bootstrap pelas divisões reais do país; Flamengo retorna Série A, B, C e D com 85 clubes.",
-    "Save schema 178 e banco esportivo R1116 / modelo 7 permanecem inalterados."
+    "Editor, Estatísticas e assets do backend passam a usar a versão corrente do aplicativo em Open Graph, Twitter, favicon, Font Awesome e scripts.",
+    "A Biblioteca é regenerada com a versão atual e seu gerador deixa de usar revisões fixas antigas de assets.",
+    "A Copa do Mundo aparece com nome humano e contexto FIFA, sem expor world-cup como subtítulo visual.",
+    "Sobre, documentação e assets estáticos avançam juntos para V564, preservando save schema 178 e banco R1116."
   ],
   "releaseNotes": [
-    "APP V563 e cache goooool-offline-v563; save schema 178 preservado; banco oficial R1116 / modelo 7; 174 ligas e 2.551 clubes."
+    "APP V564 e cache goooool-offline-v564; save schema 178 preservado; banco oficial R1116 / modelo 7; 174 ligas e 2.551 clubes."
   ]
 }

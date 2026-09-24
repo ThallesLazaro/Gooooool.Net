@@ -1,4 +1,4 @@
-# Goooool.net — V563
+# Goooool.net — V564
 
 Goooool.net é um jogo independente de gerenciamento de futebol desenvolvido por Thalles Lázaro, desenhado primeiro para celular e executado no navegador como PWA.
 
@@ -15,13 +15,13 @@ Este README descreve o **estado atual do projeto**. O histórico do que mudou em
 
 ## Estado atual
 
-- Aplicativo: V563.
+- Aplicativo: V564.
 - Save schema: 178.
 - Banco oficial: revisão 1116 / modelo 7, com 174 ligas e 2.551 clubes.
 - Interface: mobile-first; a Home inicial sem save permanece intocada, enquanto carreiras carregadas podem receber adaptações específicas em `telas-grandes.css` a partir de 960 px, sem alterar o CSS canônico mobile.
 - Sem carreira carregada, a Home prioriza modo → clube → card do clube → nome do técnico em modal → começar; busca fica visível e filtros adicionais permanecem recolhidos para reduzir ruído.
 - Guia, Atualizações, Sobre, Privacidade e Termos usam a mesma moldura visual inspirada na Wiki, com largura, navegação, painéis e rodapé consistentes.
-- Distribuição V563: cliente estático em dois pacotes (normal e publicação protegida), backend legível separado para `db.goooool.net` e ZIP principal contendo exatamente os três pacotes.
+- Distribuição V564: cliente estático em dois pacotes (normal e publicação protegida), backend legível separado para `db.goooool.net` e ZIP principal contendo exatamente os três pacotes.
 - PWA: manifest + service worker, com funcionamento offline dos recursos armazenados e instalação guiada pelo navegador/Safari.
 - Perfil nacional: todas as divisões cadastradas do país são ativadas; no Brasil, Série A/B/C/D. O catálogo não corta ligas acima de 20 clubes.
 - Editor comunitário: a Copa do Mundo aparece em Copas e competições e permite personalizar a taça WebP.

@@ -1,7 +1,7 @@
-Estado atual V563: Copa do Mundo editável no editor.php, perfil nacional com todas as divisões cadastradas, subabas por país do Ao Vivo corrigidas e storage sem falso warning de recuperação.
+Estado atual V564: Copa do Mundo editável no editor.php, perfil nacional com todas as divisões cadastradas, subabas por país do Ao Vivo corrigidas e storage sem falso warning de recuperação.
 # Goooool.net
 
-Versão documentada: V563 · 24 de setembro de 2026
+Versão documentada: V564 · 24 de setembro de 2026
 Produto: Goooool.net
 Criador e desenvolvedor: Thalles Lázaro
 URL principal: https://goooool.net/
@@ -17,7 +17,7 @@ Goooool.net é um jogo independente de gerenciamento de futebol para navegador, 
 
 ## Estado técnico atual
 
-- Aplicativo: V563.
+- Aplicativo: V564.
 
 - O país do clube usa todas as divisões cadastradas no banco. No Brasil, o catálogo atual inclui Série A, Série B, Série C e Série D; não existe corte artificial de 20 clubes por liga.
 - A Copa do Mundo aparece em `editor.php` em Copas e competições e aceita taça WebP, preservando as regras estruturais do torneio.

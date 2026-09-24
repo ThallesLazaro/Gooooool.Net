@@ -1,10 +1,27 @@
-# CHECKPOINT ATUAL — V564 / R1116 — 2026-09-24
+# CHECKPOINT ATUAL — V566 / R1116 — 2026-09-24
 
-- APP V564; save schema 178 preservado; banco oficial R1116 / modelo 7 preservado.
+- APP V566; save schema 178 e banco oficial R1116 / modelo 7 preservados.
+- STORAGE V566: uma falha genérica de transação IndexedDB ocorrida durante suspensão da página ou reconexão concorrente não é mais tratada como erro definitivo antes de uma única repetição na conexão recuperada. Erros de quota, segurança, dados, constraints, clonagem, somente leitura e versão continuam definitivos.
+- COPA DO MUNDO / TAÇA: `competitionTemplates.worldCupTrophyWebp` é a fonte oficial do banco. `InternationalEngine.ensure()` sincroniza nome/taça em Copas já existentes sem alterar grupos/resultados/RNG; IDs `world-cup-*` resolvem para `world-cup` em Seleções, Ao Vivo e encerramentos, sem fallback para liga.
+- A exceção de bandeira emoji em `<select>/<option>` nativo permanece válida; componentes HTML próprios continuam priorizando a imagem oficial do país.
+
+# CHECKPOINT ATUAL — V565 / R1116 — 2026-09-24
+
+- APP V565; save schema 178 e banco oficial R1116 / modelo 7 preservados.
+- EXCEÇÃO DE BANDEIRAS EM CONTROLES NATIVOS: superfícies HTML próprias continuam preferindo a imagem oficial do país/seleção. Em `<select>/<option>` e controles nativos equivalentes, onde imagem não é portável, é permitido usar emoji de bandeira antes do texto. Ex.: `🇧🇷 · Brasil — Série A`, `🇬🇧 · Inglaterra — Premier League`.
+- Values, IDs, filtros, banco e saves continuam usando texto/códigos puros; emoji é apenas apresentação do `<option>`.
+- A exceção vale para seletores de país/liga no jogo e no Editor quando houver país identificável; sem código confiável, manter somente texto.
+- Nenhuma mudança esportiva nesta rodada.
+
+# CHECKPOINT ATUAL — V565 / R1116 — 2026-09-24
+
+- APP V565; save schema 178 preservado; banco oficial R1116 / modelo 7 preservado.
 - Backend VERSION.txt sincronizado com a release atual; editor.php, stats.php, Open Graph, Twitter, favicons, Font Awesome e scripts deixam de renderizar versões antigas por engano.
-- Biblioteca regenerada a partir do R1116 com assets V564; o gerador não usa mais revisões fixas 544/557.
+- Biblioteca regenerada a partir do R1116 com assets V565; o gerador não usa mais revisões fixas 544/557.
 - Copa do Mundo no Editor: pesquisa pelo nome continua disponível e a lista mostra contexto FIFA sem expor o ID técnico world-cup como subtítulo visual.
-- Sobre/documentação e pacotes auxiliares sincronizados com V564.
+- COPA DO MUNDO / TAÇA V565: IDs sazonais `world-cup-*` resolvem sempre para a identidade oficial `world-cup`; nunca usar fallback de `getLeagueDefinition()` para identidade visual, pois IDs desconhecidos podem cair na primeira liga.
+- COPA DO MUNDO / SAVE: ao carregar um save, nome e `trophyWebp` da Copa ativa/concluída são sincronizados com `competitionTemplates` oficiais sem alterar partidas, grupos, resultados, RNG ou schema. A aba Seleções deve mostrar a taça oficial mesmo antes da criação da próxima edição.
+- Sobre/documentação e pacotes auxiliares sincronizados com V565.
 - Nenhuma mudança no conteúdo esportivo do banco, IDs oficiais ou estrutura de saves nesta rodada.
 
 # ESTADO SOBERANO V563/R1116 — 24/09/2026
@@ -320,7 +337,7 @@
 - APP V540 / cache `goooool-offline-v540`; save schema 178; banco oficial permanece revisão 1050 / modelo 7.
 - BASE DE VERDADE: esta release parte diretamente da V539. Para comportamento atual, usar primeiro este bloco V540 e os arquivos efetivamente distribuídos. Não reverter decisões atuais comparando com versões antigas.
 - EDITOR / CABEÇALHO TEMÁTICO: ao selecionar clube ou seleção, manter nome na linha principal e uma linha pequena de país abaixo. Quando existir escudo oficial da seleção correspondente, ele aparece antes do nome do país; sem imagem, mostrar somente o texto.
-- EDITOR / PAÍSES: toda superfície HTML própria que exiba país/nacionalidade deve tentar usar o escudo oficial da seleção antes do nome. Nome textual exato continua prioritário e `countryCode` só é fallback quando não ambíguo. `<select>/<option>` nativo continua textual.
+- EDITOR / PAÍSES: toda superfície HTML própria que exiba país/nacionalidade deve tentar usar o escudo oficial da seleção antes do nome. Nome textual exato continua prioritário e `countryCode` só é fallback quando não ambíguo. `<select>/<option>` nativo usa, por exceção V565, emoji de bandeira quando houver país/código confiável; values continuam textuais.
 - EDITOR / FONT AWESOME: o Editor usa somente o subconjunto local `assets/fontawesome/css/icons.css`. Toda classe `fa-*` de ícone precisa existir nele. Não usar glyphs por `font-family: "Font Awesome 6 Free"` nem presumir ícones ausentes; preferir um equivalente já incluído.
 - EDITOR / LAYOUT: cards, grids, textos longos e linhas de metadados precisam respeitar `min-width:0`, truncamento/overflow previsível e responsividade. Em larguras intermediárias, a Saúde do banco não pode comprimir quatro colunas a ponto de estourar a área útil.
 - BIBLIOTECA: é gerada exclusivamente por `includes/biblioteca-generator.php`; nunca corrigir milhares de páginas manualmente. Toda regeneração V540 usa assets `?v=540`.
@@ -356,7 +373,7 @@
 - EDITOR: textos administrativos devem ser curtos, escaneáveis e agrupados em cards consistentes. Qualquer classe visual especializada adicionada (backup, exportação do banco, propostas, feedback, erros, escudos etc.) deve possuir estilo correspondente; não deixar blocos novos dependentes de aparência acidental.
 - EXPORTAÇÃO DO BANCO: o bloco “Exportar banco para goooool.net” tem card próprio, ação principal clara, selo de ZIP estático e explicação detalhada recolhida em `<details>`.
 - ESTATÍSTICAS / PARTIDAS: uma linha como `Atlético Mineiro 3–0 Internacional` nunca quebra nomes/placar em linhas diferentes. Renderizar confrontos como uma unidade `inline-flex` sem wrap; se não couber no viewport, permitir scroll horizontal somente naquela linha.
-- IDENTIDADE DE PAÍS NO BACKEND: em superfícies HTML do Editor que exibem país/nacionalidade, tentar mostrar antes do nome o escudo oficial da seleção correspondente. Nome textual exato tem prioridade; `countryCode` só pode ser fallback quando identificar uma única seleção. `<select>/<option>` nativo permanece textual; sem imagem oficial não reservar espaço nem mostrar ícone quebrado.
+- IDENTIDADE DE PAÍS NO BACKEND: em superfícies HTML do Editor que exibem país/nacionalidade, tentar mostrar antes do nome o escudo oficial da seleção correspondente. Nome textual exato tem prioridade; `countryCode` só pode ser fallback quando identificar uma única seleção. `<select>/<option>` nativo pode usar, por exceção V565, emoji de bandeira quando houver país/código confiável; sem código confiável manter texto e nunca alterar o value.
 - TELAS GRANDES: preservar a decisão V537. `telas-grandes.css` existe apenas para >=960px e nunca pode tocar a Home inicial/sem save.
 - PACOTES: preservar arquitetura V533+: três ZIPs internos + ZIP principal contendo exatamente os três; backend legível e não ofuscado.
 
@@ -590,7 +607,7 @@
 
 - APP V515 / cache `goooool-offline-v515`; save schema 178; banco oficial revisão 1027 / modelo 7. Esta release não altera dados esportivos do banco nem o schema do save.
 - PAÍS COM IMAGEM — REGRA PERMANENTE: em todo contexto visual compatível que exiba nome de país/nacionalidade, tentar inserir imediatamente antes o `crestWebp` oficial da seleção correspondente. Se não existir imagem oficial, renderizar somente o texto; não criar placeholder, wrapper vazio, margem reservada ou imagem gerada para representar país.
-- CONTEXTOS TEXTUAIS: `<option>`, toast, atributo, log e qualquer superfície que não suporte HTML de imagem de forma confiável permanecem somente textuais. Nunca recolocar emoji para compensar ausência de imagem.
+- CONTEXTOS TEXTUAIS: toast, atributo, log e superfícies sem mídia permanecem textuais. EXCEÇÃO V565: `<select>/<option>` e controles nativos equivalentes podem usar emoji de bandeira como recurso puramente visual quando imagem não for suportada de forma confiável; values/IDs continuam sem emoji.
 - ESCUDOS SEM SOMBRA — REGRA PERMANENTE: nenhum escudo oficial, escudo de seleção, imagem de país baseada em seleção ou escudo gerado automaticamente pode usar `box-shadow`, `filter: drop-shadow(...)`, `text-shadow` ou halo equivalente. Molduras exclusivas de escudo também não podem adicionar sombra ao emblema.
 - DOCUMENTAÇÃO RESPONSIVA — REGRA PERMANENTE: explicações voltadas ao jogador devem usar linguagem natural como “em telas pequenas”, “em telas intermediárias”, “em telas grandes” ou “no celular”. Não expor breakpoints em pixels, larguras de sidebar ou números técnicos de CSS em textos explicativos, salvo documentação interna explicitamente técnica.
 - BIBLIOTECA/ESTATÍSTICAS/EDITOR: as regras de imagem de país e ausência de sombra valem também para páginas públicas, Estatísticas e Editor.
@@ -600,9 +617,9 @@
 # ESTADO ATUAL V514 — BUSCA FLUIDA, PAÍSES SEM EMOJI E COPAS PRIORIZADAS (16/09/2026)
 
 - APP V514 / cache `goooool-offline-v514`; save schema 178; banco oficial revisão 1027 / modelo 7. Esta release não altera dados esportivos do banco nem o schema do save.
-- PAÍSES — REGRA PERMANENTE: emojis de bandeira estão aposentados em todo o produto. Onde um país precisar de identidade visual, usar exclusivamente o `crestWebp` oficial da seleção correspondente presente no banco. Se não houver imagem oficial, exibir somente o nome do país, sem emoji, sem glifo Unicode e sem imagem gerada.
+- PAÍSES — REGRA PERMANENTE: em superfícies HTML próprias, usar `crestWebp` oficial da seleção correspondente quando houver e, sem imagem, exibir o nome. EXCEÇÃO V565: controles nativos `<select>/<option>` podem usar emoji de bandeira antes do texto porque imagens nesses elementos não são portáveis entre navegadores.
 - SELEÇÃO x PAÍS: quando a entidade é a própria seleção em uma partida/perfil, permanece válido o pipeline normal de escudo (`crestWebp` oficial > fallback gerado). Quando o elemento é apenas um indicador de país/nacionalidade, usar somente imagem oficial do banco ou nenhuma imagem.
-- SELECTS DE PAÍS: `<option>` nativo exibe somente o nome textual do país; nunca inserir emoji no label/value. Cards e listas podem mostrar a imagem oficial ao lado do texto quando ela existir.
+- SELECTS DE PAÍS: desde V565, `<option>` nativo pode exibir emoji de bandeira no label quando houver código de país confiável; o `value` nunca recebe emoji. Cards e listas continuam priorizando a imagem oficial ao lado do texto.
 - BUSCA GLOBAL: abrir a lupa e focar o campo deve ocorrer antes de qualquer indexação pesada. Jogadores são pesquisados em lotes assíncronos/canceláveis; clubes não devem gerar SVGs de escudo em massa para montar o índice. Resultados de clubes/seleções/competições usam `crestWebp`/`trophyWebp` do banco quando disponíveis; sem imagem, manter apenas o ícone neutro da categoria.
 - COPAS: na aba Competições > Copas, ordenar por situação do clube: (1) competições desta edição em que entrou/participa, inclusive se já eliminado; (2) competições reais para as quais o clube é elegível/pode se classificar; (3) demais competições. O estado “pode se classificar” usa âmbar/laranja e nunca vermelho nem `--primary` do clube.
 - BIBLIOTECA/EDITOR/ESTATÍSTICAS: a regra sem emoji de país também vale para páginas estáticas, busca da Biblioteca, Editor e Estatísticas. A Biblioteca deve publicar o WebP das seleções em `/biblioteca/escudos/` quando disponível e reutilizá-lo como imagem de país.

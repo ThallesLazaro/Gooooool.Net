@@ -6,20 +6,22 @@
   "name": "Goooool",
   "domain": "goooool.net",
   "url": "https://goooool.net/",
-  "version": 566,
-  "assetVersion": "566",
-  "cacheName": "goooool-offline-v566",
-  "releasedAt": "2026-09-24T14:30:00-03:00",
+  "version": 567,
+  "assetVersion": "567",
+  "cacheName": "goooool-offline-v567",
+  "releasedAt": "2026-09-25T14:12:00-03:00",
   "author": "Thalles Lázaro",
-  "releaseTitle": "Atualização V566 — IndexedDB resiliente e taça da Copa do Mundo validada",
-  "releaseSummary": "Evita classificar como falha definitiva uma transação IndexedDB transitória já recuperada no Safari/iOS e mantém a taça oficial da Copa do Mundo sincronizada em todas as superfícies visuais.",
+  "releaseTitle": "Atualização V567 — storage iOS, Copa do Mundo e banco R1126",
+  "releaseSummary": "Torna aborts sintéticos do IndexedDB no Safari recuperáveis com retry limitado, evita relatórios duplicados/fluxos esperados como erro, estabiliza autores de gols sem deslocar o Ao Vivo e publica o banco R1126 enviado pelo Editor.",
   "releaseHighlights": [
-    "Operações IndexedDB transitórias durante suspensão/reconexão são repetidas uma única vez na conexão recuperada antes de gerar storage_operation_failure.",
-    "Erros definitivos como quota, segurança, dados inválidos, constraints e clonagem continuam sendo reportados imediatamente.",
-    "A taça oficial da Copa do Mundo do banco continua sincronizada com edições já existentes do torneio e é resolvida por world-cup-* sem fallback para ligas.",
-    "Assets, documentação, backend e pacotes auxiliares avançam juntos para V566."
+    "IndexedDB: abort/error sem DOMException no Safari é marcado como transitório e pode receber até duas novas tentativas com reconexão; erros definitivos continuam imediatos.",
+    "Relatórios: uma falha definitiva do storage é registrada uma vez na camada de armazenamento e não é duplicada como save_write_failure/calendar/post_match.",
+    "Copa do Mundo: obrigação de jogar pela seleção é fluxo esperado, não calendar_advance_failure; taça oficial continua vindo do R1126.",
+    "Ao Vivo: autores dos gols ficam sobrepostos ao placar/área seguinte sem alterar altura do grid, inclusive Turbo ou campo desligado.",
+    "Auditoria: formatos groups/league_phase/regional_league não recebem alerta de chave não potência de dois; Liga Europa com 36 participantes deixa de gerar falso positivo.",
+    "Banco oficial atualizado para R1126 a partir do backup completo enviado, preservando estatísticas e dados comunitários no arquivo de restauração."
   ],
   "releaseNotes": [
-    "APP V566 e cache goooool-offline-v566; save schema 178 preservado; banco oficial R1116 / modelo 7."
+    "APP V567 e cache goooool-offline-v567; save schema 178 preservado; banco oficial R1126 / modelo 7."
   ]
 }

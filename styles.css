@@ -42306,22 +42306,22 @@ textarea{
 /* =========================================================
    V553 · Eventos ao vivo e autores de gols no placar
    ========================================================= */
-/* O resumo de artilheiros só consome altura depois do primeiro gol. */
-/* A linha de autores entra entre placar e campo sem deslocar as linhas
-   históricas de Campo/Turbo/comandos. Cada estado ganha uma quarta linha. */
-.match-screen:not(.is-post-match-view) > .pitch-score:has(.live-goal-authors:not([hidden])){
-  grid-template-rows:32px auto auto auto !important;
-}
-.match-screen.is-live-pitch-disabled:not(.is-turbo-live):not(.is-post-match-view) > .pitch-score:has(.live-goal-authors:not([hidden])){
-  grid-template-rows:54px auto 28px auto !important;
-}
-.match-screen.is-turbo-live:not(.is-live-pitch-disabled):not(.is-post-match-view) > .pitch-score:has(.live-goal-authors:not([hidden])){
-  grid-template-rows:31px auto auto auto !important;
-}
-.match-screen.is-turbo-live.is-live-pitch-disabled:not(.is-post-match-view) > .pitch-score:has(.live-goal-authors:not([hidden])){
-  grid-template-rows:54px auto 36px auto !important;
+/* V567 · autores de gols não participam mais do fluxo do grid. O bloco fica
+   ancorado no próprio placar e sobrepõe discretamente a área seguinte, seja ela
+   campo, aviso do Turbo ou legenda de campo desligado. Assim um gol nunca muda a
+   altura da página nem empurra controles para baixo. */
+.pitch-score > .fixture-card{
+  position:relative;
+  z-index:7;
+  overflow:visible;
 }
 .live-goal-authors{
+  position:absolute;
+  left:0;
+  right:0;
+  top:100%;
+  z-index:9;
+  transform:translateY(2px);
   display:grid;
   grid-template-columns:minmax(0,1fr) minmax(0,1fr);
   gap:6px;
@@ -42329,6 +42329,7 @@ textarea{
   padding:0 4px 2px;
   color:#fff;
   text-shadow:0 1px 3px rgba(0,0,0,.72);
+  pointer-events:none;
 }
 .live-goal-authors[hidden]{display:none !important}
 .live-goal-authors > div{

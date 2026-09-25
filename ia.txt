@@ -1,3 +1,14 @@
+# CHECKPOINT ATUAL — V567 / R1126 — 2026-09-25
+
+- APP V567; save schema 178 preservado; banco oficial R1126 / modelo 7 aplicado a partir do backup completo exportado em 25/09/2026.
+- BANCO/ESTATÍSTICAS: o `databasePack` R1126 é a fonte esportiva do cliente e do backend. O backup completo original com estatísticas, usuários e suporte comunitário deve permanecer disponível na restauração; publicação de código não deve sobrescrever o SQLite vivo do servidor.
+- STORAGE SAFARI/iOS: `transaction.onerror/onabort` sem `transaction.error` vira `StorageTransientTransactionError`; o save pode fazer até duas novas tentativas com reconexão/estabilização. Quota, segurança, dados inválidos, constraint, clone, somente leitura e versão permanecem falhas definitivas.
+- ERROS DE STORAGE: a camada `GooooolStorage` é dona do relatório definitivo. `save_write_failure`, `calendar_advance_failure` e `post_match_background_failure` não duplicam o mesmo erro quando ele já foi reportado pelo storage.
+- COPA DO MUNDO: `WORLD_CUP_FIXTURE_REQUIRED` é fluxo esperado quando existe jogo obrigatório da seleção; não registrar como falha de calendário. A interface deve encaminhar o usuário à partida da seleção. A taça oficial continua em `competitionTemplates.worldCupTrophyWebp`.
+- AO VIVO / AUTORES DE GOL: `#liveGoalAuthors` fica absolutamente ancorado no placar; ao aparecer não altera `grid-template-rows` nem desloca campo, Turbo, legenda ou controles.
+- AUDITORIA: somente mata-mata puro exige quantidade inicial em potência de dois. `groups`, `league_phase` e `regional_league` são formatos dinâmicos; Liga Europa da UEFA com 36 participantes não é erro.
+- REGRAS PERMANENTES anteriores continuam válidas, inclusive mobile-only e exceção de emoji de bandeira em `<select>/<option>` nativo.
+
 # CHECKPOINT ATUAL — V566 / R1116 — 2026-09-24
 
 - APP V566; save schema 178 e banco oficial R1116 / modelo 7 preservados.
